@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using NUnit.Framework;
 using SmartStore.Core.Domain.Catalog;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Core.Tests.Domain
 {

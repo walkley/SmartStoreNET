@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 using Rhino.Mocks;
@@ -9,6 +9,8 @@ using SmartStore.Core.Domain.Logging;
 using SmartStore.Core.Logging;
 using SmartStore.Services.Logging;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Services.Tests.Logging
 {

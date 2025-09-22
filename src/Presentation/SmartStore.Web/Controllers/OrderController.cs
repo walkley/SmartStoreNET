@@ -1,8 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web.Mvc;
-using System.Web.Routing;
 using SmartStore.Core.Data;
 using SmartStore.Core.Domain.Catalog;
 using SmartStore.Core.Domain.Common;
@@ -25,6 +23,10 @@ using SmartStore.Web.Framework.Pdf;
 using SmartStore.Web.Framework.Security;
 using SmartStore.Web.Framework.Seo;
 using SmartStore.Web.Models.Order;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.Web.Controllers
 {
@@ -188,7 +190,7 @@ namespace SmartStore.Web.Controllers
             var order = _orderService.GetOrderById(id);
 
             if (IsNonExistentOrder(order))
-                return HttpNotFound();
+                return NotFound();
 
             if (IsUnauthorizedOrder(order))
                 return new HttpUnauthorizedResult();
@@ -203,7 +205,7 @@ namespace SmartStore.Web.Controllers
             var order = _orderService.GetOrderById(id);
 
             if (IsNonExistentOrder(order))
-                return HttpNotFound();
+                return NotFound();
 
             if (IsUnauthorizedOrder(order))
                 return new HttpUnauthorizedResult();
@@ -295,7 +297,7 @@ namespace SmartStore.Web.Controllers
             var order = _orderService.GetOrderById(id);
 
             if (IsNonExistentOrder(order))
-                return HttpNotFound();
+                return NotFound();
 
             if (IsUnauthorizedOrder(order))
                 return new HttpUnauthorizedResult();
@@ -311,7 +313,7 @@ namespace SmartStore.Web.Controllers
             var order = _orderService.GetOrderById(id);
 
             if (IsNonExistentOrder(order))
-                return HttpNotFound();
+                return NotFound();
 
             if (IsUnauthorizedOrder(order))
                 return new HttpUnauthorizedResult();
@@ -347,12 +349,12 @@ namespace SmartStore.Web.Controllers
         {
             var shipment = _shipmentService.GetShipmentById(id);
             if (shipment == null)
-                return HttpNotFound();
+                return NotFound();
 
             var order = shipment.Order;
 
             if (IsNonExistentOrder(order))
-                return HttpNotFound();
+                return NotFound();
 
             if (IsUnauthorizedOrder(order))
                 return new HttpUnauthorizedResult();

@@ -1,26 +1,28 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
 using SmartStore.AmazonPay.Services;
 using SmartStore.Core.Html;
 using SmartStore.Core.Logging;
 using SmartStore.Services.Common;
 using SmartStore.Services.Orders;
 using SmartStore.Services.Payments;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.AmazonPay.Controllers
 {
     public class AmazonPayCheckoutController : AmazonPayControllerBase
     {
-        private readonly HttpContextBase _httpContext;
+        private readonly HttpContext _httpContext;
         private readonly IAmazonPayService _apiService;
         private readonly IGenericAttributeService _genericAttributeService;
         private readonly IOrderProcessingService _orderProcessingService;
 
         public AmazonPayCheckoutController(
-            HttpContextBase httpContext,
+            HttpContext httpContext,
             IAmazonPayService apiService,
             IGenericAttributeService genericAttributeService,
             IOrderProcessingService orderProcessingService)

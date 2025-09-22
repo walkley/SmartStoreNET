@@ -1,8 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
 using SmartStore.Core.Domain.Payments;
 using SmartStore.PayPal.Models;
 using SmartStore.PayPal.Settings;
@@ -11,19 +9,27 @@ using SmartStore.Services.Payments;
 using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Framework.Security;
 using SmartStore.Web.Framework.Settings;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Http;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 
 namespace SmartStore.PayPal.Controllers
 {
     public class PayPalDirectController : PayPalControllerBase<PayPalDirectPaymentSettings>
     {
-        private readonly HttpContextBase _httpContext;
+        private readonly HttpContext _httpContext;
 
         public PayPalDirectController(
             IPaymentService paymentService,
             IOrderService orderService,
             IOrderProcessingService orderProcessingService,
             PaymentSettings paymentSettings,
-            HttpContextBase httpContext) : base(
+            HttpContext httpContext) : base(
                 paymentService,
                 orderService,
                 orderProcessingService)
@@ -33,7 +39,33 @@ namespace SmartStore.PayPal.Controllers
 
         protected override string ProviderSystemName => PayPalDirectProvider.SystemName;
 
-        [LoadSetting, AdminAuthorize, ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[LoadSetting, AdminAuthorize, ChildActionOnly]
         public ActionResult Configure(PayPalDirectPaymentSettings settings, int storeScope)
         {
             var model = new PayPalDirectConfigurationModel();
@@ -44,7 +76,33 @@ namespace SmartStore.PayPal.Controllers
             return View(model);
         }
 
-        [HttpPost, AdminAuthorize, ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[HttpPost, AdminAuthorize, ChildActionOnly]
         [ValidateAntiForgeryToken]
         public ActionResult Configure(PayPalDirectConfigurationModel model, FormCollection form)
         {

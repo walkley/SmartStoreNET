@@ -1,12 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection;
-using System.Web.Mvc;
 using Telerik.Web.Mvc;
 using Telerik.Web.Mvc.Extensions;
 using Telerik.Web.Mvc.UI.Fluent;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Framework
 {

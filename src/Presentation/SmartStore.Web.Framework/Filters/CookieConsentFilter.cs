@@ -1,11 +1,12 @@
-﻿using System;
-using System.Web.Mvc;
+using System;
 using Newtonsoft.Json;
 using SmartStore.Core.Domain.Customers;
 using SmartStore.Services;
 using SmartStore.Services.Common;
 using SmartStore.Services.Customers;
 using SmartStore.Web.Framework.UI;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Framework.Filters
 {

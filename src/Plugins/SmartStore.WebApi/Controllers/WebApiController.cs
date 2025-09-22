@@ -1,6 +1,5 @@
-﻿using System;
+using System;
 using System.Linq;
-using System.Web.Mvc;
 using SmartStore.Core.Domain.Common;
 using SmartStore.Core.Security;
 using SmartStore.Web.Framework;
@@ -13,6 +12,10 @@ using SmartStore.WebApi.Models;
 using SmartStore.WebApi.Security;
 using SmartStore.WebApi.Services;
 using Telerik.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
 
 namespace SmartStore.WebApi.Controllers
 {

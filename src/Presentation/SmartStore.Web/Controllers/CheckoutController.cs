@@ -1,8 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
 using SmartStore.Core;
 using SmartStore.Core.Domain.Common;
 using SmartStore.Core.Domain.Customers;
@@ -28,6 +26,12 @@ using SmartStore.Web.Framework.Plugins;
 using SmartStore.Web.Framework.Seo;
 using SmartStore.Web.Models.Checkout;
 using SmartStore.Web.Models.Common;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Http;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
 
 namespace SmartStore.Web.Controllers
 {
@@ -52,7 +56,7 @@ namespace SmartStore.Web.Controllers
         private readonly IPaymentService _paymentService;
         private readonly IOrderTotalCalculationService _orderTotalCalculationService;
         private readonly IOrderService _orderService;
-        private readonly HttpContextBase _httpContext;
+        private readonly HttpContext _httpContext;
         private readonly OrderSettings _orderSettings;
         private readonly PaymentSettings _paymentSettings;
         private readonly AddressSettings _addressSettings;
@@ -81,7 +85,7 @@ namespace SmartStore.Web.Controllers
             IPaymentService paymentService,
             IOrderTotalCalculationService orderTotalCalculationService,
             IOrderService orderService,
-            HttpContextBase httpContext,
+            HttpContext httpContext,
             OrderSettings orderSettings,
             PaymentSettings paymentSettings,
             AddressSettings addressSettings,
@@ -375,7 +379,7 @@ namespace SmartStore.Web.Controllers
         private bool IsValidPaymentForm(IPaymentMethod paymentMethod, FormCollection form)
         {
             var paymentControllerType = paymentMethod.GetControllerType();
-            var paymentController = DependencyResolver.Current.GetService(paymentControllerType) as PaymentControllerBase;
+            var paymentController = HttpContext.RequestServices.GetService(paymentControllerType) as PaymentControllerBase;
             var warnings = paymentController.ValidatePaymentForm(form);
 
             foreach (var warning in warnings)
@@ -962,7 +966,7 @@ namespace SmartStore.Web.Controllers
 
             if (order == null || order.Deleted || _workContext.CurrentCustomer.Id != order.CustomerId)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             //disable "order completed" page?
@@ -977,7 +981,33 @@ namespace SmartStore.Web.Controllers
             return View(model);
         }
 
-        [ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[ChildActionOnly]
         public ActionResult CheckoutProgress(CheckoutProgressStep step)
         {
             var model = new CheckoutProgressModel

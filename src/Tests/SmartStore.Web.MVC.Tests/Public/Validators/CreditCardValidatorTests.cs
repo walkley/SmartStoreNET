@@ -1,8 +1,10 @@
-﻿using System.Globalization;
+using System.Globalization;
 using System.Threading;
 using FluentValidation;
 using NUnit.Framework;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Web.MVC.Tests.Public.Validators
 {

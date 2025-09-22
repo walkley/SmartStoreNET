@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Linq;
 using NUnit.Framework;
@@ -14,6 +14,8 @@ using SmartStore.Services.Media.Storage;
 using SmartStore.Services.Messages;
 using SmartStore.Services.Tests.Configuration;
 using SmartStore.Utilities;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Services.Tests.Messages
 {

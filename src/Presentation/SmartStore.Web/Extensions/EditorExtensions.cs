@@ -1,14 +1,17 @@
-﻿using System;
+using System;
 using System.Text;
-using System.Web.Mvc;
 using SmartStore.Core;
 using SmartStore.Core.Infrastructure;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Html;
+
 
 namespace SmartStore.Web
 {
     public static class EditorExtensions
     {
-        public static MvcHtmlString BBCodeEditor<TModel>(this HtmlHelper<TModel> html, string name)
+        public static HtmlString BBCodeEditor<TModel>(this HtmlHelper<TModel> html, string name)
         {
             var sb = new StringBuilder();
 

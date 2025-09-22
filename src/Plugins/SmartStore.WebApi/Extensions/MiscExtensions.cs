@@ -1,11 +1,12 @@
-﻿using System.Net.Http;
+using System.Net.Http;
 using System.Text;
-using System.Web.Mvc;
 using System.Web.OData;
 using System.Web.OData.Builder;
 using SmartStore.Core.Infrastructure;
 using SmartStore.Services.Localization;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.WebApi
 {

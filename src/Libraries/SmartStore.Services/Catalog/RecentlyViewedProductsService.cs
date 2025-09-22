@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using SmartStore.Core.Domain.Catalog;
 using SmartStore.Core.Domain.Customers;
 using SmartStore.Services.Security;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Services.Catalog
 {
@@ -16,7 +17,7 @@ namespace SmartStore.Services.Catalog
         #region Fields
 
         private readonly ICommonServices _services;
-        private readonly HttpContextBase _httpContext;
+        private readonly HttpContext _httpContext;
         private readonly IProductService _productService;
         private readonly IAclService _aclService;
         private readonly CatalogSettings _catalogSettings;
@@ -34,7 +35,7 @@ namespace SmartStore.Services.Catalog
         /// <param name="catalogSettings">Catalog settings</param>
         public RecentlyViewedProductsService(
             ICommonServices services,
-            HttpContextBase httpContext,
+            HttpContext httpContext,
             IProductService productService,
             IAclService aclService,
             CatalogSettings catalogSettings,

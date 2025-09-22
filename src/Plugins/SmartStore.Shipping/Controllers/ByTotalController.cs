@@ -1,4 +1,3 @@
-﻿using System.Web.Mvc;
 using SmartStore.Core.Domain.Common;
 using SmartStore.Services;
 using SmartStore.Services.Directory;
@@ -9,6 +8,12 @@ using SmartStore.Shipping.Services;
 using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Framework.Security;
 using Telerik.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
 
 namespace SmartStore.Shipping.Controllers
 {

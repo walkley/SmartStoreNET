@@ -1,9 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Web;
-using System.Web.Mvc;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Web.Framework
 {
@@ -36,7 +40,7 @@ namespace SmartStore.Web.Framework
             return new HtmlFieldPrefixScope(html.ViewData.TemplateInfo, htmlFieldPrefix);
         }
 
-        private static Queue<string> GetIdsToReuse(HttpContextBase httpContext, string collectionName)
+        private static Queue<string> GetIdsToReuse(HttpContext httpContext, string collectionName)
         {
             // We need to use the same sequence of IDs following a server-side validation failure,
             // otherwise the framework won't render the validation error messages next to each item.

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -17,6 +17,8 @@ using SmartStore.Services.Directory;
 using SmartStore.Services.Localization;
 using SmartStore.Services.Stores;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Services.Tests.Catalog
 {

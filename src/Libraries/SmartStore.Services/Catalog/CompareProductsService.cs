@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using SmartStore.Core.Domain.Catalog;
 using SmartStore.Core.Domain.Customers;
 using SmartStore.Services.Search;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Services.Catalog
 {
@@ -15,13 +16,13 @@ namespace SmartStore.Services.Catalog
     {
         private const string COMPARE_PRODUCTS_COOKIE_NAME = "sm.CompareProducts";
 
-        private readonly HttpContextBase _httpContext;
+        private readonly HttpContext _httpContext;
         private readonly IProductService _productService;
         private readonly ICatalogSearchService _catalogSearchService;
         private readonly PrivacySettings _privacySettings;
 
         public CompareProductsService(
-            HttpContextBase httpContext,
+            HttpContext httpContext,
             IProductService productService,
             ICatalogSearchService catalogSearchService,
             PrivacySettings privacySettings)

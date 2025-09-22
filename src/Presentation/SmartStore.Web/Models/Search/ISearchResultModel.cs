@@ -1,6 +1,7 @@
-﻿using System.Web.Mvc;
 using Autofac.Integration.Mvc;
 using SmartStore.Services.Search;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Models.Search
 {

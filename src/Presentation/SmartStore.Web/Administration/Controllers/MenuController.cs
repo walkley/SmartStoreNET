@@ -1,7 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web.Mvc;
 using SmartStore.Admin.Models.Menus;
 using SmartStore.ComponentModel;
 using SmartStore.Core.Data;
@@ -20,6 +19,14 @@ using SmartStore.Web.Framework.Modelling;
 using SmartStore.Web.Framework.Security;
 using SmartStore.Web.Framework.UI;
 using Telerik.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Http;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 
 namespace SmartStore.Admin.Controllers
 {
@@ -140,7 +147,7 @@ namespace SmartStore.Admin.Controllers
             var menu = _menuStorage.GetMenuById(id);
             if (menu == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var model = MiniMapper.Map<MenuRecord, MenuRecordModel>(menu);
@@ -163,7 +170,7 @@ namespace SmartStore.Admin.Controllers
             var menu = _menuStorage.GetMenuById(model.Id);
             if (menu == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             if (ModelState.IsValid)
@@ -196,7 +203,7 @@ namespace SmartStore.Admin.Controllers
             var menu = _menuStorage.GetMenuById(id);
             if (menu == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             if (menu.IsSystemMenu)
@@ -232,7 +239,7 @@ namespace SmartStore.Admin.Controllers
             var menu = _menuStorage.GetMenuById(menuId);
             if (menu == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var model = new MenuItemRecordModel
@@ -289,7 +296,7 @@ namespace SmartStore.Admin.Controllers
             var item = _menuStorage.GetMenuItemById(id);
             if (item == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var model = MiniMapper.Map<MenuItemRecord, MenuItemRecordModel>(item);
@@ -315,7 +322,7 @@ namespace SmartStore.Admin.Controllers
             var item = _menuStorage.GetMenuItemById(itemModel.Id);
             if (item == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             if (ModelState.IsValid)
@@ -403,7 +410,7 @@ namespace SmartStore.Admin.Controllers
                     return new EmptyResult();
                 }
 
-                return HttpNotFound();
+                return NotFound();
             }
 
             var menuId = item.MenuId;

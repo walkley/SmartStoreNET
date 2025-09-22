@@ -1,10 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using System.Web;
-using System.Web.Mvc;
 using SmartStore.Core;
 using SmartStore.Core.Data;
 using SmartStore.Core.Domain.Blogs;
@@ -17,6 +16,8 @@ using SmartStore.Services.Security;
 using SmartStore.Services.Seo;
 using SmartStore.Services.Stores;
 using SmartStore.Services.Topics;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Services.Cms
 {

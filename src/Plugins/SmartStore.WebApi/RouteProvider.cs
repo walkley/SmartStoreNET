@@ -1,7 +1,9 @@
-﻿using System.Web.Mvc;
-using System.Web.Routing;
 using SmartStore.Web.Framework.Routing;
 using SmartStore.Web.Framework.WebApi;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.WebApi
 {

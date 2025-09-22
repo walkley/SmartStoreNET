@@ -1,14 +1,17 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Web.Mvc;
 using SmartStore.ComponentModel;
 using SmartStore.Core.Infrastructure;
 using SmartStore.Services.Configuration;
 using SmartStore.Services.Localization;
 using SmartStore.Web.Framework.Localization;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Web.Framework.Settings
 {

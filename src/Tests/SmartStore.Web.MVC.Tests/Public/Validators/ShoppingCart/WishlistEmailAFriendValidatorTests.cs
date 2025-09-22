@@ -1,6 +1,8 @@
-﻿using FluentValidation.TestHelper;
+using FluentValidation.TestHelper;
 using NUnit.Framework;
 using SmartStore.Web.Models.ShoppingCart;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Web.MVC.Tests.Public.Validators.ShoppingCart
 {

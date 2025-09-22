@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -21,7 +21,8 @@ using SmartStore.Utilities;
 // SEE THIS POST for full details of what this does
 //http://shazwazza.com/post/Developing-a-plugin-framework-in-ASPNET-with-medium-trust.aspx
 
-[assembly: PreApplicationStartMethod(typeof(PluginManager), "Initialize")]
+// Removed PreApplicationStartMethod attribute as it's not available in .NET Core
+// The initialization will need to be called explicitly from Program.cs or Startup.cs
 namespace SmartStore.Core.Plugins
 {
     /// <summary>
@@ -55,7 +56,7 @@ namespace SmartStore.Core.Plugins
         /// </summary>
         public static string PluginsLocation { get; } = "~/Plugins";
 
-        /// <summary> 
+        /// <summary>
         /// Returns a collection of all referenced plugin assemblies that have been shadow copied
         /// </summary>
         public static IEnumerable<PluginDescriptor> ReferencedPlugins
@@ -158,7 +159,7 @@ namespace SmartStore.Core.Plugins
             //// Therefore we retry initialization for failed plugins, but sequentially this time.
             //foreach (var p in plugins)
             //{
-            //	// INFO: this seems redundant, but it's ok: 
+            //	// INFO: this seems redundant, but it's ok:
             //	// DeployPlugin() only probes assemblies that are not loaded yet.
             //	DeployPlugin(p, dirty);
 
@@ -434,8 +435,8 @@ namespace SmartStore.Core.Plugins
         /// to be compatible with the current app version
         /// </summary>
         /// <remarks>
-        /// A plugin is generally compatible when both app version and plugin's 
-        /// <c>MinorAppVersion</c> are equal, OR - when app version is greater - it is 
+        /// A plugin is generally compatible when both app version and plugin's
+        /// <c>MinorAppVersion</c> are equal, OR - when app version is greater - it is
         /// assumed to be compatible when no breaking changes occured since <c>MinorAppVersion</c>.
         /// </remarks>
         /// <param name="descriptor">The plugin to check</param>
@@ -452,8 +453,8 @@ namespace SmartStore.Core.Plugins
         /// to be compatible with the current app version
         /// </summary>
         /// <remarks>
-        /// A plugin is generally compatible when both app version and plugin's 
-        /// <c>MinorAppVersion</c> are equal, OR - when app version is greater - it is 
+        /// A plugin is generally compatible when both app version and plugin's
+        /// <c>MinorAppVersion</c> are equal, OR - when app version is greater - it is
         /// assumed to be compatible when no breaking changes occured since <c>MinorAppVersion</c>.
         /// </remarks>
         /// <param name="minAppVersion">The min. app version to check for</param>
@@ -586,7 +587,7 @@ namespace SmartStore.Core.Plugins
             {
                 Logger.Error(ex.Message);
 
-                // Throw the exception if its UnauthorizedAccessException as this will 
+                // Throw the exception if its UnauthorizedAccessException as this will
                 // be because we most likely cannot copy to the dynamic folder.
                 throw;
             }

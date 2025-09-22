@@ -1,17 +1,18 @@
-﻿using System.Linq;
-using System.Web;
+using System.Linq;
 using SmartStore.Collections;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Services.Search
 {
     public abstract partial class SearchQueryFactoryBase
     {
-        protected readonly HttpContextBase _httpContext;
+        protected readonly HttpContext _httpContext;
 
         private Multimap<string, string> _aliases;
 
-        protected SearchQueryFactoryBase(HttpContextBase httpContext)
+        protected SearchQueryFactoryBase(HttpContext httpContext)
         {
             _httpContext = httpContext;
         }

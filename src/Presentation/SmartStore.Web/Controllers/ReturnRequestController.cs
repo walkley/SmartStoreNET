@@ -1,6 +1,5 @@
-﻿using System;
+using System;
 using System.Linq;
-using System.Web.Mvc;
 using SmartStore.Core.Domain.Localization;
 using SmartStore.Core.Domain.Orders;
 using SmartStore.Core.Domain.Tax;
@@ -14,6 +13,12 @@ using SmartStore.Services.Seo;
 using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Framework.Seo;
 using SmartStore.Web.Models.Order;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Web.Controllers
 {

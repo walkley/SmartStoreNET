@@ -1,7 +1,9 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using SmartStore.Core.Domain.Security;
 using SmartStore.Services.Security;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Services.Tests.Security
 {

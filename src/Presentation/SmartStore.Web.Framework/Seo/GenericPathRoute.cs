@@ -1,14 +1,16 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Routing;
 using SmartStore.Collections;
 using SmartStore.Core;
 using SmartStore.Core.Data;
 using SmartStore.Core.Infrastructure;
 using SmartStore.Services.Seo;
 using SmartStore.Web.Framework.Localization;
+using Microsoft.AspNetCore.Routing;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Web.Framework.Seo
 {
@@ -120,7 +122,7 @@ namespace SmartStore.Web.Framework.Seo
         /// <returns>
         /// An object that contains the values from the route definition.
         /// </returns>
-        public override RouteData GetRouteData(HttpContextBase httpContext)
+        public override RouteData GetRouteData(HttpContext httpContext)
         {
             RouteData data = base.GetRouteData(httpContext);
 

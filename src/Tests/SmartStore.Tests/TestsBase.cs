@@ -1,6 +1,8 @@
-﻿using System.Security.Principal;
+using System.Security.Principal;
 using NUnit.Framework;
 using Rhino.Mocks;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Tests
 {

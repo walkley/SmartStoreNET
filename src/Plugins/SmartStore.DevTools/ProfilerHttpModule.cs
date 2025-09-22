@@ -1,16 +1,18 @@
-﻿using System;
-using System.Web;
+using System;
 using SmartStore.Core.Data;
 using SmartStore.Core.Infrastructure;
 using StackExchange.Profiling;
+using Microsoft.AspNetCore.Http;
+
+using System.Threading.Tasks;
+
 
 namespace SmartStore.DevTools
 {
-    public class ProfilerHttpModule : IHttpModule
-    {
-        private const string MP_KEY = "sm.miniprofiler.started";
-
-        public void Init(HttpApplication context)
+    public class ProfilerHttpModule     {
+RequestDelegate _next = null;        private const string MP_KEY = "sm.miniprofiler.started";
+/*/* This method is used to register events. */
+public void Init(HttpApplication context)
         {
             if (DevToolsPlugin.HasPendingMigrations())
             {
@@ -19,8 +21,7 @@ namespace SmartStore.DevTools
 
             context.AcquireRequestState += OnAcquireRequestState;
             context.EndRequest += OnEndRequest;
-        }
-
+        }*/
         private static void OnAcquireRequestState(object sender, EventArgs e)
         {
             var app = (HttpApplication)sender;
@@ -89,5 +90,5 @@ namespace SmartStore.DevTools
         {
             // nothing to dispose
         }
-    }
+publicProfilerHttpModule(RequestDelegatenext){_next = next;}    }
 }

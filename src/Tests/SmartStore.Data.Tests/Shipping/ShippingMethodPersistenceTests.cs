@@ -1,7 +1,9 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using SmartStore.Core.Domain.Directory;
 using SmartStore.Core.Domain.Shipping;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Data.Tests.Shipping
 {

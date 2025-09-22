@@ -1,7 +1,9 @@
-﻿using System;
+using System;
 using NUnit.Framework;
 using SmartStore.Services.Configuration;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Services.Tests.Configuration
 {

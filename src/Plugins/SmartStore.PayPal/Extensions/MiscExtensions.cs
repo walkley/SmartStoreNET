@@ -1,9 +1,10 @@
-﻿using System.Web;
 using Newtonsoft.Json;
 using SmartStore.Core.Domain.Customers;
 using SmartStore.PayPal.Services;
 using SmartStore.PayPal.Settings;
 using SmartStore.Services.Common;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.PayPal
 {
@@ -16,7 +17,7 @@ namespace SmartStore.PayPal
                 "https://www.paypal.com/cgi-bin/webscr";
         }
 
-        public static PayPalSessionData GetPayPalState(this HttpContextBase httpContext, string providerSystemName)
+        public static PayPalSessionData GetPayPalState(this HttpContext httpContext, string providerSystemName)
         {
             Guard.NotEmpty(providerSystemName, nameof(providerSystemName));
 
@@ -32,7 +33,7 @@ namespace SmartStore.PayPal
         }
 
         public static PayPalSessionData GetPayPalState(
-            this HttpContextBase httpContext,
+            this HttpContext httpContext,
             string providerSystemName,
             Customer customer,
             int storeId,

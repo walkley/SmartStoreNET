@@ -1,6 +1,7 @@
-﻿using System;
-using System.Web.Mvc;
+using System;
 using SmartStore.Web.Framework.UI;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.PayPal.Filters
 {

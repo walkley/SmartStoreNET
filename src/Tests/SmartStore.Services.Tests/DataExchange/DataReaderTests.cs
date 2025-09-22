@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -7,6 +7,8 @@ using SmartStore.Services.DataExchange.Csv;
 using SmartStore.Services.DataExchange.Excel;
 using SmartStore.Services.DataExchange.Import;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Services.Tests.DataExchange
 {

@@ -1,6 +1,7 @@
-﻿using System.Web.Mvc;
 using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Infrastructure;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Controllers
 {
@@ -9,7 +10,7 @@ namespace SmartStore.Web.Controllers
         [MapLegacyRoutes]
         public ActionResult NotFound()
         {
-            return HttpNotFound();
+            return NotFound();
         }
 
         public ActionResult Index()

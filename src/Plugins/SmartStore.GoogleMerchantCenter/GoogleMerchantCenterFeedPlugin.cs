@@ -1,10 +1,11 @@
-﻿using System.Data.Entity.Migrations;
-using System.Web.Routing;
+using System.Data.Entity.Migrations;
 using SmartStore.Core.Plugins;
 using SmartStore.GoogleMerchantCenter.Data.Migrations;
 using SmartStore.GoogleMerchantCenter.Providers;
 using SmartStore.Services;
 using SmartStore.Services.DataExchange.Export;
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.GoogleMerchantCenter
 {

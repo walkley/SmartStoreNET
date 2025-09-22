@@ -1,12 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Web;
-using System.Web.Routing;
 using Newtonsoft.Json.Linq;
 using SmartStore.Collections;
 using SmartStore.Core;
 using SmartStore.Core.IO;
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.Web.Framework.UI
 {

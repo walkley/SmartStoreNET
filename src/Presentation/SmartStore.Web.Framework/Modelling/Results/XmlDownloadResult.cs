@@ -1,7 +1,8 @@
-﻿using System.Text;
-using System.Web.Mvc;
+using System.Text;
 using System.Xml;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Mvc;
+
 
 // ReSharper disable once CheckNamespace
 namespace SmartStore.Web.Framework.Modelling

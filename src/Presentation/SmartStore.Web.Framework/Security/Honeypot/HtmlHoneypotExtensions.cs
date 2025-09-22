@@ -1,11 +1,16 @@
-﻿using System.Web.Mvc;
 using System.Web.Mvc.Html;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Html;
+
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+
 
 namespace SmartStore.Web.Framework.Security
 {
     public static class HtmlHoneypotExtensions
     {
-        public static MvcHtmlString HoneypotField(this HtmlHelper html)
+        public static HtmlString HoneypotField(this HtmlHelper html)
         {
             var token = Honeypot.CreateToken();
             var serializedToken = Honeypot.SerializeToken(token);

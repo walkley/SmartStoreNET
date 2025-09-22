@@ -1,12 +1,13 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using SmartStore.AmazonPay.Services;
 using SmartStore.Core.Data;
 using SmartStore.Core.Domain.Common;
 using SmartStore.Core.Domain.Orders;
 using SmartStore.Services.Common;
 using SmartStore.Services.Localization;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.AmazonPay
 {
@@ -86,7 +87,7 @@ namespace SmartStore.AmazonPay
             }
         }
 
-        internal static bool HasAmazonPayState(this HttpContextBase httpContext)
+        internal static bool HasAmazonPayState(this HttpContext httpContext)
         {
             var checkoutState = httpContext.GetCheckoutState();
             var checkoutStateKey = AmazonPayPlugin.SystemName + ".CheckoutState";
@@ -101,7 +102,7 @@ namespace SmartStore.AmazonPay
             return false;
         }
 
-        internal static AmazonPayCheckoutState GetAmazonPayState(this HttpContextBase httpContext, ILocalizationService localizationService)
+        internal static AmazonPayCheckoutState GetAmazonPayState(this HttpContext httpContext, ILocalizationService localizationService)
         {
             var checkoutState = httpContext.GetCheckoutState();
 

@@ -1,8 +1,9 @@
-﻿using System;
-using System.Web;
+using System;
 using SmartStore.Core.Infrastructure;
 using SmartStore.Core.Plugins;
 using SmartStore.Services.Localization;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Web.Framework.Plugins
 {
@@ -24,7 +25,7 @@ namespace SmartStore.Web.Framework.Plugins
         public bool ThrowOnError => false;
         public int MaxAttempts => 1;
 
-        public void Start(HttpContextBase httpContext)
+        public void Start(HttpContext httpContext)
         {
             //if (!PluginManager.PluginChangeDetected)
             //    return;

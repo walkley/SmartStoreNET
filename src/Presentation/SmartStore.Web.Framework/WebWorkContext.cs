@@ -1,6 +1,5 @@
-﻿using System;
+using System;
 using System.Linq;
-using System.Web;
 using SmartStore.Core;
 using SmartStore.Core.Caching;
 using SmartStore.Core.Domain.Customers;
@@ -14,6 +13,8 @@ using SmartStore.Services.Customers;
 using SmartStore.Services.Directory;
 using SmartStore.Services.Localization;
 using SmartStore.Services.Tax;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Web.Framework
 {
@@ -21,7 +22,7 @@ namespace SmartStore.Web.Framework
     {
         private const string VisitorCookieName = "SMARTSTORE.VISITOR";
 
-        private readonly HttpContextBase _httpContext;
+        private readonly HttpContext _httpContext;
         private readonly ICustomerService _customerService;
         private readonly IStoreContext _storeContext;
         private readonly IAuthenticationService _authenticationService;
@@ -47,7 +48,7 @@ namespace SmartStore.Web.Framework
 
         public WebWorkContext(
             ICacheManager cacheManager,
-            HttpContextBase httpContext,
+            HttpContext httpContext,
             ICustomerService customerService,
             IStoreContext storeContext,
             IAuthenticationService authenticationService,

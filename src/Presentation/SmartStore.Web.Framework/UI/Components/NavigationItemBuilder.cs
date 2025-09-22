@@ -1,10 +1,16 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Web.Mvc;
 using System.Web.Mvc.Html;
-using System.Web.Routing;
 using System.Web.WebPages;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Routing;
+
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+
+using Microsoft.AspNetCore.Html;
+
 
 namespace SmartStore.Web.Framework.UI
 {
@@ -266,7 +272,7 @@ namespace SmartStore.Web.Framework.UI
         {
             return this.Content(x => new HelperResult(writer =>
             {
-                var value = this.HtmlHelper.Action(action, controller, routeValues);
+                HtmlString value = this.HtmlHelper.Action(action, controller, routeValues);
                 writer.Write(value);
             }));
         }

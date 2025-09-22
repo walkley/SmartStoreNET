@@ -1,7 +1,6 @@
-//Contributor:  Nicholas Mayne
-
-using System.Web.Routing;
 using SmartStore.Core.Plugins;
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.Services.Authentication.External
 {

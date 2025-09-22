@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -6,7 +6,6 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Web;
-using System.Web.Mvc;
 using SmartStore.Core.Configuration;
 using SmartStore.Core.Domain.Orders;
 using SmartStore.Core.Domain.Payments;
@@ -16,6 +15,8 @@ using SmartStore.PayPal.Settings;
 using SmartStore.Services.Orders;
 using SmartStore.Services.Payments;
 using SmartStore.Web.Framework.Controllers;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.PayPal.Controllers
 {

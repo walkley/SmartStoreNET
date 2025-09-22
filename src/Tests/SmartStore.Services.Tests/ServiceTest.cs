@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using NUnit.Framework;
 using SmartStore.Core.Plugins;
 using SmartStore.Services.Media.Storage;
@@ -7,6 +7,8 @@ using SmartStore.Services.Tests.Media.Storage;
 using SmartStore.Services.Tests.Payments;
 using SmartStore.Services.Tests.Shipping;
 using SmartStore.Services.Tests.Tax;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Services.Tests
 {

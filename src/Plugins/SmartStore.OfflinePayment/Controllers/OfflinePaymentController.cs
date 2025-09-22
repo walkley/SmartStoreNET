@@ -1,8 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
 using Autofac;
 using FluentValidation;
 using FluentValidation.Results;
@@ -15,17 +13,25 @@ using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Framework.Security;
 using SmartStore.Web.Framework.Settings;
 using SmartStore.Web.Framework.Theming;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Http;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
 
 namespace SmartStore.OfflinePayment.Controllers
 {
     public class OfflinePaymentController : PaymentControllerBase
     {
         private readonly IComponentContext _ctx;
-        private readonly HttpContextBase _httpContext;
+        private readonly HttpContext _httpContext;
         private readonly IMediaService _mediaService;
 
         public OfflinePaymentController(
-            HttpContextBase httpContext,
+            HttpContext httpContext,
             IComponentContext ctx,
             IMediaService mediaService)
         {
@@ -277,7 +283,33 @@ namespace SmartStore.OfflinePayment.Controllers
 
         #region CashOnDelivery
 
-        [AdminAuthorize, AdminThemed, ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[AdminAuthorize, AdminThemed, ChildActionOnly]
         public ActionResult CashOnDeliveryConfigure()
         {
             var model = ConfigureGet<CashOnDeliveryConfigurationModel, CashOnDeliveryPaymentSettings>();
@@ -285,7 +317,33 @@ namespace SmartStore.OfflinePayment.Controllers
             return View("GenericConfigure", model);
         }
 
-        [HttpPost, AdminAuthorize, AdminThemed, ChildActionOnly, ValidateInput(false)]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[HttpPost, AdminAuthorize, AdminThemed, ChildActionOnly, ValidateInput(false)]
         [ValidateAntiForgeryToken]
         public ActionResult CashOnDeliveryConfigure(CashOnDeliveryConfigurationModel model, FormCollection form)
         {
@@ -307,7 +365,33 @@ namespace SmartStore.OfflinePayment.Controllers
 
         #region Invoice
 
-        [ChildActionOnly, AdminThemed, AdminAuthorize]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[ChildActionOnly, AdminThemed, AdminAuthorize]
         public ActionResult InvoiceConfigure()
         {
             var model = ConfigureGet<InvoiceConfigurationModel, InvoicePaymentSettings>();
@@ -315,7 +399,33 @@ namespace SmartStore.OfflinePayment.Controllers
             return View("GenericConfigure", model);
         }
 
-        [HttpPost, AdminAuthorize, AdminThemed, ChildActionOnly, ValidateInput(false)]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[HttpPost, AdminAuthorize, AdminThemed, ChildActionOnly, ValidateInput(false)]
         [ValidateAntiForgeryToken]
         public ActionResult InvoiceConfigure(InvoiceConfigurationModel model, FormCollection form)
         {
@@ -337,7 +447,33 @@ namespace SmartStore.OfflinePayment.Controllers
 
         #region PayInStore
 
-        [ChildActionOnly, AdminThemed, AdminAuthorize]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[ChildActionOnly, AdminThemed, AdminAuthorize]
         public ActionResult PayInStoreConfigure()
         {
             var model = ConfigureGet<PayInStoreConfigurationModel, PayInStorePaymentSettings>();
@@ -345,7 +481,33 @@ namespace SmartStore.OfflinePayment.Controllers
             return View("GenericConfigure", model);
         }
 
-        [HttpPost, AdminAuthorize, AdminThemed, ChildActionOnly, ValidateInput(false)]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[HttpPost, AdminAuthorize, AdminThemed, ChildActionOnly, ValidateInput(false)]
         [ValidateAntiForgeryToken]
         public ActionResult PayInStoreConfigure(PayInStoreConfigurationModel model, FormCollection form)
         {
@@ -367,7 +529,33 @@ namespace SmartStore.OfflinePayment.Controllers
 
         #region Prepayment
 
-        [AdminAuthorize, AdminThemed, ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[AdminAuthorize, AdminThemed, ChildActionOnly]
         public ActionResult PrepaymentConfigure()
         {
             var model = ConfigureGet<PrepaymentConfigurationModel, PrepaymentPaymentSettings>();
@@ -375,7 +563,33 @@ namespace SmartStore.OfflinePayment.Controllers
             return View("GenericConfigure", model);
         }
 
-        [HttpPost, AdminAuthorize, AdminThemed, ChildActionOnly, ValidateInput(false)]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[HttpPost, AdminAuthorize, AdminThemed, ChildActionOnly, ValidateInput(false)]
         [ValidateAntiForgeryToken]
         public ActionResult PrepaymentConfigure(PrepaymentConfigurationModel model, FormCollection form)
         {
@@ -397,7 +611,33 @@ namespace SmartStore.OfflinePayment.Controllers
 
         #region DirectDebit
 
-        [AdminAuthorize, AdminThemed, ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[AdminAuthorize, AdminThemed, ChildActionOnly]
         public ActionResult DirectDebitConfigure()
         {
             var model = ConfigureGet<DirectDebitConfigurationModel, DirectDebitPaymentSettings>();
@@ -405,7 +645,33 @@ namespace SmartStore.OfflinePayment.Controllers
             return View("GenericConfigure", model);
         }
 
-        [HttpPost, AdminAuthorize, AdminThemed, ChildActionOnly, ValidateInput(false)]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[HttpPost, AdminAuthorize, AdminThemed, ChildActionOnly, ValidateInput(false)]
         [ValidateAntiForgeryToken]
         public ActionResult DirectDebitConfigure(DirectDebitConfigurationModel model, FormCollection form)
         {
@@ -437,7 +703,33 @@ namespace SmartStore.OfflinePayment.Controllers
 
         #region Manual
 
-        [AdminAuthorize, AdminThemed, ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[AdminAuthorize, AdminThemed, ChildActionOnly]
         public ActionResult ManualConfigure()
         {
             var model = ConfigureGet<ManualConfigurationModel, ManualPaymentSettings>((m, s) =>
@@ -459,7 +751,33 @@ namespace SmartStore.OfflinePayment.Controllers
             return View(model);
         }
 
-        [HttpPost, AdminAuthorize, AdminThemed, ChildActionOnly, ValidateInput(false)]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[HttpPost, AdminAuthorize, AdminThemed, ChildActionOnly, ValidateInput(false)]
         [ValidateAntiForgeryToken]
         public ActionResult ManualConfigure(ManualConfigurationModel model, FormCollection form)
         {
@@ -536,7 +854,33 @@ namespace SmartStore.OfflinePayment.Controllers
 
         #region PurchaseOrderNumber
 
-        [AdminAuthorize, AdminThemed, ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[AdminAuthorize, AdminThemed, ChildActionOnly]
         public ActionResult PurchaseOrderNumberConfigure()
         {
             var model = ConfigureGet<PurchaseOrderNumberConfigurationModel, PurchaseOrderNumberPaymentSettings>();
@@ -544,7 +888,33 @@ namespace SmartStore.OfflinePayment.Controllers
             return View("GenericConfigure", model);
         }
 
-        [HttpPost, AdminAuthorize, AdminThemed, ChildActionOnly, ValidateInput(false)]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[HttpPost, AdminAuthorize, AdminThemed, ChildActionOnly, ValidateInput(false)]
         [ValidateAntiForgeryToken]
         public ActionResult PurchaseOrderNumberConfigure(PurchaseOrderNumberConfigurationModel model, FormCollection form)
         {

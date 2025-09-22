@@ -1,5 +1,6 @@
-﻿using System.Web.Mvc;
 using SmartStore.Services.Pdf;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Framework.Pdf
 {

@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using System.Data.Entity;
 using SmartStore.Core;
@@ -13,9 +13,10 @@ using SmartStore.Services.Customers;
 using SmartStore.Services.Seo;
 using SmartStore.Core.Domain.Seo;
 using SmartStore.Core.Domain.Localization;
-using System.Web.Mvc;
 using System;
 using SmartStore.Data.Utilities;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Services.Forums
 {

@@ -1,15 +1,16 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
 using SmartStore.Core.Data;
 using SmartStore.Core.Infrastructure.DependencyManagement;
 using SmartStore.Core.Logging;
 using SmartStore.Core.Plugins;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Core.Infrastructure
 {
@@ -108,7 +109,8 @@ namespace SmartStore.Core.Infrastructure
             _containerManager = new ContainerManager(container);
 
             // MVC dependency resolver
-            DependencyResolver.SetResolver(container.Resolve<IDependencyResolver>());
+            /* Added by CTA: This method is not supported. Use the startup class to register dependency containers */
+DependencyResolver.SetResolver(container.Resolve<IDependencyResolver>());
 
             // Logger
             this.Logger = container.Resolve<ILoggerFactory>().GetLogger("SmartStore.Bootstrapper");

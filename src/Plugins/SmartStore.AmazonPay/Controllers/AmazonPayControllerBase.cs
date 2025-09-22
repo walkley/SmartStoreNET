@@ -1,7 +1,8 @@
-﻿using System.Web.Mvc;
 using SmartStore.AmazonPay.Models;
 using SmartStore.AmazonPay.Services;
 using SmartStore.Web.Framework.Controllers;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.AmazonPay.Controllers
 {

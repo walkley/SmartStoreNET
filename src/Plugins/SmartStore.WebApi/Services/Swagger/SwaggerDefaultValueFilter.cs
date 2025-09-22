@@ -1,6 +1,5 @@
-﻿using System;
+using System;
 using System.Linq;
-using System.Web.Http.Description;
 using Swashbuckle.Swagger;
 
 namespace SmartStore.WebApi.Services.Swagger

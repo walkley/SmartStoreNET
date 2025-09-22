@@ -1,6 +1,5 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Web.Mvc;
 using System.Web.Script.Serialization;
 using FluentValidation;
 using FluentValidation.Attributes;
@@ -9,6 +8,8 @@ using SmartStore.Collections;
 using SmartStore.Web.Framework;
 using SmartStore.Web.Framework.Localization;
 using SmartStore.Web.Framework.Modelling;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Admin.Models.Messages
 {

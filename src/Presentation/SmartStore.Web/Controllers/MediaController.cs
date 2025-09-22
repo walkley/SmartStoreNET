@@ -1,12 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using System.Web.Mvc;
-using System.Web.Routing;
 using System.Web.SessionState;
 using SmartStore.Core;
 using SmartStore.Core.Domain.Media;
@@ -23,6 +21,10 @@ using SmartStore.Utilities;
 using SmartStore.Web.Framework.Localization;
 using SmartStore.Web.Framework.Modelling;
 using SmartStore.Web.Framework.Seo;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.Web.Controllers
 {
@@ -82,7 +84,7 @@ namespace SmartStore.Web.Controllers
         public async Task<ActionResult> XmlSitemap(int? index = null)
         {
             if (!_seoSettings.Value.XmlSitemapEnabled)
-                return HttpNotFound();
+                return NotFound();
 
             try
             {

@@ -1,6 +1,5 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Web.Mvc;
 using System.Web.SessionState;
 using SmartStore.Collections;
 using SmartStore.Core.Domain.Customers;
@@ -8,6 +7,8 @@ using SmartStore.Core.Domain.Stores;
 using SmartStore.Services;
 using SmartStore.Services.Customers;
 using SmartStore.Services.Tasks;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Controllers
 {
@@ -90,7 +91,7 @@ namespace SmartStore.Web.Controllers
             var task = _scheduleTaskService.GetTaskById(id);
             if (task == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var taskParameters = QueryString.Current.ToDictionary();

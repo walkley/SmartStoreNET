@@ -1,10 +1,11 @@
-﻿using System;
-using System.Web.Mvc;
+using System;
 using SmartStore.Core;
 using SmartStore.Core.Data;
 using SmartStore.Core.Domain.Localization;
 using SmartStore.Services.Localization;
 using SmartStore.Web.Framework.Filters;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Framework.Localization
 {

@@ -1,22 +1,25 @@
-﻿using System;
-using System.Web;
+using System;
 using Autofac.Integration.Mvc;
+using Microsoft.AspNetCore.Http;
+
+using System.Threading.Tasks;
+
 
 namespace SmartStore.Core.Infrastructure.DependencyManagement
 {
     /// <summary>
-    /// An <see cref="IHttpModule"/> and <see cref="ILifetimeScopeProvider"/> implementation 
+    /// An <see cref="IHttpModule"/> and <see cref="ILifetimeScopeProvider"/> implementation
     /// that creates a nested lifetime scope for each HTTP request.
     /// </summary>
-    public class AutofacRequestLifetimeHttpModule : IHttpModule
-    {
-        public void Init(HttpApplication context)
+public class AutofacRequestLifetimeHttpModule     {
+RequestDelegate _next = null;
+/* This method is used to register events. */
+public void Init(HttpApplication context)
         {
             Guard.NotNull(context, nameof(context));
 
             context.EndRequest += OnEndRequest;
         }
-
         public static void OnEndRequest(object sender, EventArgs e)
         {
             if (LifetimeScopeProvider != null)
@@ -71,6 +74,6 @@ namespace SmartStore.Core.Infrastructure.DependencyManagement
         public void Dispose()
         {
         }
-
+public AutofacRequestLifetimeHttpModule(RequestDelegate next){_next = next;}
     }
 }

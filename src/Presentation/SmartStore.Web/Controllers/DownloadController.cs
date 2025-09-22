@@ -1,7 +1,6 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
 using SmartStore.Core;
 using SmartStore.Core.Domain.Customers;
 using SmartStore.Core.Domain.Media;
@@ -11,6 +10,8 @@ using SmartStore.Services.Media;
 using SmartStore.Services.Orders;
 using SmartStore.Services.Seo;
 using SmartStore.Web.Framework.Controllers;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Controllers
 {
@@ -63,7 +64,7 @@ namespace SmartStore.Web.Controllers
         {
             var product = _productService.GetProductById(productId);
             if (product == null)
-                return HttpNotFound();
+                return NotFound();
 
             if (!product.HasSampleDownload)
             {
@@ -87,11 +88,11 @@ namespace SmartStore.Web.Controllers
         public ActionResult GetDownload(Guid id, bool agree = false, string fileVersion = "")
         {
             if (id == Guid.Empty)
-                return HttpNotFound();
+                return NotFound();
 
             var orderItem = _orderService.GetOrderItemByGuid(id);
             if (orderItem == null)
-                return HttpNotFound();
+                return NotFound();
 
             var order = orderItem.Order;
             var product = orderItem.Product;
@@ -175,11 +176,11 @@ namespace SmartStore.Web.Controllers
         public ActionResult GetLicense(Guid id)
         {
             if (id == Guid.Empty)
-                return HttpNotFound();
+                return NotFound();
 
             var orderItem = _orderService.GetOrderItemByGuid(id);
             if (orderItem == null)
-                return HttpNotFound();
+                return NotFound();
 
             var order = orderItem.Order;
             var product = orderItem.Product;

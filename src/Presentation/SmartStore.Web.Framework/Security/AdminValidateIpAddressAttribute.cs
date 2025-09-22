@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Web;
-using System.Web.Mvc;
 using SmartStore.Core;
 using SmartStore.Core.Domain.Security;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Framework.Security
 {

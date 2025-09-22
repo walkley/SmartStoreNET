@@ -1,12 +1,13 @@
-﻿using System;
+using System;
 using System.Web;
-using System.Web.Mvc;
 using SmartStore.Core.Localization;
 using SmartStore.Core.Logging;
 using SmartStore.Services;
 using SmartStore.Web.Framework.Filters;
 using SmartStore.Web.Framework.Localization;
 using SmartStore.Web.Framework.Modelling;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Framework.Controllers
 {
@@ -175,7 +176,7 @@ namespace SmartStore.Web.Framework.Controllers
                 return fallbackResult();
             }
 
-            return HttpNotFound();
+            return NotFound();
         }
 
         /// <summary>

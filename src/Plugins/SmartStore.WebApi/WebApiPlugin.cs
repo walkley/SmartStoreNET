@@ -1,10 +1,11 @@
-﻿using System.Web.Routing;
 using SmartStore.Core.Plugins;
 using SmartStore.Core.Security;
 using SmartStore.Services.Configuration;
 using SmartStore.Services.Localization;
 using SmartStore.Web.Framework.WebApi;
 using SmartStore.Web.Framework.WebApi.Caching;
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.WebApi
 {

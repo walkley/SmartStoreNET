@@ -1,6 +1,7 @@
-﻿using System.ServiceModel.Syndication;
-using System.Web.Mvc;
+using System.ServiceModel.Syndication;
 using System.Xml;
+using Microsoft.AspNetCore.Mvc;
+
 
 // ReSharper disable once CheckNamespace
 namespace SmartStore.Web.Framework.Modelling

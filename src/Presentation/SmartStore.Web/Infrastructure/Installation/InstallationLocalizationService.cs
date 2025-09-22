@@ -1,14 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
-using System.Web;
 using System.Xml;
 using SmartStore.Core;
 using SmartStore.Core.Infrastructure;
 using SmartStore.Data.Setup;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Web.Infrastructure.Installation
 {
@@ -45,7 +46,7 @@ namespace SmartStore.Web.Infrastructure.Installation
 
         public virtual InstallationLanguage GetCurrentLanguage()
         {
-            var httpContext = EngineContext.Current.Resolve<HttpContextBase>();
+            HttpContext httpContext = EngineContext.Current.Resolve<HttpContext>();
 
             var cookieLanguageCode = "";
             var cookie = httpContext.Request.Cookies[LanguageCookieName];
@@ -94,7 +95,7 @@ namespace SmartStore.Web.Infrastructure.Installation
 
         public virtual void SaveCurrentLanguage(string languageCode)
         {
-            var httpContext = EngineContext.Current.Resolve<HttpContextBase>();
+            HttpContext httpContext = EngineContext.Current.Resolve<HttpContext>();
 
             var cookie = new HttpCookie(LanguageCookieName);
             cookie.HttpOnly = true;

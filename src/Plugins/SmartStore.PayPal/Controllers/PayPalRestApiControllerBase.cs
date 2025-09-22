@@ -1,7 +1,6 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Net;
-using System.Web.Mvc;
 using SmartStore.ComponentModel;
 using SmartStore.Core.Configuration;
 using SmartStore.Core.Logging;
@@ -11,6 +10,12 @@ using SmartStore.PayPal.Settings;
 using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Framework.Security;
 using SmartStore.Web.Framework.Settings;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Http;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
 
 namespace SmartStore.PayPal.Controllers
 {
