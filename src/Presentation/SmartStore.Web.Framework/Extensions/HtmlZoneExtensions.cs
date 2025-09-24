@@ -1,9 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Web;
-using System.Web.Mvc;
 using SmartStore.Collections;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+
 
 namespace SmartStore.Web.Framework
 {

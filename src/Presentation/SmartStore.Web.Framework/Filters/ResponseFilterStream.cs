@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using System.IO;
-using System.Web;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Web.Framework.Filters
 {
@@ -15,7 +16,7 @@ namespace SmartStore.Web.Framework.Filters
     /// </summary>    
     public class ResponseFilterStream : Stream
     {
-        private readonly HttpContextBase _httpContext;
+        private readonly HttpContext _httpContext;
 
         /// <summary>
         /// The original stream
@@ -44,7 +45,7 @@ namespace SmartStore.Web.Framework.Filters
         /// </summary>
         /// <param name="innerStream">Original inner stream</param>
         /// <param name="capacity">Initial capacity of the capture stream</param>
-        public ResponseFilterStream(Stream innerStream, HttpContextBase httpContext, int capacity = 5000)
+        public ResponseFilterStream(Stream innerStream, HttpContext httpContext, int capacity = 5000)
         {
             Guard.NotNull(innerStream, nameof(innerStream));
             Guard.NotNull(httpContext, nameof(httpContext));

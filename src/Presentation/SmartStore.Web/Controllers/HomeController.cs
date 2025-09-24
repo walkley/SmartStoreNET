@@ -1,5 +1,4 @@
-﻿using System;
-using System.Web.Mvc;
+using System;
 using SmartStore.Core.Domain;
 using SmartStore.Core.Domain.Common;
 using SmartStore.Core.Domain.Customers;
@@ -14,6 +13,10 @@ using SmartStore.Web.Framework.Filters;
 using SmartStore.Web.Framework.Security;
 using SmartStore.Web.Framework.Seo;
 using SmartStore.Web.Models.Common;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
 
 namespace SmartStore.Web.Controllers
 {

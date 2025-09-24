@@ -1,5 +1,4 @@
-﻿using System;
-using System.Web.Mvc;
+using System;
 using SmartStore.Core;
 using SmartStore.Core.Domain.Customers;
 using SmartStore.Core.Domain.Messages;
@@ -8,6 +7,8 @@ using SmartStore.Services.Messages;
 using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Framework.Filters;
 using SmartStore.Web.Models.Newsletter;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Controllers
 {
@@ -117,7 +118,7 @@ namespace SmartStore.Web.Controllers
             var subscription = _newsLetterSubscriptionService.GetNewsLetterSubscriptionByGuid(token);
             if (subscription == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var model = new SubscriptionActivationModel();

@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-using System.Web.Mvc;
 using SmartStore.Admin.Models.Tasks;
 using SmartStore.Core.Async;
 using SmartStore.Core.Domain.Common;
@@ -13,6 +12,10 @@ using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Framework.Filters;
 using SmartStore.Web.Framework.Security;
 using Telerik.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
 
 namespace SmartStore.Admin.Controllers
 {
@@ -119,7 +122,7 @@ namespace SmartStore.Admin.Controllers
             var model = _adminModelHelper.CreateScheduleTaskModel(id);
             if (model == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             return Json(new
@@ -184,7 +187,7 @@ namespace SmartStore.Admin.Controllers
             var model = _adminModelHelper.CreateScheduleTaskModel(id);
             if (model == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             ViewBag.ReturnUrl = returnUrl;
@@ -287,7 +290,33 @@ namespace SmartStore.Admin.Controllers
             }
         }
 
-        [ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[ChildActionOnly]
         public ActionResult MinimalTask(int taskId, string returnUrl /* mandatory on purpose */, bool cancellable = true, bool reloadPage = false)
         {
             var model = _adminModelHelper.CreateScheduleTaskModel(taskId);

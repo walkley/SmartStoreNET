@@ -11,9 +11,12 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web.Hosting;
-using System.Web.Mvc;
 using Newtonsoft.Json;
 using SmartStore.ComponentModel;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+
 
 namespace SmartStore.Utilities
 {

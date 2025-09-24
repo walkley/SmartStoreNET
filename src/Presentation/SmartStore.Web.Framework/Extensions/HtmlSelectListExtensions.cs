@@ -1,7 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web.Mvc;
 using SmartStore.Core;
 using SmartStore.Core.Domain.Customers;
 using SmartStore.Core.Domain.Stores;
@@ -10,6 +9,10 @@ using SmartStore.Core.Plugins;
 using SmartStore.Services.Localization;
 using SmartStore.Services.Payments;
 using SmartStore.Web.Framework.Plugins;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 
 namespace SmartStore.Web.Framework
 {

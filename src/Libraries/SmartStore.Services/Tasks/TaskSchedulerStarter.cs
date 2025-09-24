@@ -1,10 +1,11 @@
-﻿using System;
-using System.Web;
+using System;
 using SmartStore.Core.Events;
 using SmartStore.Core.Infrastructure;
 using SmartStore.Core.Logging;
 using SmartStore.Services.Stores;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Services.Tasks
 {
@@ -35,7 +36,7 @@ namespace SmartStore.Services.Tasks
         public int MaxAttempts => 10;
         public bool ThrowOnError => false;
 
-        public void Start(HttpContextBase httpContext)
+        public void Start(HttpContext httpContext)
         {
             var tasks = _taskService.GetAllTasks(true);
             _taskService.CalculateFutureSchedules(tasks, true /* isAppStart */);

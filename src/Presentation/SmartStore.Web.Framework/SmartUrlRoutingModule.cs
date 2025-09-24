@@ -1,11 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Text.RegularExpressions;
-using System.Web;
 using System.Web.Hosting;
-using System.Web.Routing;
 using SmartStore.Collections;
 using SmartStore.Core.Data;
 using SmartStore.Core.Domain.Customers;
@@ -14,6 +12,12 @@ using SmartStore.Core.IO;
 using SmartStore.Utilities;
 using SmartStore.Web.Framework.Security;
 using SmartStore.Web.Framework.Theming;
+using Microsoft.AspNetCore.Routing;
+
+using Microsoft.AspNetCore.Http;
+
+using System.Threading.Tasks;
+
 
 namespace SmartStore.Web.Framework
 {
@@ -42,9 +46,8 @@ namespace SmartStore.Web.Framework
     /// - PreSendRequestHeaders  
     /// - PreSendRequestContent
     /// </remarks>
-    public class SmartUrlRoutingModule : IHttpModule
-    {
-        private static readonly object _contextKey = new object();
+    public class SmartUrlRoutingModule     {
+RequestDelegate _next = null;        private static readonly object _contextKey = new object();
 
         private static readonly ICollection<Action<HttpApplication>> _actions =
             new SyncedCollection<Action<HttpApplication>>(new List<Action<HttpApplication>>()) { ReadLockFree = true };
@@ -55,7 +58,7 @@ namespace SmartStore.Web.Framework
         static SmartUrlRoutingModule()
         {
             StopSubDirMonitoring();
-        }
+_next = next;        }
 
         private static void StopSubDirMonitoring()
         {
@@ -72,8 +75,8 @@ namespace SmartStore.Web.Framework
             }
             catch { }
         }
-
-        public void Init(HttpApplication application)
+/*/* This method is used to register events. */
+public void Init(HttpApplication application)
         {
             if (!DataSettings.DatabaseIsInstalled())
                 return;
@@ -103,8 +106,7 @@ namespace SmartStore.Web.Framework
                 // Set app to fully initialized state on very first request
                 EngineContext.Current.IsFullyInitialized = true;
             }
-        }
-
+        }*/
         #region Handlers
 
         private static void RewritePluginStaticFilePaths(HttpApplication app)
@@ -289,5 +291,5 @@ namespace SmartStore.Web.Framework
             public Regex PathPattern { get; set; }
             public Regex HttpMethodPattern { get; set; }
         }
-    }
+publicSmartUrlRoutingModule(RequestDelegatenext){}    }
 }

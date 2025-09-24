@@ -1,6 +1,8 @@
-﻿using System.Web.Mvc;
-using System.Web.Routing;
 using SmartStore.Core.Logging;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.DevTools.Filters
 {

@@ -1,6 +1,5 @@
-﻿using System;
+using System;
 using System.Linq;
-using System.Web.Mvc;
 using SmartStore.Admin.Models.Directory;
 using SmartStore.Core.Domain.Directory;
 using SmartStore.Core.Security;
@@ -10,6 +9,10 @@ using SmartStore.Web.Framework;
 using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Framework.Security;
 using Telerik.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
 
 namespace SmartStore.Admin.Controllers
 {
@@ -137,7 +140,7 @@ namespace SmartStore.Admin.Controllers
             var entity = _measureService.GetMeasureWeightById(id);
             if (entity == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var model = entity.ToModel();
@@ -159,7 +162,7 @@ namespace SmartStore.Admin.Controllers
             var entity = _measureService.GetMeasureWeightById(model.Id);
             if (entity == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             if (ModelState.IsValid)
@@ -300,7 +303,7 @@ namespace SmartStore.Admin.Controllers
             var entity = _measureService.GetMeasureDimensionById(id);
             if (entity == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var model = entity.ToModel();
@@ -322,7 +325,7 @@ namespace SmartStore.Admin.Controllers
             var entity = _measureService.GetMeasureDimensionById(model.Id);
             if (entity == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             if (ModelState.IsValid)

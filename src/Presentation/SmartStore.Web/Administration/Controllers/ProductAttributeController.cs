@@ -1,7 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web.Mvc;
 using SmartStore.Admin.Models.Catalog;
 using SmartStore.Core.Domain.Catalog;
 using SmartStore.Core.Domain.Common;
@@ -16,6 +15,12 @@ using SmartStore.Web.Framework.Filters;
 using SmartStore.Web.Framework.Modelling;
 using SmartStore.Web.Framework.Security;
 using Telerik.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
+using System.Text.Encodings.Web;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
 
 namespace SmartStore.Admin.Controllers
 {
@@ -60,7 +65,7 @@ namespace SmartStore.Admin.Controllers
             // TODO: DRY, similar code in ProductController (ProductAttributeValueList, ProductAttributeValueEditPopup...)
             if (option != null)
             {
-                model.NameString = Server.HtmlEncode(option.Color.IsEmpty() ? option.Name : $"{option.Name} - {option.Color}");
+                model.NameString = HtmlEncoder.Default.Encode(option.Color.IsEmpty() ? option.Name : $"{option.Name} - {option.Color}");
                 model.PriceAdjustmentString = (option.ValueType == ProductVariantAttributeValueType.Simple ? option.PriceAdjustment.ToString("G29") : "");
                 model.WeightAdjustmentString = (option.ValueType == ProductVariantAttributeValueType.Simple ? option.WeightAdjustment.ToString("G29") : "");
                 model.TypeName = option.ValueType.GetLocalizedEnum(Services.Localization, Services.WorkContext);

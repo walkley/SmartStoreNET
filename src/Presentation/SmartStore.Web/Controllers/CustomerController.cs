@@ -1,7 +1,6 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
 using SmartStore.ComponentModel;
 using SmartStore.Core;
 using SmartStore.Core.Domain.Common;
@@ -37,6 +36,14 @@ using SmartStore.Web.Framework.Security;
 using SmartStore.Web.Framework.Seo;
 using SmartStore.Web.Models.Common;
 using SmartStore.Web.Models.Customer;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Web.Controllers
 {
@@ -1152,7 +1159,7 @@ namespace SmartStore.Web.Controllers
         public ActionResult AddressDelete(int id)
         {
             if (id < 1)
-                return HttpNotFound();
+                return NotFound();
 
             if (!IsCurrentUserRegistered())
                 return new HttpUnauthorizedResult();
@@ -1222,7 +1229,7 @@ namespace SmartStore.Web.Controllers
         public ActionResult AddressEdit(int id)
         {
             if (id < 1)
-                return HttpNotFound();
+                return NotFound();
 
             if (!IsCurrentUserRegistered())
                 return new HttpUnauthorizedResult();
@@ -1429,7 +1436,7 @@ namespace SmartStore.Web.Controllers
         public ActionResult UserAgreement(Guid id /* orderItemId */, string fileVersion = "")
         {
             if (id == Guid.Empty)
-                return HttpNotFound();
+                return NotFound();
 
             var orderItem = _orderService.GetOrderItemByGuid(id);
             if (orderItem == null)
@@ -1815,7 +1822,7 @@ namespace SmartStore.Web.Controllers
         public ActionResult DeleteForumSubscription(int id)
         {
             if (id < 1)
-                return HttpNotFound();
+                return NotFound();
 
             var forumSubscription = _forumService.GetSubscriptionById(id);
             if (forumSubscription != null && forumSubscription.CustomerId == _workContext.CurrentCustomer.Id)

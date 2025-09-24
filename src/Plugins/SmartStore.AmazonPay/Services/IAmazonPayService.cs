@@ -1,10 +1,11 @@
-﻿using System.Web;
-using System.Web.Mvc;
+using System.Web;
 using AmazonPay;
 using SmartStore.AmazonPay.Models;
 using SmartStore.Core.Domain.Orders;
 using SmartStore.Services.Authentication.External;
 using SmartStore.Services.Payments;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.AmazonPay.Services
 {

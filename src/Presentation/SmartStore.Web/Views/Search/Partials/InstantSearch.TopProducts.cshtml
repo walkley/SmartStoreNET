@@ -1,4 +1,4 @@
-﻿@using SmartStore.Web.Models.Search
+@using SmartStore.Web.Models.Search
 @model SearchResultModel
 @{ 
 	var hasThumbs = Model.TopProducts.Items.Any(x => x.Picture != null && x.Picture.ImageUrl.HasValue());

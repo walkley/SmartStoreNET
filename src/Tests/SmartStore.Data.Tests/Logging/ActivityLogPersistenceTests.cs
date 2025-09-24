@@ -1,8 +1,10 @@
-﻿using System;
+using System;
 using NUnit.Framework;
 using SmartStore.Core.Domain.Customers;
 using SmartStore.Core.Domain.Logging;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Data.Tests.Logging
 {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,8 +11,9 @@ using SmartStore.Core.Events;
 using System.Xml;
 using SmartStore.Core;
 using System.Net;
-using System.Web;
 using System.IO;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Services.Themes
 {
@@ -26,7 +27,7 @@ namespace SmartStore.Services.Themes
         private readonly IRequestCache _requestCache;
         private readonly IEventPublisher _eventPublisher;
         private readonly Lazy<IThemeFileResolver> _themeFileResolver;
-        private readonly HttpContextBase _httpContext;
+        private readonly HttpContext _httpContext;
 
         public ThemeVariablesService(
             IRepository<ThemeVariable> rsVariables,
@@ -34,7 +35,7 @@ namespace SmartStore.Services.Themes
             IRequestCache requestCache,
             IEventPublisher eventPublisher,
             Lazy<IThemeFileResolver> themeFileResolver,
-            HttpContextBase httpContext)
+            HttpContext httpContext)
         {
             _rsVariables = rsVariables;
             _themeRegistry = themeRegistry;

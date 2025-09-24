@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Web.Mvc;
+using System.Collections.Generic;
 using FluentValidation;
 using FluentValidation.Attributes;
 using SmartStore.Admin.Models.Tasks;
@@ -8,6 +7,10 @@ using SmartStore.Core.Localization;
 using SmartStore.Services.DataExchange.Import;
 using SmartStore.Web.Framework;
 using SmartStore.Web.Framework.Modelling;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 
 namespace SmartStore.Admin.Models.DataExchange
 {

@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using System.Web.Mvc;
 using SmartStore.Core;
 using SmartStore.Core.Domain.Security;
 using SmartStore.Core.Domain.Stores;
@@ -11,6 +10,8 @@ using SmartStore.Services.Localization;
 using SmartStore.Services.Security;
 using SmartStore.Services.Stores;
 using SmartStore.Web.Framework.Localization;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Framework.Controllers
 {

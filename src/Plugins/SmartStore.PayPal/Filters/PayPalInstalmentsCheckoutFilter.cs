@@ -1,6 +1,5 @@
-﻿using System;
+using System;
 using System.Text;
-using System.Web.Mvc;
 using Newtonsoft.Json;
 using SmartStore.Core.Domain.Customers;
 using SmartStore.Core.Domain.Orders;
@@ -12,6 +11,8 @@ using SmartStore.Services;
 using SmartStore.Services.Common;
 using SmartStore.Services.Customers;
 using SmartStore.Web.Framework.UI;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.PayPal.Filters
 {

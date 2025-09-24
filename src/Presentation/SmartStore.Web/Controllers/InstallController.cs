@@ -1,13 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Principal;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Hosting;
-using System.Web.Mvc;
 using System.Web.SessionState;
 using Autofac;
 using SmartStore.Core;
@@ -27,6 +25,12 @@ using SmartStore.Utilities;
 using SmartStore.Web.Framework.Security;
 using SmartStore.Web.Infrastructure.Installation;
 using SmartStore.Web.Models.Install;
+using Microsoft.Data.SqlClient;
+
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 
 namespace SmartStore.Web.Controllers
 {

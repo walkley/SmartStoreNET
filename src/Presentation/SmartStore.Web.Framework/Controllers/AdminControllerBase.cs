@@ -1,10 +1,11 @@
-﻿using System;
-using System.Web.Mvc;
+using System;
 using SmartStore.Core;
 using SmartStore.Web.Framework.Filters;
 using SmartStore.Web.Framework.Security;
 using SmartStore.Web.Framework.Seo;
 using SmartStore.Web.Framework.Theming;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Framework.Controllers
 {

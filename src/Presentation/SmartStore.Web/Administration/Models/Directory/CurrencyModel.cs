@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
-using System.Web.Mvc;
 using FluentValidation;
 using FluentValidation.Attributes;
 using SmartStore.Core.Domain.Directory;
@@ -10,6 +9,10 @@ using SmartStore.Core.Localization;
 using SmartStore.Web.Framework;
 using SmartStore.Web.Framework.Localization;
 using SmartStore.Web.Framework.Modelling;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 
 namespace SmartStore.Admin.Models.Directory
 {

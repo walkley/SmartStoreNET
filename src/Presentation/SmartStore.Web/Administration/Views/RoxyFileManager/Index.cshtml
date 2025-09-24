@@ -1,4 +1,4 @@
-﻿@{ 
+@{ 
 	Layout = null;
 
 	var roxy = "~/Administration/Content/filemanager/";
@@ -228,7 +228,7 @@
 	</div>
 
 	@Html.SmartScripts(this.Url, ResourceLocation.Foot)
-	@Scripts.Render("~/bundles/roxyfm")
+	<script src="~/bundles/roxyfm"></script> @* TODO: Verify the bundle or replace with static files. *@
 	@Html.LocalizationScript(WorkContext.WorkingLanguage.UniqueSeoCode, "~/Administration/Content/filemanager/lang/", "*.js", null)
 </body>
 </html>

@@ -1,10 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Text;
-using System.Web.Mvc;
 using Autofac;
 using NuGet;
 using SmartStore.Admin.Models.Catalog;
@@ -49,6 +48,16 @@ using SmartStore.Web.Framework.Filters;
 using SmartStore.Web.Framework.Modelling;
 using SmartStore.Web.Framework.Security;
 using Telerik.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+using Microsoft.AspNetCore.Http;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
+using System.Text.Encodings.Web;
+
 
 namespace SmartStore.Admin.Controllers
 {
@@ -2517,7 +2526,7 @@ namespace SmartStore.Admin.Controllers
             var productTag = _productTagService.GetProductTagById(id);
             if (productTag == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var model = new ProductTagModel
@@ -2544,7 +2553,7 @@ namespace SmartStore.Admin.Controllers
             var productTag = _productTagService.GetProductTagById(model.Id);
             if (productTag == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             if (ModelState.IsValid)
@@ -3104,7 +3113,7 @@ namespace SmartStore.Admin.Controllers
                     Id = x.Id,
                     ProductVariantAttributeId = x.ProductVariantAttributeId,
                     Name = x.Name,
-                    NameString = Server.HtmlEncode(x.Color.IsEmpty() ? x.Name : string.Format("{0} - {1}", x.Name, x.Color)),
+                    NameString = HtmlEncoder.Default.Encode(x.Color.IsEmpty() ? x.Name : string.Format("{0} - {1}", x.Name, x.Color)),
                     Alias = x.Alias,
                     Color = x.Color,
                     PictureId = x.MediaFileId,
@@ -3720,7 +3729,7 @@ namespace SmartStore.Admin.Controllers
         {
             var download = _downloadService.GetDownloadById(downloadId);
             if (download == null)
-                return HttpNotFound();
+                return NotFound();
 
             _downloadService.DeleteDownload(download);
             

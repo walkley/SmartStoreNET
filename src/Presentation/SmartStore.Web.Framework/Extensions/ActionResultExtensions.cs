@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
 
 // use base SmartStore Namespace to ensure the extension methods are always available
 namespace SmartStore

@@ -1,9 +1,10 @@
-﻿using System.Runtime.CompilerServices;
-using System.Web.Mvc;
+using System.Runtime.CompilerServices;
 using SmartStore.Core.Infrastructure;
 using SmartStore.Services.Cms;
 using SmartStore.Services.Media;
 using SmartStore.Services.Media.Imaging;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Framework
 {

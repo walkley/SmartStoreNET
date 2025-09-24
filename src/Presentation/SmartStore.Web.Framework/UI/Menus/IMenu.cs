@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Web.Mvc;
+using System.Collections.Generic;
 using SmartStore.Collections;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Framework.UI
 {

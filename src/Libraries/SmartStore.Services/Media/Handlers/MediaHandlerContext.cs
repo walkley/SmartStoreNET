@@ -1,17 +1,19 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web;
-using System.Web.Mvc;
 using SmartStore.Core.Domain.Customers;
 using SmartStore.Core.Domain.Media;
 using SmartStore.Core.IO;
 using SmartStore.Core.Security;
 using SmartStore.Services.Media.Imaging;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Services.Media
 {

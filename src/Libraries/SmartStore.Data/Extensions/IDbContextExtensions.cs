@@ -1,7 +1,6 @@
 using System;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text.RegularExpressions;
@@ -10,6 +9,8 @@ using Microsoft.SqlServer.Management.Smo;
 using SmartStore.Core;
 using SmartStore.Core.Data;
 using SmartStore.Data;
+using Microsoft.Data.SqlClient;
+
 
 namespace SmartStore
 {

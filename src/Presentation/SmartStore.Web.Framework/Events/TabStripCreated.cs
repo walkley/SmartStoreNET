@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Web.Mvc;
+using System.Collections.Generic;
 using SmartStore.Core.Infrastructure;
 using SmartStore.Web.Framework.Localization;
 using SmartStore.Web.Framework.UI;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+
 
 namespace SmartStore.Web.Framework.Events
 {

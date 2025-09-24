@@ -1,11 +1,9 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Web;
-using System.Web.Mvc;
-using System.Web.Routing;
 using SmartStore.Core.Domain.Common;
 using SmartStore.Core.Domain.Orders;
 using SmartStore.Core.Fakes;
@@ -15,6 +13,10 @@ using SmartStore.Utilities;
 using SmartStore.Web.Controllers;
 using SmartStore.Web.Framework.Pdf;
 using SmartStore.Web.Models.Order;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.WebApi.Services
 {

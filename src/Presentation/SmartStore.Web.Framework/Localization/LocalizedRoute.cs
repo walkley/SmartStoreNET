@@ -1,12 +1,15 @@
-﻿using System;
+using System;
 using System.Globalization;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Routing;
 using SmartStore.Core.Data;
 using SmartStore.Core.Domain.Localization;
 using SmartStore.Core.Infrastructure;
 using SmartStore.Services.Localization;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Routing;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Web.Framework.Localization
 {
@@ -82,7 +85,7 @@ namespace SmartStore.Web.Framework.Localization
         /// <returns>
         /// An object that contains the values from the route definition.
         /// </returns>
-        public override RouteData GetRouteData(HttpContextBase httpContext)
+        public override RouteData GetRouteData(HttpContext httpContext)
         {
             if (DataSettings.DatabaseIsInstalled() && SeoFriendlyUrlsForLanguagesEnabled)
             {

@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using System.Web.Routing;
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.Web.Framework.UI
 {

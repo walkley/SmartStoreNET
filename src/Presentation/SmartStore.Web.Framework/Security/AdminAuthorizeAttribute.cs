@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web.Mvc;
 using SmartStore.Core.Security;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Framework.Security
 {

@@ -1,7 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Web.Mvc;
+using System.ComponentModel.DataAnnotations;
 using SmartStore.Core.Domain.Localization;
 using SmartStore.Core.Domain.Stores;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Core.Domain.Messages
 {

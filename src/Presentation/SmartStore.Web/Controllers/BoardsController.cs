@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel.Syndication;
-using System.Web.Mvc;
 using SmartStore.Core;
 using SmartStore.Core.Domain.Customers;
 using SmartStore.Core.Domain.Forums;
@@ -33,6 +32,12 @@ using SmartStore.Web.Framework.Seo;
 using SmartStore.Web.Framework.UI;
 using SmartStore.Web.Models.Boards;
 using SmartStore.Web.Models.Search;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
 
 namespace SmartStore.Web.Controllers
 {
@@ -317,7 +322,7 @@ namespace SmartStore.Web.Controllers
         {
             if (!_forumSettings.ForumsEnabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var store = Services.StoreContext.CurrentStore;
@@ -348,13 +353,13 @@ namespace SmartStore.Web.Controllers
         {
             if (!_forumSettings.ForumsEnabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var group = _forumService.GetForumGroupById(id);
             if (group == null || !_storeMappingService.Authorize(group) || !_aclService.Authorize(group))
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var model = PrepareForumGroupModel(group);
@@ -371,14 +376,14 @@ namespace SmartStore.Web.Controllers
         {
             if (!_forumSettings.ForumsEnabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var customer = Services.WorkContext.CurrentCustomer;
             var forum = _forumService.GetForumById(id);
             if (forum == null || !_storeMappingService.Authorize(forum.ForumGroup) || !_aclService.Authorize(forum.ForumGroup))
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var pageSize = _forumSettings.TopicsPageSize > 0 ? _forumSettings.TopicsPageSize : 20;
@@ -434,7 +439,7 @@ namespace SmartStore.Web.Controllers
         {
             if (!_forumSettings.ForumsEnabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var store = Services.StoreContext.CurrentStore;
@@ -523,12 +528,38 @@ namespace SmartStore.Web.Controllers
 
         #region Active discussion
 
-        [ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[ChildActionOnly]
         public ActionResult ActiveDiscussionsSmall()
         {
             if (!_forumSettings.ForumsEnabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var topics = _forumService.GetActiveTopics(0, _forumSettings.HomePageActiveDiscussionsTopicCount);
@@ -563,7 +594,7 @@ namespace SmartStore.Web.Controllers
         {
             if (!_forumSettings.ForumsEnabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var model = new ActiveDiscussionsModel();
@@ -594,7 +625,7 @@ namespace SmartStore.Web.Controllers
         {
             if (!_forumSettings.ForumsEnabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var store = Services.StoreContext.CurrentStore;
@@ -641,7 +672,7 @@ namespace SmartStore.Web.Controllers
         {
             if (!_forumSettings.ForumsEnabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var customer = Services.WorkContext.CurrentCustomer;
@@ -649,7 +680,7 @@ namespace SmartStore.Web.Controllers
 
             if (!IsTopicVisible(topic, customer))
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var posts = _forumService.GetAllPosts(topic.Id, 0, true, page - 1, _forumSettings.PostsPageSize);
@@ -805,7 +836,7 @@ namespace SmartStore.Web.Controllers
         {
             if (!_forumSettings.ForumsEnabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var customer = Services.WorkContext.CurrentCustomer;
@@ -813,7 +844,7 @@ namespace SmartStore.Web.Controllers
 
             if (!IsTopicVisible(topic, customer))
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var model = new TopicMoveModel
@@ -857,7 +888,7 @@ namespace SmartStore.Web.Controllers
         {
             if (!_forumSettings.ForumsEnabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var customer = Services.WorkContext.CurrentCustomer;
@@ -865,7 +896,7 @@ namespace SmartStore.Web.Controllers
 
             if (!IsTopicVisible(topic, customer))
             {
-                return HttpNotFound();
+                return NotFound();
             }
             if (!_forumService.IsCustomerAllowedToMoveTopic(customer, topic))
             {
@@ -887,7 +918,7 @@ namespace SmartStore.Web.Controllers
         {
             if (!_forumSettings.ForumsEnabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var customer = Services.WorkContext.CurrentCustomer;
@@ -895,7 +926,7 @@ namespace SmartStore.Web.Controllers
 
             if (forum == null || !_storeMappingService.Authorize(forum.ForumGroup) || !_aclService.Authorize(forum.ForumGroup))
             {
-                return HttpNotFound();
+                return NotFound();
             }
             if (!_forumService.IsCustomerAllowedToCreateTopic(customer, forum))
             {
@@ -931,14 +962,14 @@ namespace SmartStore.Web.Controllers
         {
             if (!_forumSettings.ForumsEnabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var customer = Services.WorkContext.CurrentCustomer;
             var forum = _forumService.GetForumById(model.ForumId);
             if (forum == null || !_storeMappingService.Authorize(forum.ForumGroup) || !_aclService.Authorize(forum.ForumGroup))
             {
-                return HttpNotFound();
+                return NotFound();
             }
             if (!_forumService.IsCustomerAllowedToCreateTopic(customer, forum))
             {
@@ -1039,7 +1070,7 @@ namespace SmartStore.Web.Controllers
         {
             if (!_forumSettings.ForumsEnabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var customer = Services.WorkContext.CurrentCustomer;
@@ -1047,7 +1078,7 @@ namespace SmartStore.Web.Controllers
 
             if (!IsTopicVisible(topic, customer))
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var firstPost = topic.GetFirstPost(_forumService);
@@ -1095,7 +1126,7 @@ namespace SmartStore.Web.Controllers
         {
             if (!_forumSettings.ForumsEnabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var customer = Services.WorkContext.CurrentCustomer;
@@ -1103,7 +1134,7 @@ namespace SmartStore.Web.Controllers
 
             if (!IsTopicVisible(topic, customer))
             {
-                return HttpNotFound();
+                return NotFound();
             }
             if (!_forumService.IsCustomerAllowedToEditTopic(customer, topic))
             {
@@ -1215,7 +1246,7 @@ namespace SmartStore.Web.Controllers
         {
             if (!_forumSettings.ForumsEnabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var customer = Services.WorkContext.CurrentCustomer;
@@ -1223,7 +1254,7 @@ namespace SmartStore.Web.Controllers
 
             if (!IsTopicVisible(topic, customer))
             {
-                return HttpNotFound();
+                return NotFound();
             }
             if (!_forumService.IsCustomerAllowedToDeleteTopic(customer, topic))
             {
@@ -1250,7 +1281,7 @@ namespace SmartStore.Web.Controllers
         {
             if (!_forumSettings.ForumsEnabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var customer = Services.WorkContext.CurrentCustomer;
@@ -1258,7 +1289,7 @@ namespace SmartStore.Web.Controllers
 
             if (topic == null || !_storeMappingService.Authorize(topic.Forum.ForumGroup) || !_aclService.Authorize(topic.Forum.ForumGroup))
             {
-                return HttpNotFound();
+                return NotFound();
             }
             if (!_forumService.IsCustomerAllowedToCreatePost(customer, topic))
             {
@@ -1321,7 +1352,7 @@ namespace SmartStore.Web.Controllers
         {
             if (!_forumSettings.ForumsEnabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var customer = Services.WorkContext.CurrentCustomer;
@@ -1329,7 +1360,7 @@ namespace SmartStore.Web.Controllers
 
             if (topic == null || !_storeMappingService.Authorize(topic.Forum.ForumGroup) || !_aclService.Authorize(topic.Forum.ForumGroup))
             {
-                return HttpNotFound();
+                return NotFound();
             }
             if (!_forumService.IsCustomerAllowedToCreatePost(customer, topic))
             {
@@ -1426,7 +1457,7 @@ namespace SmartStore.Web.Controllers
         {
             if (!_forumSettings.ForumsEnabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var customer = Services.WorkContext.CurrentCustomer;
@@ -1434,7 +1465,7 @@ namespace SmartStore.Web.Controllers
 
             if (post == null || !_storeMappingService.Authorize(post.ForumTopic.Forum.ForumGroup) || !_aclService.Authorize(post.ForumTopic.Forum.ForumGroup))
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var firstPost = post.ForumTopic.GetFirstPost(_forumService);
@@ -1482,7 +1513,7 @@ namespace SmartStore.Web.Controllers
         {
             if (!_forumSettings.ForumsEnabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var customer = Services.WorkContext.CurrentCustomer;
@@ -1490,7 +1521,7 @@ namespace SmartStore.Web.Controllers
 
             if (post == null || !_storeMappingService.Authorize(post.ForumTopic.Forum.ForumGroup) || !_aclService.Authorize(post.ForumTopic.Forum.ForumGroup))
             {
-                return HttpNotFound();
+                return NotFound();
             }
             if (!_forumService.IsCustomerAllowedToEditPost(customer, post))
             {
@@ -1588,14 +1619,14 @@ namespace SmartStore.Web.Controllers
         {
             if (!_forumSettings.ForumsEnabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var post = _forumService.GetPostById(id);
 
             if (post == null || !_storeMappingService.Authorize(post.ForumTopic.Forum.ForumGroup) || !_aclService.Authorize(post.ForumTopic.Forum.ForumGroup))
             {
-                return HttpNotFound();
+                return NotFound();
             }
             if (!_forumService.IsCustomerAllowedToDeletePost(Services.WorkContext.CurrentCustomer, post))
             {
@@ -1625,7 +1656,7 @@ namespace SmartStore.Web.Controllers
         {
             if (!_forumSettings.ForumsEnabled || !_forumSettings.AllowCustomersToVoteOnPosts)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var customer = Services.WorkContext.CurrentCustomer;
@@ -1633,7 +1664,7 @@ namespace SmartStore.Web.Controllers
 
             if (post == null || !_storeMappingService.Authorize(post.ForumTopic.Forum.ForumGroup) || !_aclService.Authorize(post.ForumTopic.Forum.ForumGroup))
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             if (!_forumSettings.AllowGuestsToVoteOnPosts && customer.IsGuest())
@@ -1692,7 +1723,33 @@ namespace SmartStore.Web.Controllers
 
         #region Search
 
-        [ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[ChildActionOnly]
         public ActionResult SearchBox()
         {
             var currentTerm = _queryFactory.Current?.Term;
@@ -1711,7 +1768,33 @@ namespace SmartStore.Web.Controllers
             return PartialView("~/Views/Search/Partials/SearchBox.cshtml", model);
         }
 
-        [ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[ChildActionOnly]
         public ActionResult Filters(IForumSearchResultModel model)
         {
             if (model == null)
@@ -1787,7 +1870,7 @@ namespace SmartStore.Web.Controllers
         {
             if (!_forumSettings.ForumsEnabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             CreateForumBreadcrumb();

@@ -1,6 +1,5 @@
-﻿using System;
+using System;
 using System.ComponentModel.DataAnnotations;
-using System.Web.Mvc;
 using FluentValidation;
 using FluentValidation.Attributes;
 using SmartStore.Core.Domain.Tasks;
@@ -8,6 +7,8 @@ using SmartStore.Core.Localization;
 using SmartStore.Services.Tasks;
 using SmartStore.Web.Framework;
 using SmartStore.Web.Framework.Modelling;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Admin.Models.Tasks
 {

@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Web.Mvc;
+using System.Collections.Generic;
 using SmartStore.Admin.Models.ExternalAuthentication;
 using SmartStore.Core.Domain.Customers;
 using SmartStore.Core.Security;
@@ -8,6 +7,8 @@ using SmartStore.Services.Configuration;
 using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Framework.Plugins;
 using SmartStore.Web.Framework.Security;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Admin.Controllers
 {

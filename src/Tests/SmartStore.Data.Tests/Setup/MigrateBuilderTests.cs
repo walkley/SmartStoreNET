@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
@@ -6,6 +6,8 @@ using SmartStore.Core.Domain.Configuration;
 using SmartStore.Core.Domain.Localization;
 using SmartStore.Data.Setup;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Data.Tests.Setup
 {

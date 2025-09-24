@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Web.Mvc;
+using System.Collections.Generic;
 using SmartStore.Web.Framework;
 using SmartStore.Web.Framework.Modelling;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Admin.Models.Catalog
 {

@@ -1,11 +1,12 @@
-﻿using System;
-using System.Web.Mvc;
+using System;
 using SmartStore.Admin.Models.Tasks;
 using SmartStore.Core.Domain.Tasks;
 using SmartStore.Core.Localization;
 using SmartStore.Services.Helpers;
 using SmartStore.Services.Tasks;
 using SmartStore.Web.Framework;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Admin.Controllers
 {

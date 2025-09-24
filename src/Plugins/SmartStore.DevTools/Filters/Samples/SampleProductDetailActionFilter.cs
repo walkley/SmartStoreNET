@@ -1,6 +1,7 @@
-﻿using System.Web.Mvc;
 using SmartStore.Services;
 using SmartStore.Web.Models.Catalog;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.DevTools.Filters
 {

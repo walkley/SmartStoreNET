@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
 using SmartStore.Core.Logging;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Framework.Filters
 {

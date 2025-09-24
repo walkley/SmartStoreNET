@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Web.Mvc;
 using SmartStore.Core;
 using SmartStore.Core.Domain.Common;
 using SmartStore.GoogleMerchantCenter.Models;
@@ -12,6 +11,10 @@ using SmartStore.Services.DataExchange.Export;
 using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Framework.Security;
 using Telerik.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 
 namespace SmartStore.GoogleMerchantCenter.Controllers
 {

@@ -1,11 +1,14 @@
-﻿using System;
+using System;
 using System.Text;
-using System.Web.Mvc;
 using System.Web.WebPages;
 using SmartStore.Core.Infrastructure;
 using SmartStore.Core.Localization;
 using SmartStore.Services.Localization;
 using Telerik.Web.Mvc.UI.Fluent;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+
 
 namespace SmartStore.Web.Framework.UI
 {

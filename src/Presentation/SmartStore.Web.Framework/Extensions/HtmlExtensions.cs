@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -7,9 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Web;
-using System.Web.Mvc;
 using System.Web.Mvc.Html;
-using System.Web.Routing;
 using System.Web.WebPages;
 using SmartStore.Core;
 using SmartStore.Core.Domain.Catalog;
@@ -23,6 +21,16 @@ using SmartStore.Web.Framework.Localization;
 using SmartStore.Web.Framework.Modelling;
 using SmartStore.Web.Framework.Settings;
 using SmartStore.Web.Framework.UI;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Routing;
+
+using Microsoft.AspNetCore.Html;
+
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 
 namespace SmartStore.Web.Framework
 {
@@ -37,7 +45,7 @@ namespace SmartStore.Web.Framework
 
     public static class HtmlExtensions
     {
-        public static MvcHtmlString Hint(this HtmlHelper helper, string value)
+        public static HtmlString Hint(this HtmlHelper helper, string value)
         {
             if (String.IsNullOrEmpty(value))
             {
@@ -109,7 +117,7 @@ namespace SmartStore.Web.Framework
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MvcHtmlString DeleteConfirmation<T>(this HtmlHelper<T> helper, string buttonsSelector = null) where T : EntityModelBase
+        public static HtmlString DeleteConfirmation<T>(this HtmlHelper<T> helper, string buttonsSelector = null) where T : EntityModelBase
         {
             return DeleteConfirmation<T>(helper, "", buttonsSelector);
         }
@@ -122,7 +130,7 @@ namespace SmartStore.Web.Framework
         /// <param name="actionName"></param>
         /// <param name="buttonsSelector"></param>
         /// <returns></returns>
-        public static MvcHtmlString DeleteConfirmation<T>(this HtmlHelper<T> helper, string actionName, string buttonsSelector = null) where T : EntityModelBase
+        public static HtmlString DeleteConfirmation<T>(this HtmlHelper<T> helper, string actionName, string buttonsSelector = null) where T : EntityModelBase
         {
             if (String.IsNullOrEmpty(actionName))
                 actionName = "Delete";
@@ -153,10 +161,10 @@ namespace SmartStore.Web.Framework
                 .Show(false)
                 .Render();
 
-            return new MvcHtmlString(script);
+            return new HtmlString(script);
         }
 
-        public static MvcHtmlString SmartLabel(this HtmlHelper helper, string expression, string labelText, string hint = null, object htmlAttributes = null)
+        public static HtmlString SmartLabel(this HtmlHelper helper, string expression, string labelText, string hint = null, object htmlAttributes = null)
         {
             var result = PooledStringBuilder.Rent();
 
@@ -169,7 +177,7 @@ namespace SmartStore.Web.Framework
             else
             {
                 var labelAttrs = new RouteValueDictionary(htmlAttributes);
-                var label = helper.Label(expression, labelText, labelAttrs);
+                HtmlString label = helper.Label(expression, labelText, labelAttrs);
 
                 result.Append(label.ToHtmlString());
             }
@@ -184,7 +192,7 @@ namespace SmartStore.Web.Framework
             return MvcHtmlString.Create(result.ToStringAndReturn());
         }
 
-        public static MvcHtmlString SmartLabelFor<TModel, TValue>(
+        public static HtmlString SmartLabelFor<TModel, TValue>(
             this HtmlHelper<TModel> helper,
             Expression<Func<TModel, TValue>> expression,
             bool displayHint = true,
@@ -196,7 +204,7 @@ namespace SmartStore.Web.Framework
             return SmartLabelFor(helper, expression, resourceDisplayName as SmartResourceDisplayName, metadata, displayHint, htmlAttributes);
         }
 
-        public static MvcHtmlString SmartLabelFor<TModel, TValue>(
+        public static HtmlString SmartLabelFor<TModel, TValue>(
             this HtmlHelper<TModel> helper,
             Expression<Func<TModel, TValue>> expression,
             string resourceKey,
@@ -211,7 +219,7 @@ namespace SmartStore.Web.Framework
             return SmartLabelFor(helper, expression, resourceDisplayName, metadata, displayHint, htmlAttributes);
         }
 
-        private static MvcHtmlString SmartLabelFor<TModel, TValue>(
+        private static HtmlString SmartLabelFor<TModel, TValue>(
             this HtmlHelper<TModel> helper,
             Expression<Func<TModel, TValue>> expression,
             SmartResourceDisplayName resourceDisplayName,
@@ -249,7 +257,7 @@ namespace SmartStore.Web.Framework
             var labelAttrs = new RouteValueDictionary(htmlAttributes);
             //labelAttrs.AppendCssClass("col-form-label");
 
-            var label = helper.LabelFor(expression, labelText, labelAttrs);
+            HtmlString label = helper.LabelFor(expression, labelText, labelAttrs);
 
             if (displayHint)
             {
@@ -299,7 +307,7 @@ namespace SmartStore.Web.Framework
         /// <param name="selectedYear">Selected year</param>
         /// <param name="localizeLabels">Localize labels</param>
         /// <returns></returns>
-        public static MvcHtmlString DatePickerDropDowns(this HtmlHelper html,
+        public static HtmlString DatePickerDropDowns(this HtmlHelper html,
             string dayName, string monthName, string yearName,
             int? beginYear = null, int? endYear = null,
             int? selectedDay = null, int? selectedMonth = null, int? selectedYear = null, bool localizeLabels = true, bool disabled = false)
@@ -410,7 +418,7 @@ namespace SmartStore.Web.Framework
 
         private static readonly SelectListItem[] _singleEmptyItem = new[] { new SelectListItem { Text = "", Value = "" } };
 
-        public static MvcHtmlString DropDownListForEnum<TModel, TEnum>(
+        public static HtmlString DropDownListForEnum<TModel, TEnum>(
             this HtmlHelper<TModel> htmlHelper,
             Expression<Func<TModel, TEnum>> expression,
             string optionLabel = null) where TEnum : struct
@@ -418,7 +426,7 @@ namespace SmartStore.Web.Framework
             return htmlHelper.DropDownListForEnum(expression, null, optionLabel);
         }
 
-        public static MvcHtmlString DropDownListForEnum<TModel, TEnum>(
+        public static HtmlString DropDownListForEnum<TModel, TEnum>(
             this HtmlHelper<TModel> htmlHelper,
             Expression<Func<TModel, TEnum>> expression,
             object htmlAttributes,
@@ -433,7 +441,7 @@ namespace SmartStore.Web.Framework
             return htmlHelper.DropDownListForEnum(expression, attrs, optionLabel);
         }
 
-        public static MvcHtmlString DropDownListForEnum<TModel, TEnum>(
+        public static HtmlString DropDownListForEnum<TModel, TEnum>(
             this HtmlHelper<TModel> htmlHelper,
             Expression<Func<TModel, TEnum>> expression,
             IDictionary<string, object> htmlAttributes,
@@ -468,12 +476,12 @@ namespace SmartStore.Web.Framework
         #endregion
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MvcHtmlString Widget(this HtmlHelper helper, string widgetZone)
+        public static HtmlString Widget(this HtmlHelper helper, string widgetZone)
         {
             return helper.Widget(widgetZone, null);
         }
 
-        public static MvcHtmlString Widget(this HtmlHelper helper, string widgetZone, object model)
+        public static HtmlString Widget(this HtmlHelper helper, string widgetZone, object model)
         {
             var routeValues = GetWidgetsByZoneRouteValues(helper, widgetZone, model);
             if (routeValues != null)
@@ -519,7 +527,7 @@ namespace SmartStore.Web.Framework
         public static IHtmlString MetaAcceptLanguage(this HtmlHelper html)
         {
             var acceptLang = HttpUtility.HtmlAttributeEncode(Thread.CurrentThread.CurrentUICulture.ToString());
-            return new MvcHtmlString(string.Format("<meta name=\"accept-language\" content=\"{0}\"/>", acceptLang));
+            return new HtmlString(string.Format("<meta name=\"accept-language\" content=\"{0}\"/>", acceptLang));
         }
 
         public static IHtmlString LanguageAttributes(this HtmlHelper html, bool omitLTR = false)
@@ -550,7 +558,7 @@ namespace SmartStore.Web.Framework
                 result += " dir=\"" + (rtl ? "rtl" : "ltr") + "\"";
             }
 
-            return new MvcHtmlString(result);
+            return new HtmlString(result);
         }
 
         public static IHtmlString LanguageAttributes(this HtmlHelper html, bool currentRtl, Language pageLanguage)
@@ -563,10 +571,10 @@ namespace SmartStore.Web.Framework
             }
 
             var result = "dir=\"" + (currentRtl ? "rtl" : "ltr") + "\"";
-            return new MvcHtmlString(result);
+            return new HtmlString(result);
         }
 
-        public static MvcHtmlString ControlGroupFor<TModel, TValue>(
+        public static HtmlString ControlGroupFor<TModel, TValue>(
             this HtmlHelper<TModel> html,
             Expression<Func<TModel, TValue>> expression,
             InputEditorType editorType = InputEditorType.TextBox,
@@ -646,12 +654,12 @@ namespace SmartStore.Web.Framework
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MvcHtmlString ColorBox(this HtmlHelper html, string name, string color)
+        public static HtmlString ColorBox(this HtmlHelper html, string name, string color)
         {
             return ColorBox(html, name, color, null);
         }
 
-        public static MvcHtmlString ColorBox(this HtmlHelper html, string name, string color, string defaultColor)
+        public static HtmlString ColorBox(this HtmlHelper html, string name, string color, string defaultColor)
         {
             var sb = PooledStringBuilder.Rent();
 
@@ -668,7 +676,7 @@ namespace SmartStore.Web.Framework
             return MvcHtmlString.Create(sb.ToStringAndReturn());
         }
 
-        public static MvcHtmlString TableFormattedVariantAttributes(this HtmlHelper helper, string formattedVariantAttributes, string separatorLines = "<br />", string separatorValues = ": ")
+        public static HtmlString TableFormattedVariantAttributes(this HtmlHelper helper, string formattedVariantAttributes, string separatorLines = "<br />", string separatorValues = ": ")
         {
             var sb = new StringBuilder();
             string name, value;
@@ -698,7 +706,7 @@ namespace SmartStore.Web.Framework
             return MvcHtmlString.Create(sb.ToString());
         }
 
-        public static MvcHtmlString SettingEditorFor<TModel, TValue>(
+        public static HtmlString SettingEditorFor<TModel, TValue>(
             this HtmlHelper<TModel> helper,
             Expression<Func<TModel, TValue>> expression,
             string parentSelector = null,
@@ -711,7 +719,7 @@ namespace SmartStore.Web.Framework
                 parentSelector);
         }
 
-        public static MvcHtmlString SettingEditorFor<TModel, TValue>(
+        public static HtmlString SettingEditorFor<TModel, TValue>(
             this HtmlHelper<TModel> helper,
             Expression<Func<TModel, TValue>> expression,
             Func<TModel, HelperResult> editor,
@@ -720,11 +728,11 @@ namespace SmartStore.Web.Framework
             return SettingEditorFor(
                 helper,
                 expression,
-                new MvcHtmlString(editor(helper.ViewData.Model).ToHtmlString()),
+                new HtmlString(editor(helper.ViewData.Model).ToHtmlString()),
                 parentSelector);
         }
 
-        public static MvcHtmlString EnumSettingEditorFor<TModel, TValue>(
+        public static HtmlString EnumSettingEditorFor<TModel, TValue>(
             this HtmlHelper<TModel> helper,
             Expression<Func<TModel, TValue>> expression,
             string parentSelector = null,
@@ -738,10 +746,10 @@ namespace SmartStore.Web.Framework
                 parentSelector);
         }
 
-        public static MvcHtmlString SettingEditorFor<TModel, TValue>(
+        public static HtmlString SettingEditorFor<TModel, TValue>(
             this HtmlHelper<TModel> helper,
             Expression<Func<TModel, TValue>> expression,
-            MvcHtmlString editor,
+            HtmlString editor,
             string parentSelector = null)
         {
             Guard.NotNull(expression, nameof(expression));
@@ -762,7 +770,7 @@ namespace SmartStore.Web.Framework
             return MvcHtmlString.Create(sb.ToStringAndReturn());
         }
 
-        private static MvcHtmlString SettingOverrideCheckboxInternal<TModel, TValue>(
+        private static HtmlString SettingOverrideCheckboxInternal<TModel, TValue>(
             HtmlHelper<TModel> helper,
             Expression<Func<TModel, TValue>> expression,
             StoreDependingSettingData data,
@@ -801,7 +809,7 @@ namespace SmartStore.Web.Framework
             return MvcHtmlString.Create(sb.ToStringAndReturn());
         }
 
-        public static MvcHtmlString CollapsedText(this HtmlHelper helper, string text)
+        public static HtmlString CollapsedText(this HtmlHelper helper, string text)
         {
             if (text.IsEmpty())
                 return MvcHtmlString.Empty;
@@ -819,12 +827,12 @@ namespace SmartStore.Web.Framework
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MvcHtmlString IconForFileExtension(this HtmlHelper helper, string fileExtension, bool renderLabel = false)
+        public static HtmlString IconForFileExtension(this HtmlHelper helper, string fileExtension, bool renderLabel = false)
         {
             return IconForFileExtension(helper, fileExtension, null, renderLabel);
         }
 
-        public static MvcHtmlString IconForFileExtension(this HtmlHelper helper, string fileExtension, string extraCssClasses = null, bool renderLabel = false)
+        public static HtmlString IconForFileExtension(this HtmlHelper helper, string fileExtension, string extraCssClasses = null, bool renderLabel = false)
         {
             Guard.NotNull(helper, nameof(helper));
             Guard.NotEmpty(fileExtension, nameof(fileExtension));
@@ -942,30 +950,30 @@ namespace SmartStore.Web.Framework
         #region Media
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MvcHtmlString MediaViewer(this HtmlHelper helper, MediaFileInfo file, object htmlAttributes = null)
+        public static HtmlString MediaViewer(this HtmlHelper helper, MediaFileInfo file, object htmlAttributes = null)
         {
             return MediaInternal(helper, file, true, 0, CommonHelper.ObjectToDictionary(htmlAttributes));
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MvcHtmlString MediaViewer(this HtmlHelper helper, MediaFileInfo file, IDictionary<string, object> htmlAttributes)
+        public static HtmlString MediaViewer(this HtmlHelper helper, MediaFileInfo file, IDictionary<string, object> htmlAttributes)
         {
             return MediaInternal(helper, file, true, 0, htmlAttributes);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MvcHtmlString MediaThumbnail(this HtmlHelper helper, MediaFileInfo file, int size, object htmlAttributes = null)
+        public static HtmlString MediaThumbnail(this HtmlHelper helper, MediaFileInfo file, int size, object htmlAttributes = null)
         {
             return MediaInternal(helper, file, false, size, CommonHelper.ObjectToDictionary(htmlAttributes));
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static MvcHtmlString MediaThumbnail(this HtmlHelper helper, MediaFileInfo file, int size, IDictionary<string, object> htmlAttributes)
+        public static HtmlString MediaThumbnail(this HtmlHelper helper, MediaFileInfo file, int size, IDictionary<string, object> htmlAttributes)
         {
             return MediaInternal(helper, file, false, size, htmlAttributes);
         }
 
-        private static MvcHtmlString MediaInternal(
+        private static HtmlString MediaInternal(
             HtmlHelper helper,
             MediaFileInfo file,
             bool renderViewer,

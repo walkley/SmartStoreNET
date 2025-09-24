@@ -1,8 +1,11 @@
-﻿using System.Web.Mvc;
 using Newtonsoft.Json;
 using SmartStore.Collections;
 using SmartStore.Services.Cms;
 using SmartStore.Web.Framework.Theming;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Web.Framework.UI
 {
@@ -64,7 +67,7 @@ namespace SmartStore.Web.Framework.UI
             }
             else
             {
-                var httpContext = filterContext.HttpContext;
+                HttpContext httpContext = filterContext.HttpContext;
 
                 // So that other actions/partials can access this.
                 httpContext.Items["SelectedNode"] = selectedNode;

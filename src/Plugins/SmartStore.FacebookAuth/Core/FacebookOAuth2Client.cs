@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Data;
@@ -6,11 +6,12 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
-using System.Web;
 using System.Web.Script.Serialization;
 using DotNetOpenAuth.AspNet;
 using DotNetOpenAuth.AspNet.Clients;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.FacebookAuth.Core
 {
@@ -79,18 +80,18 @@ namespace SmartStore.FacebookAuth.Core
             _requestedScopes = requestedScopes;
         }
 
-        public override void RequestAuthentication(HttpContextBase context, Uri returnUrl)
+        public override void RequestAuthentication(HttpContext context, Uri returnUrl)
         {
             string redirectUrl = this.GetServiceLoginUrl(returnUrl).AbsoluteUri;
             context.Response.Redirect(redirectUrl, endResponse: true);
         }
 
-        public new AuthenticationResult VerifyAuthentication(HttpContextBase context)
+        public new AuthenticationResult VerifyAuthentication(HttpContext context)
         {
             throw new NoNullAllowedException();
         }
 
-        public override AuthenticationResult VerifyAuthentication(HttpContextBase context, Uri returnPageUrl)
+        public override AuthenticationResult VerifyAuthentication(HttpContext context, Uri returnPageUrl)
         {
             string code = context.Request.QueryString["code"];
             if (string.IsNullOrEmpty(code))

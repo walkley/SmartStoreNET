@@ -1,11 +1,14 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Web;
-using System.Web.Mvc;
 using SmartStore.Core.Data;
 using SmartStore.Core.Infrastructure;
 using SmartStore.Utilities;
 using SmartStore.Web.Framework;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.Filters;
+
 
 namespace SmartStore.Web.Infrastructure
 {

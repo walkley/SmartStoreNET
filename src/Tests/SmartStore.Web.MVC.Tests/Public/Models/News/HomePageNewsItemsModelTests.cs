@@ -1,8 +1,10 @@
-﻿using System;
+using System;
 using NUnit.Framework;
 using SmartStore.Tests;
 using SmartStore.Web.Models.Common;
 using SmartStore.Web.Models.News;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Web.MVC.Tests.Public.Models.News
 {

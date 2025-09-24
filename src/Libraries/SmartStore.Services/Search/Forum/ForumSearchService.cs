@@ -1,13 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web.Mvc;
 using Autofac;
 using SmartStore.Core.Domain.Forums;
 using SmartStore.Core.Logging;
 using SmartStore.Core.Search;
 using SmartStore.Core.Search.Facets;
 using SmartStore.Services.Forums;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Services.Search
 {

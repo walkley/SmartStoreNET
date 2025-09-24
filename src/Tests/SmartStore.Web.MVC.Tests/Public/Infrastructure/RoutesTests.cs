@@ -1,6 +1,8 @@
-﻿using System;
+using System;
 using NUnit.Framework;
 using SmartStore.Web.Controllers;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Web.MVC.Tests.Public.Infrastructure
 {

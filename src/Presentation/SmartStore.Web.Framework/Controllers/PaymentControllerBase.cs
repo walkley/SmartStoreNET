@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Web.Mvc;
+using System.Collections.Generic;
 using SmartStore.Services.Payments;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Web.Framework.Controllers
 {

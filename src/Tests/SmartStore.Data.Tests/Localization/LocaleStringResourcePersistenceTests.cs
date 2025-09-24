@@ -1,6 +1,8 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using SmartStore.Core.Domain.Localization;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Data.Tests.Localization
 {

@@ -1,15 +1,17 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
 using System.Web.WebPages;
 using SmartStore.Core.Infrastructure;
 using SmartStore.Core.Logging;
 using SmartStore.Core.Themes;
 using SmartStore.Services.Common;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Web.Framework.Theming
 {
@@ -434,7 +436,7 @@ namespace SmartStore.Web.Framework.Theming
             return (c == '~' || c == '/');
         }
 
-        protected virtual bool IsMobileDevice(HttpContextBase httpContext)
+        protected virtual bool IsMobileDevice(HttpContext httpContext)
         {
             var mobileDeviceHelper = EngineContext.Current.Resolve<IMobileDeviceHelper>();
             var result = mobileDeviceHelper.IsMobileDevice();

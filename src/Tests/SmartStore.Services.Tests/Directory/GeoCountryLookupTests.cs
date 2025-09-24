@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using NUnit.Framework;
 using SmartStore.Services.Directory;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Services.Tests.Directory
 {

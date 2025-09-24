@@ -1,5 +1,4 @@
-﻿using System;
-using System.Web.Mvc;
+using System;
 using SmartStore.Clickatell.Models;
 using SmartStore.ComponentModel;
 using SmartStore.Core.Plugins;
@@ -7,6 +6,10 @@ using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Framework.Filters;
 using SmartStore.Web.Framework.Security;
 using SmartStore.Web.Framework.Settings;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
 
 namespace SmartStore.Clickatell.Controllers
 {

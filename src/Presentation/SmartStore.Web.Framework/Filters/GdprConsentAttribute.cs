@@ -1,10 +1,13 @@
-﻿using System;
-using System.Web.Mvc;
+using System;
 using SmartStore.Core.Domain.Customers;
 using SmartStore.Core.Logging;
 using SmartStore.Services;
 using SmartStore.Services.Common;
 using SmartStore.Web.Framework.UI;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
 
 namespace SmartStore.Web.Framework.Filters
 {

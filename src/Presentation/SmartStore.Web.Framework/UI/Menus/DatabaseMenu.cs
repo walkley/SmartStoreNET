@@ -1,7 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web.Mvc;
 using SmartStore.Collections;
 using SmartStore.Core.Data;
 using SmartStore.Core.Domain.Catalog;
@@ -12,6 +11,8 @@ using SmartStore.Services;
 using SmartStore.Services.Catalog;
 using SmartStore.Services.Cms;
 using SmartStore.Services.Search;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Framework.UI
 {

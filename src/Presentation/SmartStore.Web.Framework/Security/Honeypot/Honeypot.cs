@@ -1,9 +1,10 @@
-﻿using System;
+using System;
 using System.Text;
-using System.Web;
 using System.Web.Security;
 using Newtonsoft.Json;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Web.Framework.Security
 {
@@ -58,7 +59,7 @@ namespace SmartStore.Web.Framework.Security
             return result;
         }
 
-        public static bool IsBot(HttpContextBase httpContext)
+        public static bool IsBot(HttpContext httpContext)
         {
             var tokenString = httpContext.Request.Form[TokenFieldName];
             if (tokenString.IsEmpty())

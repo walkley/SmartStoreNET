@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using SmartStore.Collections;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Core.Tests.Collections
 {

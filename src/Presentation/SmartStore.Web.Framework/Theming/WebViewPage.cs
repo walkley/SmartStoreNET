@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Web.Mvc;
 using System.Web.WebPages;
 using SmartStore.Core;
 using SmartStore.Core.Infrastructure;
@@ -11,6 +10,10 @@ using SmartStore.Core.Logging;
 using SmartStore.Core.Themes;
 using SmartStore.Services;
 using SmartStore.Services.Cms;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+
 
 namespace SmartStore.Web.Framework.Theming
 {

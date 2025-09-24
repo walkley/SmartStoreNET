@@ -1,6 +1,8 @@
-﻿using System.Web.Mvc;
-using System.Web.Routing;
 using SmartStore.Web.Framework.Routing;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.Clickatell
 {

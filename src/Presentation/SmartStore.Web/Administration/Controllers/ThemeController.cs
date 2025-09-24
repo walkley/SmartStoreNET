@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Hosting;
-using System.Web.Mvc;
 using SmartStore.Admin.Models.Themes;
 using SmartStore.Collections;
 using SmartStore.Core.Domain.Themes;
@@ -15,6 +14,12 @@ using SmartStore.Web.Framework.Filters;
 using SmartStore.Web.Framework.Modelling;
 using SmartStore.Web.Framework.Security;
 using SmartStore.Web.Framework.Theming.Assets;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Admin.Controllers
 {
@@ -374,7 +379,7 @@ namespace SmartStore.Admin.Controllers
 
             if (!_themeRegistry.ThemeManifestExists(theme))
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             using (HttpContext.PreviewModeCookie())

@@ -1,6 +1,8 @@
-﻿using System;
+using System;
 using System.Reflection;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Tests
 {

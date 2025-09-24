@@ -1,9 +1,12 @@
 using System.Collections.Generic;
-using System.Web.Mvc;
 using SmartStore.Core.Domain.Payments;
 using SmartStore.Core.Plugins;
 using SmartStore.OfflinePayment.Settings;
 using SmartStore.Services.Payments;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 
 namespace SmartStore.OfflinePayment
 {

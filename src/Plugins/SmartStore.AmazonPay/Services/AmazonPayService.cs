@@ -1,11 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Web;
-using System.Web.Mvc;
 using AmazonPay;
 using AmazonPay.Responses;
 using AmazonPay.StandardPaymentRequests;
@@ -35,12 +33,18 @@ using SmartStore.Services.Orders;
 using SmartStore.Services.Payments;
 using SmartStore.Web;
 using SmartStore.Web.Framework;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Http;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 
 namespace SmartStore.AmazonPay.Services
 {
     public partial class AmazonPayService : IAmazonPayService
     {
-        private readonly HttpContextBase _httpContext;
+        private readonly HttpContext _httpContext;
         private readonly IRepository<Order> _orderRepository;
         private readonly ICommonServices _services;
         private readonly IPaymentService _paymentService;
@@ -61,7 +65,7 @@ namespace SmartStore.AmazonPay.Services
         private readonly CompanyInformationSettings _companyInformationSettings;
 
         public AmazonPayService(
-            HttpContextBase httpContext,
+            HttpContext httpContext,
             IRepository<Order> orderRepository,
             ICommonServices services,
             IPaymentService paymentService,

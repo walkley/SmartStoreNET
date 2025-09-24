@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 using System.Data.Common;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
-using System.Data.SqlClient;
 using System.IO;
 using System.Threading.Tasks;
 using SmartStore.Core.Data;
@@ -10,6 +9,8 @@ using SmartStore.Core.Domain.Media;
 using SmartStore.Core.Plugins;
 using SmartStore.Data;
 using SmartStore.Data.Utilities;
+using Microsoft.Data.SqlClient;
+
 
 namespace SmartStore.Services.Media.Storage
 {

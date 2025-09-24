@@ -1,8 +1,10 @@
-﻿using System;
+using System;
 using NUnit.Framework;
 using SmartStore.Core.Domain.Common;
 using SmartStore.Core.Domain.Directory;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Core.Tests.Domain.Common
 {

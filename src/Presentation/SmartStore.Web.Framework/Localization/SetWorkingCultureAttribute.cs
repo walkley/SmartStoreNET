@@ -1,14 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading;
-using System.Web.Mvc;
 using Newtonsoft.Json;
 using SmartStore.ComponentModel;
 using SmartStore.Core;
 using SmartStore.Core.Data;
 using SmartStore.Utilities.ObjectPools;
 using SmartStore.Web.Framework.UI;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Framework.Localization
 {

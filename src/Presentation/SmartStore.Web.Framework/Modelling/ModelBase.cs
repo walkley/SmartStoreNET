@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Web.Mvc;
 using Newtonsoft.Json;
 using SmartStore.Core.Infrastructure;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Framework.Modelling
 {

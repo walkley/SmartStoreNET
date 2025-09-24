@@ -1,9 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Web;
-using System.Web.Mvc;
 using Newtonsoft.Json;
 using SmartStore.ComponentModel;
 using SmartStore.Core.Domain.Customers;
@@ -28,12 +26,16 @@ using SmartStore.Web.Framework.Plugins;
 using SmartStore.Web.Framework.Security;
 using SmartStore.Web.Framework.Settings;
 using SmartStore.Web.Framework.Theming;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.PayPal.Controllers
 {
     public class PayPalPlusController : PayPalRestApiControllerBase<PayPalPlusPaymentSettings>
     {
-        private readonly HttpContextBase _httpContext;
+        private readonly HttpContext _httpContext;
         private readonly PluginMediator _pluginMediator;
         private readonly IGenericAttributeService _genericAttributeService;
         private readonly IPaymentService _paymentService;
@@ -42,7 +44,7 @@ namespace SmartStore.PayPal.Controllers
         private readonly IPriceFormatter _priceFormatter;
 
         public PayPalPlusController(
-            HttpContextBase httpContext,
+            HttpContext httpContext,
             PluginMediator pluginMediator,
             IPayPalService payPalService,
             IGenericAttributeService genericAttributeService,
@@ -170,7 +172,33 @@ namespace SmartStore.PayPal.Controllers
             return paymentInfo;
         }
 
-        [LoadSetting, AdminAuthorize, ChildActionOnly, AdminThemed]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[LoadSetting, AdminAuthorize, ChildActionOnly, AdminThemed]
         public ActionResult Configure(PayPalPlusPaymentSettings settings, int storeScope)
         {
             // It's better to also offer inactive methods here but filter them out in frontend.
@@ -199,7 +227,33 @@ namespace SmartStore.PayPal.Controllers
             return View(model);
         }
 
-        [HttpPost, AdminAuthorize, ChildActionOnly, AdminThemed]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[HttpPost, AdminAuthorize, ChildActionOnly, AdminThemed]
         [ValidateAntiForgeryToken]
         public ActionResult Configure(PayPalPlusConfigurationModel model, FormCollection form)
         {

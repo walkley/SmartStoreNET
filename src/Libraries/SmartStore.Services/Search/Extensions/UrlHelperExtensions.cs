@@ -1,6 +1,7 @@
-﻿using System.Web.Mvc;
 using SmartStore.Core.Infrastructure;
 using SmartStore.Core.Search.Facets;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Services.Search.Extensions
 {

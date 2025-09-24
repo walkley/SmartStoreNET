@@ -1,6 +1,7 @@
-﻿using System.Web.Routing;
 using SmartStore.Core.Search.Facets;
 using SmartStore.Services.Search.Rendering;
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.Web.Infrastructure
 {

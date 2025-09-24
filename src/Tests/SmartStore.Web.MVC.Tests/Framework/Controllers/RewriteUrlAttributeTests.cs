@@ -1,5 +1,4 @@
-﻿using System;
-using System.Web.Mvc;
+using System;
 using NUnit.Framework;
 using Rhino.Mocks;
 using SmartStore.Core;
@@ -8,6 +7,10 @@ using SmartStore.Core.Domain.Seo;
 using SmartStore.Core.Domain.Stores;
 using SmartStore.Core.Fakes;
 using SmartStore.Web.Framework.Seo;
+using Microsoft.AspNetCore.Mvc;
+
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Web.MVC.Tests.Framework.Controllers
 {

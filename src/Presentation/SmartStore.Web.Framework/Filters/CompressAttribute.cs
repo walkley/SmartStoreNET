@@ -1,5 +1,8 @@
-﻿using System.IO.Compression;
-using System.Web.Mvc;
+using System.IO.Compression;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.Filters;
+
 
 namespace SmartStore.Web.Framework.Filters
 {

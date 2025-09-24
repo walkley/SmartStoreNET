@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel.Syndication;
-using System.Web.Mvc;
 using SmartStore.ComponentModel;
 using SmartStore.Core;
 using SmartStore.Core.Caching;
@@ -32,6 +31,10 @@ using SmartStore.Web.Infrastructure.Cache;
 using SmartStore.Web.Models.Common;
 using SmartStore.Web.Models.Media;
 using SmartStore.Web.Models.News;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
 
 namespace SmartStore.Web.Controllers
 {
@@ -210,7 +213,7 @@ namespace SmartStore.Web.Controllers
         {
             if (!_newsSettings.Enabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var model = PrepareNewsItemListModel(command);
@@ -289,13 +292,13 @@ namespace SmartStore.Web.Controllers
         {
             if (!_newsSettings.Enabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var newsItem = _newsService.GetNewsById(newsItemId);
             if (newsItem == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             if (!newsItem.Published ||
@@ -306,7 +309,7 @@ namespace SmartStore.Web.Controllers
             {
                 if (!_services.WorkContext.CurrentCustomer.IsAdmin())
                 {
-                    return HttpNotFound();
+                    return NotFound();
                 }
             }
 
@@ -323,13 +326,13 @@ namespace SmartStore.Web.Controllers
         {
             if (!_newsSettings.Enabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var newsItem = _newsService.GetNewsById(newsItemId);
             if (newsItem == null || !newsItem.Published || !newsItem.AllowComments)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             if (_captchaSettings.ShowOnNewsCommentPage && captchaError.HasValue())
@@ -374,7 +377,33 @@ namespace SmartStore.Web.Controllers
             return View(model);
         }
 
-        [ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[ChildActionOnly]
         public ActionResult RssHeaderLink()
         {
             if (!_newsSettings.Enabled || !_newsSettings.ShowHeaderRssUrl)
@@ -409,7 +438,33 @@ namespace SmartStore.Web.Controllers
             return pictureModel;
         }
 
-        [ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[ChildActionOnly]
         public ActionResult NewsSummary(
             bool renderHeading, 
             string newsHeading, 

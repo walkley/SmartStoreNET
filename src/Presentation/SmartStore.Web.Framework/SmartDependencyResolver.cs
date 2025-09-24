@@ -1,7 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Web.Mvc;
 using SmartStore.Core.Infrastructure;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Framework
 {

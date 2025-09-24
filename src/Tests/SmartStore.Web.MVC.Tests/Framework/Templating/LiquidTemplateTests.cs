@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using NUnit.Framework;
@@ -14,6 +14,8 @@ using SmartStore.Services;
 using SmartStore.Templating;
 using SmartStore.Templating.Liquid;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Web.MVC.Tests.Framework.Templating
 {

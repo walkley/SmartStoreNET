@@ -1,7 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web.Mvc;
 using System.Xml;
 using SmartStore.Collections;
 using SmartStore.Core.Domain.Catalog;
@@ -17,6 +16,10 @@ using SmartStore.Services.Catalog;
 using SmartStore.Services.DataExchange.Export;
 using SmartStore.Services.Directory;
 using SmartStore.Services.Localization;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 
 namespace SmartStore.GoogleMerchantCenter.Providers
 {

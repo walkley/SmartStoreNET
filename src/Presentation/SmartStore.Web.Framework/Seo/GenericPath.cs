@@ -1,5 +1,6 @@
-﻿using System;
-using System.Web.Routing;
+using System;
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.Web.Framework.Seo
 {

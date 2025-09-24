@@ -1,8 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web.Mvc;
-using System.Web.Routing;
 using SmartStore.Admin.Models.Plugins;
 using SmartStore.Core.Html;
 using SmartStore.Core.Logging;
@@ -18,6 +16,12 @@ using SmartStore.Services.Tax;
 using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Framework.Plugins;
 using SmartStore.Web.Framework.Security;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Routing;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Admin.Controllers
 {
@@ -265,7 +269,7 @@ namespace SmartStore.Admin.Controllers
             var descriptor = _pluginFinder.GetPluginDescriptorBySystemName(systemName);
             if (descriptor == null || !descriptor.Installed || !descriptor.IsConfigurable)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var model = PreparePluginModel(descriptor, false);
@@ -284,7 +288,7 @@ namespace SmartStore.Admin.Controllers
                 var pluginDescriptor = _pluginFinder.GetPluginDescriptorBySystemName(pk, false);
                 if (pluginDescriptor == null)
                 {
-                    return HttpNotFound("The plugin does not exist.");
+                    return NotFound("The plugin does not exist.");
                 }
 
                 string settingKey = pluginDescriptor.GetSettingKey("LimitedToStores");
@@ -376,7 +380,7 @@ namespace SmartStore.Admin.Controllers
             var provider = _providerManager.GetProvider(systemName);
             if (provider == null || !provider.Metadata.IsConfigurable)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var infos = GetProviderInfos(provider);
@@ -398,7 +402,7 @@ namespace SmartStore.Admin.Controllers
             var provider = _providerManager.GetProvider(systemName);
             if (provider == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var infos = GetProviderInfos(provider);
@@ -434,7 +438,7 @@ namespace SmartStore.Admin.Controllers
             var provider = _providerManager.GetProvider(model.SystemName);
             if (provider == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var infos = GetProviderInfos(provider);
@@ -607,13 +611,13 @@ namespace SmartStore.Admin.Controllers
             var descriptor = _pluginFinder.GetPluginDescriptorBySystemName(systemName);
             if (descriptor == null || !descriptor.Installed)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var isLicensable = IsLicensable(descriptor);
             if (!isLicensable)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             if (model.StoreLicenses != null)

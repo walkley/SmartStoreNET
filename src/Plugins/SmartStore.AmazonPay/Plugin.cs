@@ -1,6 +1,5 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Web.Routing;
 using SmartStore.AmazonPay.Controllers;
 using SmartStore.AmazonPay.Services;
 using SmartStore.Core.Domain.Cms;
@@ -14,6 +13,8 @@ using SmartStore.Services.Customers;
 using SmartStore.Services.Orders;
 using SmartStore.Services.Payments;
 using SmartStore.Services.Tasks;
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.AmazonPay
 {

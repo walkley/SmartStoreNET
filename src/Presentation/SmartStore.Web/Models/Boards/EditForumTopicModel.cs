@@ -1,11 +1,14 @@
-﻿using System.Collections.Generic;
-using System.Web.Mvc;
+using System.Collections.Generic;
 using FluentValidation;
 using FluentValidation.Attributes;
 using SmartStore.Core.Domain.Forums;
 using SmartStore.Services.Localization;
 using SmartStore.Web.Framework.Modelling;
 using SmartStore.Web.Framework.Security;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 
 namespace SmartStore.Web.Models.Boards
 {

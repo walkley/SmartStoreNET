@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using NUnit.Framework;
 using SmartStore.Core.Data;
@@ -6,6 +6,8 @@ using SmartStore.Core.Domain.Catalog;
 using SmartStore.Core.Domain.DataExchange;
 using SmartStore.Services.DataExchange;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Services.Tests.DataExchange
 {

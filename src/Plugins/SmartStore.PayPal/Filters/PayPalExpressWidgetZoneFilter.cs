@@ -1,5 +1,4 @@
-﻿using System;
-using System.Web.Mvc;
+using System;
 using SmartStore.Core.Domain.Orders;
 using SmartStore.PayPal.Settings;
 using SmartStore.Services;
@@ -7,6 +6,8 @@ using SmartStore.Services.Customers;
 using SmartStore.Services.Payments;
 using SmartStore.Web.Framework.UI;
 using SmartStore.Web.Models.ShoppingCart;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.PayPal.Filters
 {

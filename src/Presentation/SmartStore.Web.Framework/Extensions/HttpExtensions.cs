@@ -1,13 +1,16 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Routing;
 using SmartStore.Core.Domain.Customers;
 using SmartStore.Core.Infrastructure;
 using SmartStore.Services.Orders;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Routing;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore
 {
@@ -128,7 +131,7 @@ namespace SmartStore
             }
         }
 
-        public static RouteData GetRouteData(this HttpContextBase httpContext)
+        public static RouteData GetRouteData(this HttpContext httpContext)
         {
             Guard.NotNull(httpContext, nameof(httpContext));
 
@@ -140,13 +143,13 @@ namespace SmartStore
             return null;
         }
 
-        public static bool TryGetRouteData(this HttpContextBase httpContext, out RouteData routeData)
+        public static bool TryGetRouteData(this HttpContext httpContext, out RouteData routeData)
         {
             routeData = httpContext.GetRouteData();
             return routeData != null;
         }
 
-        public static CheckoutState GetCheckoutState(this HttpContextBase httpContext)
+        public static CheckoutState GetCheckoutState(this HttpContext httpContext)
         {
             Guard.NotNull(httpContext, nameof(httpContext));
 
@@ -161,14 +164,14 @@ namespace SmartStore
             return state;
         }
 
-        public static void RemoveCheckoutState(this HttpContextBase httpContext)
+        public static void RemoveCheckoutState(this HttpContext httpContext)
         {
             Guard.NotNull(httpContext, nameof(httpContext));
 
             httpContext.Session.SafeRemove(CheckoutState.CheckoutStateSessionKey);
         }
 
-        internal static string GetUserThemeChoiceFromCookie(this HttpContextBase context)
+        internal static string GetUserThemeChoiceFromCookie(this HttpContext context)
         {
             if (context == null)
                 return null;
@@ -182,7 +185,7 @@ namespace SmartStore
             return null;
         }
 
-        internal static void SetUserThemeChoiceInCookie(this HttpContextBase context, string value)
+        internal static void SetUserThemeChoiceInCookie(this HttpContext context, string value)
         {
             if (context?.Request == null)
             {
@@ -206,7 +209,7 @@ namespace SmartStore
             context.Request.Cookies.Set(cookie);
         }
 
-        internal static HttpCookie GetPreviewModeCookie(this HttpContextBase context, bool createIfMissing)
+        internal static HttpCookie GetPreviewModeCookie(this HttpContext context, bool createIfMissing)
         {
             var httpRequest = context.SafeGetHttpRequest();
             var cookie = httpRequest?.Cookies?.Get("sm.PreviewModeOverrides");
@@ -233,7 +236,7 @@ namespace SmartStore
             return cookie;
         }
 
-        internal static void SetPreviewModeValue(this HttpContextBase context, string key, string value)
+        internal static void SetPreviewModeValue(this HttpContext context, string key, string value)
         {
             if (context == null)
                 return;
@@ -252,7 +255,7 @@ namespace SmartStore
             }
         }
 
-        public static IDisposable PreviewModeCookie(this HttpContextBase context)
+        public static IDisposable PreviewModeCookie(this HttpContext context)
         {
             var disposable = new ActionDisposable(() =>
             {
@@ -275,7 +278,7 @@ namespace SmartStore
             return disposable;
         }
 
-        public static string GetContentUrl(this HttpContextBase context, string path)
+        public static string GetContentUrl(this HttpContext context, string path)
         {
             if (path.HasValue())
             {

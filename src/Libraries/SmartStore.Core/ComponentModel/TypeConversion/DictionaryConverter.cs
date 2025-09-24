@@ -1,9 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Globalization;
-using System.Web.Routing;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.ComponentModel
 {

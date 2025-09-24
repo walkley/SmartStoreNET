@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 using Rhino.Mocks;
@@ -7,6 +7,8 @@ using SmartStore.Core.Domain.Directory;
 using SmartStore.Core.Events;
 using SmartStore.Services.Directory;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Services.Tests.Directory
 {

@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using System.Globalization;
-using System.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Framework
 {

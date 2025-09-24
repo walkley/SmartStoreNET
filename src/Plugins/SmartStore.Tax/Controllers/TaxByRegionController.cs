@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Web.Mvc;
+using System.Linq;
 using SmartStore.Core.Domain.Directory;
 using SmartStore.Core.Domain.Tax;
 using SmartStore.Services.Directory;
@@ -10,6 +9,12 @@ using SmartStore.Tax.Services;
 using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Framework.Security;
 using Telerik.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
 
 namespace SmartStore.Tax.Controllers
 {

@@ -1,9 +1,10 @@
-﻿using System;
-using System.Web.Mvc;
+using System;
 using SmartStore.Core.Security;
 using SmartStore.Core.Themes;
 using SmartStore.Services;
 using SmartStore.Web.Framework.UI;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Admin.Infrastructure
 {

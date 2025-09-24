@@ -1,4 +1,3 @@
-﻿using System.Web.Mvc;
 using SmartStore.Core.Domain.Common;
 using SmartStore.Core.Domain.Directory;
 using SmartStore.Services;
@@ -11,6 +10,10 @@ using SmartStore.ShippingByWeight.Services;
 using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Framework.Security;
 using Telerik.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 
 namespace SmartStore.ShippingByWeight.Controllers
 {

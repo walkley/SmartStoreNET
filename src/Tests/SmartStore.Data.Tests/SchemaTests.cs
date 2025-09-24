@@ -1,7 +1,9 @@
-﻿using System;
+using System;
 using System.Data.Entity;
 using NUnit.Framework;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Data.Tests
 {

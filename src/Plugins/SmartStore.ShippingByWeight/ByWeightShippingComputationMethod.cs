@@ -1,6 +1,5 @@
-﻿using System;
+using System;
 using System.Data.Entity.Migrations;
-using System.Web.Routing;
 using SmartStore.Core;
 using SmartStore.Core.Domain.Shipping;
 using SmartStore.Core.Domain.Tax;
@@ -14,6 +13,8 @@ using SmartStore.Services.Shipping.Tracking;
 using SmartStore.Services.Tax;
 using SmartStore.ShippingByWeight.Data.Migrations;
 using SmartStore.ShippingByWeight.Services;
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.ShippingByWeight
 {
