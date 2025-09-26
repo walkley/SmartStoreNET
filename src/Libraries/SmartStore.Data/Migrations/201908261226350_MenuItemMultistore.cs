@@ -40,7 +40,7 @@ namespace SmartStore.Data.Migrations
                 "Specifies the color of the icon.",
                 "Legt die Farbe des Icons fest.");
 
-            builder.AddOrUpdate("Common.White", "White", "Weiﬂ");
+            builder.AddOrUpdate("Common.White", "White", "Wei√ü");
         }
     }
 }
