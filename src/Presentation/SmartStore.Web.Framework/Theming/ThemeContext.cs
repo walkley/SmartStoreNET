@@ -1,10 +1,11 @@
-﻿using System.Linq;
-using System.Web;
+using System.Linq;
 using SmartStore.Core;
 using SmartStore.Core.Domain.Customers;
 using SmartStore.Core.Domain.Themes;
 using SmartStore.Core.Themes;
 using SmartStore.Services.Common;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Web.Framework.Theming
 {
@@ -18,7 +19,7 @@ namespace SmartStore.Web.Framework.Theming
         private readonly ThemeSettings _themeSettings;
         private readonly IThemeRegistry _themeRegistry;
         private readonly IMobileDeviceHelper _mobileDeviceHelper;
-        private readonly HttpContextBase _httpContext;
+        private readonly HttpContext _httpContext;
 
         private bool _themeIsCached;
         private string _cachedThemeName;
@@ -32,7 +33,7 @@ namespace SmartStore.Web.Framework.Theming
             ThemeSettings themeSettings,
             IThemeRegistry themeRegistry,
             IMobileDeviceHelper mobileDeviceHelper,
-            HttpContextBase httpContext)
+            HttpContext httpContext)
         {
             this._workContext = workContext;
             this._storeContext = storeContext;

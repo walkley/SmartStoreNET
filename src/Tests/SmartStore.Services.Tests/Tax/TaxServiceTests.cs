@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using NUnit.Framework;
 using Rhino.Mocks;
@@ -15,6 +15,8 @@ using SmartStore.Services.Common;
 using SmartStore.Services.Directory;
 using SmartStore.Services.Tax;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Services.Tests.Tax
 {

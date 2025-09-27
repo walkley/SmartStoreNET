@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 using Rhino.Mocks;
@@ -11,6 +11,8 @@ using SmartStore.Services.Configuration;
 using SmartStore.Services.Localization;
 using SmartStore.Services.Stores;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Services.Tests.Localization
 {

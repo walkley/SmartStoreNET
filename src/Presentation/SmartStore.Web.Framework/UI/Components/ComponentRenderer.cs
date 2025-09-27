@@ -1,8 +1,11 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Web;
-using System.Web.Mvc;
 using System.Web.UI;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+
 
 namespace SmartStore.Web.Framework.UI
 {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
@@ -17,6 +17,8 @@ using SmartStore.Services.Configuration;
 using SmartStore.Services.Customers;
 using SmartStore.Services.Helpers;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Services.Tests.Helpers
 {

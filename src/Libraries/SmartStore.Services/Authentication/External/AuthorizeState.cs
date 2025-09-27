@@ -1,7 +1,8 @@
 //Contributor:  Nicholas Mayne
 
 using System.Collections.Generic;
-using System.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Services.Authentication.External
 {

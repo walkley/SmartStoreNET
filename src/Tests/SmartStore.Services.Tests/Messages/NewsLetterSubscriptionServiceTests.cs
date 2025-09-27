@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using Rhino.Mocks;
 using SmartStore.Core.Data;
 using SmartStore.Core.Domain.Customers;
@@ -6,6 +6,8 @@ using SmartStore.Core.Domain.Messages;
 using SmartStore.Core.Events;
 using SmartStore.Services.Messages;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Services.Tests.Messages
 {

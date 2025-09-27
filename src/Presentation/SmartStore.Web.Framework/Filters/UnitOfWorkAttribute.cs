@@ -1,6 +1,9 @@
-﻿using System;
-using System.Web.Mvc;
+using System;
 using SmartStore.Core.Data;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.Filters;
+
 
 namespace SmartStore.Web.Framework.Filters
 {

@@ -1,11 +1,13 @@
-﻿using System.Web.Mvc;
 using System.Web.Mvc.Routing.Constraints;
-using System.Web.Routing;
 using SmartStore.Core.Data;
 using SmartStore.Services.Media;
 using SmartStore.Web.Framework;
 using SmartStore.Web.Framework.Localization;
 using SmartStore.Web.Framework.Routing;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.Web.Infrastructure
 {

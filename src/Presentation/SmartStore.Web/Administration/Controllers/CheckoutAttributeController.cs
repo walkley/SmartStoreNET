@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Web.Mvc;
+using System.Linq;
 using SmartStore.Admin.Models.Orders;
 using SmartStore.Core;
 using SmartStore.Core.Domain.Common;
@@ -17,6 +16,14 @@ using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Framework.Filters;
 using SmartStore.Web.Framework.Security;
 using Telerik.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
+using System.Text.Encodings.Web;
+
 
 namespace SmartStore.Admin.Controllers
 {
@@ -277,7 +284,7 @@ namespace SmartStore.Admin.Controllers
                 .Select(x =>
                 {
                     var m = x.ToModel();
-                    m.NameString = Server.HtmlEncode(x.Color.IsEmpty() ? x.Name : $"{x.Name} - {x.Color}");
+                    m.NameString = HtmlEncoder.Default.Encode(x.Color.IsEmpty() ? x.Name : $"{x.Name} - {x.Color}");
 
                     return m;
                 })

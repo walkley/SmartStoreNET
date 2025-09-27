@@ -1,18 +1,27 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
 using System.Web.Mvc.Async;
 using System.Web.Mvc.Html;
-using System.Web.Routing;
 using Newtonsoft.Json;
 using SmartStore.ComponentModel;
 using SmartStore.Core.Logging;
 using SmartStore.Services.Localization;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Routing;
+
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+
+using Microsoft.AspNetCore.Html;
+
+using Microsoft.AspNetCore.Http;
+
+using System.Threading.Tasks;
+
 
 namespace SmartStore.Services.Cms.Blocks
 {
@@ -213,7 +222,7 @@ namespace SmartStore.Services.Cms.Blocks
             }
 
             var routeData = CreateRouteData(vpd.Route, routeValues, vpd.DataTokens, htmlHelper.ViewContext);
-            var httpContext = htmlHelper.ViewContext.HttpContext;
+            HttpContext httpContext = htmlHelper.ViewContext.HttpContext;
             var requestContext = new RequestContext(httpContext, routeData);
 
             // Create the controller instance
@@ -401,18 +410,17 @@ namespace SmartStore.Services.Cms.Blocks
             return routeData;
         }
 
-        class ChildActionMvcHandler : MvcHandler
-        {
-            public ChildActionMvcHandler(RequestContext context)
+        class ChildActionMvcHandler         {
+RequestDelegate _next = null;            public ChildActionMvcHandler(RequestContext context)
                 : base(context)
             {
             }
 
-            protected override void AddVersionHeader(HttpContextBase httpContext)
+            protected override void AddVersionHeader(HttpContext httpContext)
             {
                 // No version header for child actions
             }
-        }
+publicChildActionMvcHandler(RequestDelegatenext){}        }
 
         #endregion
     }

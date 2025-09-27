@@ -1,9 +1,11 @@
-﻿using System;
+using System;
 using System.Linq;
 using NUnit.Framework;
 using SmartStore.Core.Domain.Media;
 using SmartStore.Core.Domain.Messages;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Data.Tests.Messages
 {

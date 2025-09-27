@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
-using System.Web.Mvc;
 using SmartStore.Core.Domain;
 using SmartStore.Core.Domain.Security;
 using SmartStore.Core.Localization;
@@ -12,6 +11,8 @@ using SmartStore.Services.Cms;
 using SmartStore.Services.Common;
 using SmartStore.Services.Customers;
 using SmartStore.Web.Framework.Filters;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Framework.Theming
 {

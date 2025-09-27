@@ -1,7 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using NUnit.Framework;
 using SmartStore.ComponentModel;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Core.Tests
 {

@@ -1,7 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web.Mvc;
 using SmartStore.ComponentModel;
 using SmartStore.Core.Domain.Catalog;
 using SmartStore.Core.Domain.Common;
@@ -16,6 +15,10 @@ using SmartStore.Services.Seo;
 using SmartStore.Web.Models.Catalog;
 using SmartStore.Web.Models.Common;
 using SmartStore.Web.Models.Customer;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 
 namespace SmartStore.Web
 {

@@ -1,7 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web.Mvc;
 using SmartStore.Admin.Models.Catalog;
 using SmartStore.Core.Domain.Catalog;
 using SmartStore.Core.Domain.Common;
@@ -14,6 +13,14 @@ using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Framework.Filters;
 using SmartStore.Web.Framework.Security;
 using Telerik.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
+using System.Text.Encodings.Web;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Admin.Controllers
 {
@@ -306,7 +313,7 @@ namespace SmartStore.Admin.Controllers
             gridModel.Data = options.Select(x =>
             {
                 var model = x.ToModel();
-                model.NameString = Server.HtmlEncode(x.Color.IsEmpty() ? x.Name : $"{x.Name} - {x.Color}");
+                model.NameString = HtmlEncoder.Default.Encode(x.Color.IsEmpty() ? x.Name : $"{x.Name} - {x.Color}");
 
                 return model;
             });
@@ -394,7 +401,7 @@ namespace SmartStore.Admin.Controllers
             }
 
             var model = sao.ToModel();
-            model.NameString = Server.HtmlEncode(sao.Color.IsEmpty() ? sao.Name : $"{sao.Name} - {sao.Color}");
+            model.NameString = HtmlEncoder.Default.Encode(sao.Color.IsEmpty() ? sao.Name : $"{sao.Name} - {sao.Color}");
 
             AddLocales(_languageService, model.Locales, (locale, languageId) =>
             {

@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web.Routing;
 using SmartStore.Core.Infrastructure;
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.Web.Framework.Routing
 {

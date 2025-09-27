@@ -1,12 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data.SqlServerCe;
 using System.IO;
 using System.Linq;
 using System.Threading;
 using SmartStore.Utilities;
 using SmartStore.Utilities.Threading;
+using Microsoft.Data.SqlClient;
+
 
 namespace SmartStore.Core.Data
 {

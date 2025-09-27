@@ -1,6 +1,5 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
-using System.Web.Mvc;
 using SmartStore.Admin.Models.Payments;
 using SmartStore.Core.Domain.Payments;
 using SmartStore.Core.Security;
@@ -13,6 +12,10 @@ using SmartStore.Web.Framework.Filters;
 using SmartStore.Web.Framework.Modelling;
 using SmartStore.Web.Framework.Plugins;
 using SmartStore.Web.Framework.Security;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Admin.Controllers
 {
@@ -150,7 +153,7 @@ namespace SmartStore.Admin.Controllers
             var provider = _paymentService.LoadPaymentMethodBySystemName(systemName);
             if (provider == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             _pluginMediator.SetSetting(provider.Metadata, "FriendlyName", model.FriendlyName);

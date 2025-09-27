@@ -1,6 +1,7 @@
-﻿using System.Diagnostics;
-using System.Web.Mvc;
+using System.Diagnostics;
 using SmartStore.Core.Logging;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.DevTools.Filters
 {

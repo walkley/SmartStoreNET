@@ -1,5 +1,6 @@
-﻿using System.Web.Mvc;
 using SmartStore.Web.Framework.Localization;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Framework.Seo
 {

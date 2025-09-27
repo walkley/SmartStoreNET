@@ -1,8 +1,13 @@
-﻿using System.Web;
-using System.Web.Mvc;
+using System.Web;
 using SmartStore.Core;
 using SmartStore.Core.Infrastructure;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+
+using Microsoft.AspNetCore.Html;
+
 
 namespace SmartStore.Web.Framework.Security
 {

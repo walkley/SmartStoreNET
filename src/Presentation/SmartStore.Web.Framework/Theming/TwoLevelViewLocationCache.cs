@@ -1,8 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Web;
-using System.Web.Mvc;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Web.Framework.Theming
 {
@@ -26,7 +28,7 @@ namespace SmartStore.Web.Framework.Theming
 
         }
 
-        private static IDictionary<string, string> GetRequestCache(HttpContextBase httpContext)
+        private static IDictionary<string, string> GetRequestCache(HttpContext httpContext)
         {
             var d = httpContext.Items[s_key] as IDictionary<string, string>;
             if (d == null)
@@ -37,7 +39,7 @@ namespace SmartStore.Web.Framework.Theming
             return d;
         }
 
-        public string GetViewLocation(HttpContextBase httpContext, string key)
+        public string GetViewLocation(HttpContext httpContext, string key)
         {
             var d = GetRequestCache(httpContext);
             string location;
@@ -49,7 +51,7 @@ namespace SmartStore.Web.Framework.Theming
             return location;
         }
 
-        public void InsertViewLocation(HttpContextBase httpContext, string key, string virtualPath)
+        public void InsertViewLocation(HttpContext httpContext, string key, string virtualPath)
         {
             _innerCache.InsertViewLocation(httpContext, key, virtualPath);
             GetRequestCache(httpContext)[key] = virtualPath;

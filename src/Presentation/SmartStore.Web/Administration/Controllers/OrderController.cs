@@ -1,10 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
-using System.Web.Mvc;
-using System.Web.Routing;
 using SmartStore.Admin.Models.Dashboard;
 using SmartStore.Admin.Models.Orders;
 using SmartStore.Core;
@@ -49,6 +47,16 @@ using SmartStore.Web.Framework.Pdf;
 using SmartStore.Web.Framework.Plugins;
 using SmartStore.Web.Framework.Security;
 using Telerik.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Routing;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+using Microsoft.AspNetCore.Http;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
 
 namespace SmartStore.Admin.Controllers
 {
@@ -928,7 +936,33 @@ namespace SmartStore.Admin.Controllers
             return View(model);
         }
 
-        [ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[ChildActionOnly]
         public ActionResult OrderGrid(OrderListModel model, int? productId, bool hideProfitReport = false)
         {
             if (productId.GetValueOrDefault() > 0)
@@ -1742,7 +1776,7 @@ namespace SmartStore.Admin.Controllers
             var oi = _orderService.GetOrderItemById(model.Id);
             if (oi == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var orderId = oi.Order.Id;
@@ -1796,7 +1830,7 @@ namespace SmartStore.Admin.Controllers
             var oi = _orderService.GetOrderItemById(model.Id);
             if (oi == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var orderId = oi.Order.Id;
@@ -1849,7 +1883,7 @@ namespace SmartStore.Admin.Controllers
             var orderItem = order.OrderItems.Where(x => x.Id == orderItemId).FirstOrDefault();
             if (orderItem == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             if (orderItem.Quantity > 0)
@@ -1902,7 +1936,7 @@ namespace SmartStore.Admin.Controllers
             var orderItem = order.OrderItems.Where(x => x.Id == orderItemId).FirstOrDefault();
             if (orderItem == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             orderItem.DownloadCount = 0;
@@ -1940,7 +1974,7 @@ namespace SmartStore.Admin.Controllers
             var orderItem = order.OrderItems.Where(x => x.Id == orderItemId).FirstOrDefault();
             if (orderItem == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             orderItem.IsDownloadActivated = !orderItem.IsDownloadActivated;
@@ -1966,7 +2000,7 @@ namespace SmartStore.Admin.Controllers
             var orderItem = order.OrderItems.Where(x => x.Id == orderItemId).FirstOrDefault();
             if (orderItem == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             if (!orderItem.Product.IsDownload)
@@ -2000,7 +2034,7 @@ namespace SmartStore.Admin.Controllers
             var orderItem = order.OrderItems.Where(x => x.Id == model.OrderItemId).FirstOrDefault();
             if (orderItem == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var isUrlDownload = Request.Form["is-url-download-" + model.LicenseDownloadId] == "true";
@@ -2072,7 +2106,7 @@ namespace SmartStore.Admin.Controllers
             var orderItem = order.OrderItems.Where(x => x.Id == model.OrderItemId).FirstOrDefault();
             if (orderItem == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             // Set deleted file to transient.
@@ -2343,7 +2377,7 @@ namespace SmartStore.Admin.Controllers
             var address = _addressService.GetAddressById(addressId);
             if (address == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var model = new OrderAddressModel { OrderId = orderId };
@@ -2366,7 +2400,7 @@ namespace SmartStore.Admin.Controllers
             var address = _addressService.GetAddressById(model.Address.Id);
             if (address == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             if (ModelState.IsValid)
@@ -2511,7 +2545,7 @@ namespace SmartStore.Admin.Controllers
             var order = _orderService.GetOrderById(model.OrderId);
             if (order == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             if (ModelState.IsValid)
@@ -2558,7 +2592,7 @@ namespace SmartStore.Admin.Controllers
             var shipment = _shipmentService.GetShipmentById(id);
             if (shipment == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var model = new ShipmentModel();
@@ -2575,7 +2609,7 @@ namespace SmartStore.Admin.Controllers
             var shipment = _shipmentService.GetShipmentById(model.Id);
             if (shipment == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             if (ModelState.IsValid)
@@ -2603,7 +2637,7 @@ namespace SmartStore.Admin.Controllers
             var shipment = _shipmentService.GetShipmentById(id);
             if (shipment == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var orderId = shipment.OrderId;
@@ -2625,7 +2659,7 @@ namespace SmartStore.Admin.Controllers
             var shipment = _shipmentService.GetShipmentById(id);
             if (shipment == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             try
@@ -2650,7 +2684,7 @@ namespace SmartStore.Admin.Controllers
             var shipment = _shipmentService.GetShipmentById(id);
             if (shipment == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             try

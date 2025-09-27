@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel.Syndication;
-using System.Web.Mvc;
 using SmartStore.Core;
 using SmartStore.Core.Caching;
 using SmartStore.Core.Domain.Catalog;
@@ -25,6 +24,8 @@ using SmartStore.Web.Framework.Seo;
 using SmartStore.Web.Framework.UI;
 using SmartStore.Web.Infrastructure.Cache;
 using SmartStore.Web.Models.Catalog;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Controllers
 {
@@ -93,20 +94,20 @@ namespace SmartStore.Web.Controllers
         {
             var category = _categoryService.GetCategoryById(categoryId);
             if (category == null || category.Deleted)
-                return HttpNotFound();
+                return NotFound();
 
             // Check whether the current user has a "Manage catalog" permission.
             // It allows him to preview a category before publishing.
             if (!category.Published && !Services.Permissions.Authorize(Permissions.Catalog.Category.Read))
-                return HttpNotFound();
+                return NotFound();
 
             // ACL (access control list).
             if (!_aclService.Authorize(category))
-                return HttpNotFound();
+                return NotFound();
 
             // Store mapping.
             if (!_storeMappingService.Authorize(category))
-                return HttpNotFound();
+                return NotFound();
 
             var store = Services.StoreContext.CurrentStore;
             var customer = Services.WorkContext.CurrentCustomer;
@@ -224,7 +225,33 @@ namespace SmartStore.Web.Controllers
             return View(templateViewPath, model);
         }
 
-        [ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[ChildActionOnly]
         public ActionResult HomepageCategories()
         {
             var categories = _categoryService.GetAllCategoriesDisplayedOnHomePage()
@@ -250,20 +277,20 @@ namespace SmartStore.Web.Controllers
         {
             var manufacturer = _manufacturerService.GetManufacturerById(manufacturerId);
             if (manufacturer == null || manufacturer.Deleted)
-                return HttpNotFound();
+                return NotFound();
 
             // Check whether the current user has a "Manage catalog" permission.
             // It allows him to preview a manufacturer before publishing.
             if (!manufacturer.Published && !Services.Permissions.Authorize(Permissions.Catalog.Manufacturer.Read))
-                return HttpNotFound();
+                return NotFound();
 
             // ACL (access control list).
             if (!_aclService.Authorize(manufacturer))
-                return HttpNotFound();
+                return NotFound();
 
             // Store mapping.
             if (!_storeMappingService.Authorize(manufacturer))
-                return HttpNotFound();
+                return NotFound();
 
             var store = Services.StoreContext.CurrentStore;
             var customer = Services.WorkContext.CurrentCustomer;
@@ -385,7 +412,33 @@ namespace SmartStore.Web.Controllers
             return View(model);
         }
 
-        [ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[ChildActionOnly]
         public ActionResult HomepageManufacturers()
         {
             if (_catalogSettings.ManufacturerItemsToDisplayOnHomepage > 0 && _catalogSettings.ShowManufacturersOnHomepage)
@@ -404,7 +457,33 @@ namespace SmartStore.Web.Controllers
 
         #region HomePage
 
-        [ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[ChildActionOnly]
         public ActionResult HomepageBestSellers(int? productThumbPictureSize)
         {
             if (!_catalogSettings.ShowBestsellersOnHomepage || _catalogSettings.NumberOfBestsellersOnHomepage == 0)
@@ -439,7 +518,33 @@ namespace SmartStore.Web.Controllers
             return PartialView(model);
         }
 
-        [ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[ChildActionOnly]
         public ActionResult HomepageProducts(int? productThumbPictureSize)
         {
             var products = _productService.GetAllProductsDisplayedOnHomePage();
@@ -464,7 +569,33 @@ namespace SmartStore.Web.Controllers
 
         #region Products by Tag
 
-        [ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[ChildActionOnly]
         public ActionResult PopularProductTags()
         {
             if (!_catalogSettings.ShowPopularProductTagsOnHomepage)
@@ -516,12 +647,12 @@ namespace SmartStore.Web.Controllers
             var productTag = _productTagService.GetProductTagById(productTagId);
             if (productTag == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             if (!productTag.Published && !Services.Permissions.Authorize(Permissions.Catalog.Product.Read))
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var model = new ProductsByTagModel
@@ -589,7 +720,33 @@ namespace SmartStore.Web.Controllers
             return View(model);
         }
 
-        [ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[ChildActionOnly]
         public ActionResult RecentlyViewedProductsBlock()
         {
             if (!_catalogSettings.RecentlyViewedProductsEnabled)
@@ -724,10 +881,10 @@ namespace SmartStore.Web.Controllers
         {
             var product = _productService.GetProductById(id);
             if (product == null || product.Deleted || product.IsSystemProduct || !product.Published)
-                return HttpNotFound();
+                return NotFound();
 
             if (!_catalogSettings.CompareProductsEnabled)
-                return HttpNotFound();
+                return NotFound();
 
             _compareProductsService.AddProductToCompareList(id);
 
@@ -769,10 +926,10 @@ namespace SmartStore.Web.Controllers
         {
             var product = _productService.GetProductById(id);
             if (product == null)
-                return HttpNotFound();
+                return NotFound();
 
             if (!_catalogSettings.CompareProductsEnabled)
-                return HttpNotFound();
+                return NotFound();
 
             _compareProductsService.RemoveProductFromCompareList(id);
 
@@ -808,7 +965,7 @@ namespace SmartStore.Web.Controllers
         {
             if (!_catalogSettings.CompareProductsEnabled)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var products = _compareProductsService.GetComparedProducts();

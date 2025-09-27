@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection;
-using System.Web;
 using System.Web.Hosting;
 using Autofac;
 using Autofac.Builder;
@@ -98,6 +97,8 @@ using SmartStore.Web.Framework.UI;
 using SmartStore.Web.Framework.WebApi.Configuration;
 using SmartStore.Web.Framework.WebApi.OData;
 using Module = Autofac.Module;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Web.Framework
 {
@@ -732,7 +733,7 @@ namespace SmartStore.Web.Framework
             }
         }
 
-        static HttpContextBase HttpContextBaseFactory(IComponentContext ctx)
+        static HttpContext HttpContextBaseFactory(IComponentContext ctx)
         {
             if (IsRequestValid())
             {

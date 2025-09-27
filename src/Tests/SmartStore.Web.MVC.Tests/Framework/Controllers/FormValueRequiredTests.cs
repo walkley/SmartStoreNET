@@ -1,7 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Specialized;
 using NUnit.Framework;
 using SmartStore.Web.Framework.Filters;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Web.MVC.Tests.Framework.Controllers
 {

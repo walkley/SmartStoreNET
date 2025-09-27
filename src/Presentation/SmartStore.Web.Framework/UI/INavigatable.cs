@@ -1,5 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Web.Routing;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.Web.Framework.UI
 {

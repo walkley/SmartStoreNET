@@ -1,12 +1,19 @@
-﻿using System.IO;
+using System.IO;
 using System.Linq;
 using System.Text;
-using System.Web.Mvc;
 using System.Web.Mvc.Html;
 using SmartStore.Core;
 using SmartStore.Core.Infrastructure;
 using SmartStore.Core.Themes;
 using SmartStore.Services.Localization;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Html;
+
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 
 namespace SmartStore.Web.Framework.Theming
 {
@@ -15,7 +22,7 @@ namespace SmartStore.Web.Framework.Theming
 
         #region ThemeVars
 
-        public static MvcHtmlString ThemeVarLabel(this HtmlHelper html, ThemeVariableInfo info, string hint = null)
+        public static HtmlString ThemeVarLabel(this HtmlHelper html, ThemeVariableInfo info, string hint = null)
         {
             Guard.NotNull(info, "info");
 
@@ -43,7 +50,7 @@ namespace SmartStore.Web.Framework.Theming
             return MvcHtmlString.Create(result.ToString());
         }
 
-        public static MvcHtmlString ThemeVarEditor(this HtmlHelper html, ThemeVariableInfo info, object value)
+        public static HtmlString ThemeVarEditor(this HtmlHelper html, ThemeVariableInfo info, object value)
         {
             Guard.NotNull(info, "info");
 
@@ -65,7 +72,7 @@ namespace SmartStore.Web.Framework.Theming
             var isValidColor = info.Type == ThemeVariableType.Color
                 && ((strValue.HasValue() && ThemeVarsRepository.IsValidColor(strValue)) || (strValue.IsEmpty() && ThemeVarsRepository.IsValidColor(info.DefaultValue)));
 
-            MvcHtmlString control;
+            HtmlString control;
 
             if (isValidColor)
             {
@@ -94,7 +101,7 @@ namespace SmartStore.Web.Framework.Theming
             return control;
         }
 
-        public static MvcHtmlString ThemeVarChainInfo(this HtmlHelper html, ThemeVariableInfo info)
+        public static HtmlString ThemeVarChainInfo(this HtmlHelper html, ThemeVariableInfo info)
         {
             Guard.NotNull(info, "info");
 
@@ -110,7 +117,7 @@ namespace SmartStore.Web.Framework.Theming
             return MvcHtmlString.Empty;
         }
 
-        private static MvcHtmlString ThemeVarSelectEditor(HtmlHelper html, ThemeVariableInfo info, string expression, string value)
+        private static HtmlString ThemeVarSelectEditor(HtmlHelper html, ThemeVariableInfo info, string expression, string value)
         {
             var manifest = info.Manifest;
 

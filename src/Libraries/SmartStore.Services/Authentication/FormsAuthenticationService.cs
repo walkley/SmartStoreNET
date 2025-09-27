@@ -1,17 +1,18 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Security;
 using SmartStore.Core;
 using SmartStore.Core.Domain.Customers;
 using SmartStore.Services.Customers;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Services.Authentication
 {
     public partial class FormsAuthenticationService : IAuthenticationService
     {
-        private readonly HttpContextBase _httpContext;
+        private readonly HttpContext _httpContext;
         private readonly ICustomerService _customerService;
         private readonly CustomerSettings _customerSettings;
         private readonly PrivacySettings _privacySettings;
@@ -20,7 +21,7 @@ namespace SmartStore.Services.Authentication
         private Customer _cachedCustomer;
 
         public FormsAuthenticationService(
-            HttpContextBase httpContext,
+            HttpContext httpContext,
             ICustomerService customerService,
             CustomerSettings customerSettings,
             PrivacySettings privacySettings)

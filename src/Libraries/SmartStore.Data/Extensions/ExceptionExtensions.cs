@@ -1,7 +1,8 @@
-﻿using System;
+using System;
 using System.Data.Entity.Core;
 using System.Data.Entity.Infrastructure;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
+
 
 namespace SmartStore
 {

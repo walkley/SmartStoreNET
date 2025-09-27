@@ -1,9 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 using SmartStore.Rules;
 using SmartStore.Rules.Filters;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Core.Tests.Rules.Filters
 {

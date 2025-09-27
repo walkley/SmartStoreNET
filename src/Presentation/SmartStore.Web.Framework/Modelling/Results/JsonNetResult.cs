@@ -1,9 +1,10 @@
-﻿using System;
-using System.Web.Mvc;
+using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using SmartStore.ComponentModel;
 using SmartStore.Services.Helpers;
+using Microsoft.AspNetCore.Mvc;
+
 
 // ReSharper disable CheckNamespace
 namespace SmartStore.Web.Framework.Modelling

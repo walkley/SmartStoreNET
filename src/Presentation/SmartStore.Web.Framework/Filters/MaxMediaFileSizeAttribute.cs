@@ -1,7 +1,8 @@
-﻿using System;
-using System.Web.Mvc;
+using System;
 using SmartStore.Core.Domain.Media;
 using SmartStore.Services.Media;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Framework.Filters
 {

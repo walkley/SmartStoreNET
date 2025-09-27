@@ -1,5 +1,7 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using SmartStore.Core.Localization;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Web.MVC.Tests.Public.Validators
 {

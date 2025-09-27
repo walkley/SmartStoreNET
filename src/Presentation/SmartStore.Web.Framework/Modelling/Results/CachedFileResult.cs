@@ -1,11 +1,13 @@
-﻿using System;
+using System;
 using System.Globalization;
 using System.IO;
-using System.Web;
 using System.Web.Hosting;
-using System.Web.Mvc;
 using SmartStore.Core.IO;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Web.Framework.Modelling
 {
@@ -145,7 +147,7 @@ namespace SmartStore.Web.Framework.Modelling
 
         public override void ExecuteResult(ControllerContext context)
         {
-            var httpContext = context.HttpContext;
+            HttpContext httpContext = context.HttpContext;
             var request = httpContext.Request;
             var response = httpContext.Response;
 
@@ -219,7 +221,7 @@ namespace SmartStore.Web.Framework.Modelling
             return new FullFileResponder(this);
         }
 
-        private static string GenerateETag(HttpContextBase context, DateTime lastModified, DateTime now)
+        private static string GenerateETag(HttpContext context, DateTime lastModified, DateTime now)
         {
             // Get 64-bit FILETIME stamp
             var lastModFileTime = lastModified.ToFileTime();

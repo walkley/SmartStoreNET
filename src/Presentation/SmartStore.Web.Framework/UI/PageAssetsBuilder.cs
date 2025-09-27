@@ -1,25 +1,28 @@
-﻿using System;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Web;
 using System.Web.Hosting;
-using System.Web.Mvc;
 using System.Web.Optimization;
-using System.Web.Routing;
 using System.Web.WebPages;
 using SmartStore.Core;
 using SmartStore.Core.Domain.Seo;
 using SmartStore.Core.Domain.Themes;
 using SmartStore.Services.Localization;
 using SmartStore.Utilities.ObjectPools;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Routing;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Web.Framework.UI
 {
     public partial class PageAssetsBuilder : IPageAssetsBuilder
     {
-        private readonly HttpContextBase _httpContext;
+        private readonly HttpContext _httpContext;
         private readonly SeoSettings _seoSettings;
         private readonly ThemeSettings _themeSettings;
         private readonly IBundleBuilder _bundleBuilder;
@@ -39,7 +42,7 @@ namespace SmartStore.Web.Framework.UI
         public PageAssetsBuilder(
             SeoSettings seoSettings,
             ThemeSettings themeSettings,
-            HttpContextBase httpContext,
+            HttpContext httpContext,
             IStoreContext storeContext,
             IBundleBuilder bundleBuilder)
         {

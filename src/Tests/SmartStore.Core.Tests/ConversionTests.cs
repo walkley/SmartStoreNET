@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,6 +10,8 @@ using SmartStore.ComponentModel;
 using SmartStore.Core.Domain.Shipping;
 using SmartStore.Core.Email;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Core.Tests
 {

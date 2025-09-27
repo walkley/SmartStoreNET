@@ -1,14 +1,17 @@
-﻿//Contributor: MvcContrib.TestHelper
+//Contributor: MvcContrib.TestHelper
 using System;
 using System.Collections.Specialized;
 using System.Linq.Expressions;
 using System.Reflection;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Routing;
 using SmartStore.Collections;
 using SmartStore.Core.Fakes;
 using SmartStore.Tests;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Routing;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Web.MVC.Tests.Public.Infrastructure
 {
@@ -30,7 +33,7 @@ namespace SmartStore.Web.MVC.Tests.Public.Infrastructure
     {
         #region Utilities
 
-        private static HttpContextBase FakeHttpContext(string url, HttpVerbs? httpMethod, HttpVerbs? formMethod)
+        private static HttpContext FakeHttpContext(string url, HttpVerbs? httpMethod, HttpVerbs? formMethod)
         {
             NameValueCollection form = null;
 
@@ -53,18 +56,18 @@ namespace SmartStore.Web.MVC.Tests.Public.Infrastructure
             return context;
         }
 
-        private static HttpContextBase FakeHttpContext(string url, string method)
+        private static HttpContext FakeHttpContext(string url, string method)
         {
             var httpMethod = (HttpVerbs)Enum.Parse(typeof(HttpVerbs), method);
             return FakeHttpContext(url, httpMethod, null);
         }
 
-        private static HttpContextBase FakeHttpContext(string url, HttpVerbs? httpMethod)
+        private static HttpContext FakeHttpContext(string url, HttpVerbs? httpMethod)
         {
             return FakeHttpContext(url, httpMethod, null);
         }
 
-        private static HttpContextBase FakeHttpContext(string url)
+        private static HttpContext FakeHttpContext(string url)
         {
             return FakeHttpContext(url, null, null);
         }
@@ -150,7 +153,7 @@ namespace SmartStore.Web.MVC.Tests.Public.Infrastructure
         /// <returns></returns>
         public static RouteData Route(string url, string httpMethod)
         {
-            var context = FakeHttpContext(url, httpMethod);
+            HttpContext context = FakeHttpContext(url, httpMethod);
             return RouteTable.Routes.GetRouteData(context);
         }
 
@@ -161,7 +164,7 @@ namespace SmartStore.Web.MVC.Tests.Public.Infrastructure
         /// <returns>A matching <see cref="RouteData" />, or null.</returns>
         public static RouteData Route(this string url)
         {
-            var context = FakeHttpContext(url);
+            HttpContext context = FakeHttpContext(url);
             var routeData = RouteTable.Routes.GetRouteData(context);
 
             if (routeData != null)
@@ -191,7 +194,7 @@ namespace SmartStore.Web.MVC.Tests.Public.Infrastructure
         /// <returns></returns>
         public static RouteData Route(this string url, HttpVerbs httpMethod, HttpVerbs formMethod)
         {
-            var context = FakeHttpContext(url, httpMethod, formMethod);
+            HttpContext context = FakeHttpContext(url, httpMethod, formMethod);
             var route = RouteTable.Routes.GetRouteData(context);
 
             // cater for SimplyRestful methods and others
@@ -208,7 +211,7 @@ namespace SmartStore.Web.MVC.Tests.Public.Infrastructure
         /// <returns></returns>
         public static RouteData Route(this string url, HttpVerbs httpMethod)
         {
-            var context = FakeHttpContext(url, httpMethod);
+            HttpContext context = FakeHttpContext(url, httpMethod);
             var route = RouteTable.Routes.GetRouteData(context);
 
             // cater for SimplyRestful methods and others

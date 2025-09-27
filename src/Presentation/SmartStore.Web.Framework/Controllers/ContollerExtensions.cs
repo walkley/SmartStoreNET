@@ -1,14 +1,20 @@
-﻿using System.Globalization;
+using System.Globalization;
 using System.IO;
-using System.Web.Mvc;
 using System.Web.Mvc.Html;
-using System.Web.Routing;
 using SmartStore.Core;
 using SmartStore.Core.Domain.Customers;
 using SmartStore.Services.Common;
 using SmartStore.Services.Stores;
 using SmartStore.Utilities;
 using SmartStore.Web.Framework.Modelling.Results;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Routing;
+
+using Microsoft.AspNetCore.Html;
+
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+
 
 #pragma warning disable 1573
 
@@ -18,7 +24,7 @@ namespace SmartStore.Web.Framework.Controllers
     {
         #region InvokeAction
 
-        public static MvcHtmlString InvokeAction(this ControllerBase controller, string actionName, string controllerName = null, RouteValueDictionary routeValues = null)
+        public static HtmlString InvokeAction(this ControllerBase controller, string actionName, string controllerName = null, RouteValueDictionary routeValues = null)
         {
             Guard.NotNull(controller, nameof(controller));
             Guard.NotEmpty(actionName, nameof(actionName));

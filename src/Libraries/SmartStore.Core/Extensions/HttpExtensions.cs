@@ -1,17 +1,19 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Net;
 using System.Runtime.CompilerServices;
-using System.Web;
 using System.Web.Caching;
-using System.Web.Mvc;
 using System.Web.Security;
 using SmartStore.Core;
 using SmartStore.Core.Fakes;
 using SmartStore.Core.Infrastructure;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore
 {
@@ -50,7 +52,7 @@ namespace SmartStore
         /// Tries to get the <see cref="HttpRequestBase"/> instance without throwing exceptions
         /// </summary>
         /// <returns>The <see cref="HttpRequestBase"/> instance or <c>null</c>.</returns>
-        public static HttpRequestBase SafeGetHttpRequest(this HttpContextBase httpContext)
+        public static HttpRequestBase SafeGetHttpRequest(this HttpContext httpContext)
         {
             if (httpContext == null)
             {
@@ -187,7 +189,7 @@ namespace SmartStore
         /// <summary>
         /// Gets a value which indicates whether the current request requests a static resource, like .txt, .pdf, .js, .css etc.
         /// </summary>
-        public static bool IsStaticResourceRequested(this HttpContextBase context)
+        public static bool IsStaticResourceRequested(this HttpContext context)
         {
             if (context?.Request == null)
                 return false;
@@ -270,13 +272,13 @@ namespace SmartStore
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void RememberAppRelativePath(this HttpContextBase httpContext)
+        public static void RememberAppRelativePath(this HttpContext httpContext)
         {
             httpContext.Items[RememberPathKey] = httpContext.Request.AppRelativeCurrentExecutionFilePath;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static string GetOriginalAppRelativePath(this HttpContextBase httpContext)
+        public static string GetOriginalAppRelativePath(this HttpContext httpContext)
         {
             return GetItem<string>(httpContext, RememberPathKey, forceCreation: false) ?? httpContext.Request.AppRelativeCurrentExecutionFilePath;
         }
@@ -287,7 +289,7 @@ namespace SmartStore
             return GetItem<T>(new HttpContextWrapper(httpContext), key, factory, forceCreation);
         }
 
-        public static T GetItem<T>(this HttpContextBase httpContext, string key, Func<T> factory = null, bool forceCreation = true)
+        public static T GetItem<T>(this HttpContext httpContext, string key, Func<T> factory = null, bool forceCreation = true)
         {
             Guard.NotEmpty(key, nameof(key));
 

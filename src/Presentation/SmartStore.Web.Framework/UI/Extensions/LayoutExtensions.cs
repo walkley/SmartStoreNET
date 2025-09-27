@@ -1,8 +1,14 @@
-﻿using System.Web;
-using System.Web.Mvc;
-using System.Web.Routing;
+using System.Web;
 using SmartStore.Core.Infrastructure;
 using SmartStore.Core.Localization;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Routing;
+
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+
+using Microsoft.AspNetCore.Html;
+
 
 namespace SmartStore.Web.Framework.UI
 {
@@ -22,7 +28,7 @@ namespace SmartStore.Web.Framework.UI
             pageAssetsBuilder.AppendTitleParts(parts);
         }
 
-        public static MvcHtmlString SmartTitle(this HtmlHelper html, bool addDefaultTitle, params string[] parts)
+        public static HtmlString SmartTitle(this HtmlHelper html, bool addDefaultTitle, params string[] parts)
         {
             var pageAssetsBuilder = EngineContext.Current.Resolve<IPageAssetsBuilder>();
             html.AppendTitleParts(parts);
@@ -45,7 +51,7 @@ namespace SmartStore.Web.Framework.UI
             pageAssetsBuilder.AppendMetaDescriptionParts(parts);
         }
 
-        public static MvcHtmlString SmartMetaDescription(this HtmlHelper html, params string[] parts)
+        public static HtmlString SmartMetaDescription(this HtmlHelper html, params string[] parts)
         {
             var pageAssetsBuilder = EngineContext.Current.Resolve<IPageAssetsBuilder>();
             html.AppendMetaDescriptionParts(parts);
@@ -68,7 +74,7 @@ namespace SmartStore.Web.Framework.UI
             pageAssetsBuilder.AppendMetaKeywordParts(parts);
         }
 
-        public static MvcHtmlString SmartMetaKeywords(this HtmlHelper html, params string[] parts)
+        public static HtmlString SmartMetaKeywords(this HtmlHelper html, params string[] parts)
         {
             var pageAssetsBuilder = EngineContext.Current.Resolve<IPageAssetsBuilder>();
             html.AppendMetaKeywordParts(parts);
@@ -79,7 +85,7 @@ namespace SmartStore.Web.Framework.UI
 
         #region MetaMisc
 
-        public static MvcHtmlString SmartMetaRobots(this HtmlHelper html)
+        public static HtmlString SmartMetaRobots(this HtmlHelper html)
         {
             var pageAssetsBuilder = EngineContext.Current.Resolve<IPageAssetsBuilder>();
             return MvcHtmlString.Create(pageAssetsBuilder.GenerateMetaRobots());
@@ -131,7 +137,7 @@ namespace SmartStore.Web.Framework.UI
             pageAssetsBuilder.AppendScriptParts(location, excludeFromBundling, parts);
         }
 
-        public static MvcHtmlString SmartScripts(this HtmlHelper html, UrlHelper urlHelper, ResourceLocation location, bool? enableBundling = null)
+        public static HtmlString SmartScripts(this HtmlHelper html, UrlHelper urlHelper, ResourceLocation location, bool? enableBundling = null)
         {
             var pageAssetsBuilder = EngineContext.Current.Resolve<IPageAssetsBuilder>();
             return MvcHtmlString.Create(pageAssetsBuilder.GenerateScripts(urlHelper, location, enableBundling));
@@ -154,7 +160,7 @@ namespace SmartStore.Web.Framework.UI
         /// <param name="pattern">The pattern to match, e.g. 'lang-*.js'. The wildcard char MUST exist.</param>
         /// <param name="fallbackCulture">Optional.</param>
         /// <returns></returns>
-        public static MvcHtmlString LocalizationScript(this HtmlHelper html, string culture, string virtualPath, string pattern, string fallbackCulture = "en")
+        public static HtmlString LocalizationScript(this HtmlHelper html, string culture, string virtualPath, string pattern, string fallbackCulture = "en")
         {
             var fileResolver = EngineContext.Current.Resolve<ILocalizationFileResolver>();
             var result = fileResolver.Resolve(culture, virtualPath, pattern, true, fallbackCulture);
@@ -215,7 +221,7 @@ namespace SmartStore.Web.Framework.UI
             pageAssetsBuilder.AppendCssFileParts(location, excludeFromBundling, parts);
         }
 
-        public static MvcHtmlString SmartCssFiles(this HtmlHelper html, UrlHelper urlHelper, ResourceLocation location, bool? enableBundling = null)
+        public static HtmlString SmartCssFiles(this HtmlHelper html, UrlHelper urlHelper, ResourceLocation location, bool? enableBundling = null)
         {
             var pageAssetsBuilder = EngineContext.Current.Resolve<IPageAssetsBuilder>();
             return MvcHtmlString.Create(pageAssetsBuilder.GenerateCssFiles(urlHelper, location, enableBundling));
@@ -237,7 +243,7 @@ namespace SmartStore.Web.Framework.UI
             pageAssetsBuilder.AppendCustomHeadParts(parts);
         }
 
-        public static MvcHtmlString CustomHead(this HtmlHelper html, params string[] parts)
+        public static HtmlString CustomHead(this HtmlHelper html, params string[] parts)
         {
             var pageAssetsBuilder = EngineContext.Current.Resolve<IPageAssetsBuilder>();
             html.AppendCustomHeadParts(parts);
@@ -260,7 +266,7 @@ namespace SmartStore.Web.Framework.UI
             pageAssetsBuilder.AppendCanonicalUrlParts(parts);
         }
 
-        public static MvcHtmlString CanonicalUrls(this HtmlHelper html, params string[] parts)
+        public static HtmlString CanonicalUrls(this HtmlHelper html, params string[] parts)
         {
             var pageAssetsBuilder = EngineContext.Current.Resolve<IPageAssetsBuilder>();
             html.AppendCanonicalUrlParts(parts);
@@ -289,7 +295,7 @@ namespace SmartStore.Web.Framework.UI
             pageAssetsBuilder.AddLinkPart(rel, href, htmlAttributes);
         }
 
-        public static MvcHtmlString LinkRels(this HtmlHelper html)
+        public static HtmlString LinkRels(this HtmlHelper html)
         {
             var pageAssetsBuilder = EngineContext.Current.Resolve<IPageAssetsBuilder>();
             return MvcHtmlString.Create(pageAssetsBuilder.GenerateLinkRels());
@@ -323,7 +329,7 @@ namespace SmartStore.Web.Framework.UI
             pageAssetsBuilder.SetHtmlId(htmlId);
         }
 
-        public static MvcHtmlString HtmlId(this HtmlHelper html)
+        public static HtmlString HtmlId(this HtmlHelper html)
         {
             var pageAssetsBuilder = EngineContext.Current.Resolve<IPageAssetsBuilder>();
             var result = pageAssetsBuilder.GenerateHtmlId();

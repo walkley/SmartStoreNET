@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using SmartStore.Core.Domain.Customers;
 using SmartStore.Core.Infrastructure;
 using SmartStore.Core.Localization;
@@ -8,8 +8,10 @@ using SmartStore.Services.Localization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Services.Customers
 {
@@ -27,7 +29,7 @@ namespace SmartStore.Services.Customers
     {
         private readonly ICommonServices _services;
         private readonly ITypeFinder _typeFinder;
-        private readonly HttpContextBase _httpContext;
+        private readonly HttpContext _httpContext;
         private readonly PrivacySettings _privacySettings;
 
         public const string ConsentCookieName = "CookieConsent";
@@ -38,7 +40,7 @@ namespace SmartStore.Services.Customers
         public CookieManager(
             ICommonServices services,
             ITypeFinder typeFinder,
-            HttpContextBase httpContext,
+            HttpContext httpContext,
             PrivacySettings privacySettings)
         {
             _services = services;
@@ -153,7 +155,7 @@ namespace SmartStore.Services.Customers
 
         public virtual ConsentCookie GetCookieData(ControllerContext context)
         {
-            var httpContext = context.HttpContext;
+            HttpContext httpContext = context.HttpContext;
 
             if (httpContext.Items.Contains(ConsentCookieName))
             {

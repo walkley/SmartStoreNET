@@ -1,8 +1,11 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Net;
 using System.Text;
-using System.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Core.Security
 {
@@ -55,13 +58,13 @@ namespace SmartStore.Core.Security
             }
             catch
             {
-                filterContext.Result = new HttpStatusCodeResult(HttpStatusCode.Unauthorized);
+                filterContext.Result = new StatusCodeResult(StatusCodes.Status401Unauthorized);
             }
         }
 
         protected virtual void HandleUnauthorizedRequest(AuthorizationContext filterContext)
         {
-            var httpContext = filterContext.HttpContext;
+            HttpContext httpContext = filterContext.HttpContext;
             var request = httpContext?.Request;
 
             if (request == null)

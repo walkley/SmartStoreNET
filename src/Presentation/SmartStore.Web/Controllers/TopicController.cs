@@ -1,5 +1,3 @@
-﻿using System.Web.Mvc;
-using System.Web.Routing;
 using SmartStore.Core;
 using SmartStore.Core.Caching;
 using SmartStore.Core.Domain.Seo;
@@ -15,6 +13,10 @@ using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Framework.UI;
 using SmartStore.Web.Infrastructure.Cache;
 using SmartStore.Web.Models.Topics;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.Web.Controllers
 {
@@ -101,11 +103,11 @@ namespace SmartStore.Web.Controllers
         public ActionResult TopicDetailsLegacy(string systemName, bool popup = false)
         {
             if (!_seoSettings.RedirectLegacyTopicUrls)
-                return HttpNotFound();
+                return NotFound();
 
             var topic = _topicService.GetTopicBySystemName(systemName, 0, false);
             if (topic == null || !topic.IsPublished)
-                return HttpNotFound();
+                return NotFound();
 
             var routeValues = new RouteValueDictionary { ["SeName"] = topic.GetSeName() };
             if (popup)
@@ -135,7 +137,7 @@ namespace SmartStore.Web.Controllers
             });
 
             if (cacheModel == null || (!popup && cacheModel.RenderAsWidget))
-                return HttpNotFound();
+                return NotFound();
 
             ViewBag.IsPopup = popup;
 
@@ -147,7 +149,33 @@ namespace SmartStore.Web.Controllers
             return View("TopicDetails", cacheModel);
         }
 
-        [ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[ChildActionOnly]
         public ActionResult TopicBlock(string systemName, bool bodyOnly = false, bool isLead = false)
         {
             var cacheKey = string.Format(ModelCacheEventConsumer.TOPIC_BY_SYSTEMNAME_KEY, systemName.ToLower(), _workContext.WorkingLanguage.Id, _storeContext.CurrentStore.Id, _workContext.CurrentCustomer.GetRolesIdent());
@@ -174,7 +202,33 @@ namespace SmartStore.Web.Controllers
             return PartialView(cacheModel);
         }
 
-        [ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[ChildActionOnly]
         public ActionResult TopicWidget(TopicWidgetModel model)
         {
             // Check for Cookie Consent

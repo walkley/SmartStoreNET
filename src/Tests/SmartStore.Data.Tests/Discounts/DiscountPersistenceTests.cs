@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using NUnit.Framework;
 using SmartStore.Core.Domain.Catalog;
@@ -6,6 +6,8 @@ using SmartStore.Core.Domain.Discounts;
 using SmartStore.Rules;
 using SmartStore.Rules.Domain;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Data.Tests.Discounts
 {

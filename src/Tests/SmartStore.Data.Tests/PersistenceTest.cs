@@ -1,5 +1,7 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using SmartStore.Core;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Data.Tests
 {

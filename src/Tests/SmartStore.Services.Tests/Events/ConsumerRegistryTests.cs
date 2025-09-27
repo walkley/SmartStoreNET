@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
@@ -8,6 +8,8 @@ using SmartStore.Services.Customers;
 using SmartStore.Services.DataExchange.Export.Events;
 using SmartStore.Services.Events;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Services.Tests.Events
 {

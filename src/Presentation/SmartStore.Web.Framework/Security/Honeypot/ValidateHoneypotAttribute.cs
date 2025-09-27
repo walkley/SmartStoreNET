@@ -1,9 +1,10 @@
-﻿using System;
-using System.Web.Mvc;
+using System;
 using SmartStore.Core;
 using SmartStore.Core.Domain.Security;
 using SmartStore.Core.Localization;
 using SmartStore.Core.Logging;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Web.Framework.Security
 {

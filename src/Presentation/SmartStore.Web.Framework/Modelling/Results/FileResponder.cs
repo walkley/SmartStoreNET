@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Globalization;
 using System.Net;
-using System.Web;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Web.Framework.Modelling
 {
@@ -16,7 +17,7 @@ namespace SmartStore.Web.Framework.Modelling
 
         protected IFileResponse FileResponse { get; private set; }
 
-        public virtual bool TrySendHeaders(HttpContextBase context)
+        public virtual bool TrySendHeaders(HttpContext context)
         {
             var response = context.Response;
 
@@ -42,7 +43,7 @@ namespace SmartStore.Web.Framework.Modelling
             return true;
         }
 
-        public abstract void SendFile(HttpContextBase context);
+        public abstract void SendFile(HttpContext context);
     }
 
 
@@ -53,7 +54,7 @@ namespace SmartStore.Web.Framework.Modelling
         {
         }
 
-        public override bool TrySendHeaders(HttpContextBase context)
+        public override bool TrySendHeaders(HttpContext context)
         {
             var response = context.Response;
 
@@ -73,7 +74,7 @@ namespace SmartStore.Web.Framework.Modelling
             return true;
         }
 
-        public override void SendFile(HttpContextBase context)
+        public override void SendFile(HttpContext context)
         {
             // Don't send any file.
         }
@@ -87,7 +88,7 @@ namespace SmartStore.Web.Framework.Modelling
         {
         }
 
-        public override bool TrySendHeaders(HttpContextBase context)
+        public override bool TrySendHeaders(HttpContext context)
         {
             var response = context.Response;
 
@@ -103,7 +104,7 @@ namespace SmartStore.Web.Framework.Modelling
             return true;
         }
 
-        public override void SendFile(HttpContextBase context)
+        public override void SendFile(HttpContext context)
         {
             // Don't send file, it is unmodified. Let browser fetch from its cache.
         }
@@ -118,7 +119,7 @@ namespace SmartStore.Web.Framework.Modelling
         {
         }
 
-        public override bool TrySendHeaders(HttpContextBase context)
+        public override bool TrySendHeaders(HttpContext context)
         {
             base.TrySendHeaders(context);
 
@@ -128,7 +129,7 @@ namespace SmartStore.Web.Framework.Modelling
             return true;
         }
 
-        public override void SendFile(HttpContextBase context)
+        public override void SendFile(HttpContext context)
         {
             var fileLength = FileResponse.FileLength ?? FileResponse.Transmitter.GetFileLength();
             FileResponse.Transmitter.TransmitFile(0, fileLength, fileLength, context);
@@ -166,7 +167,7 @@ namespace SmartStore.Web.Framework.Modelling
             _rangeHeader = rangeHeader;
         }
 
-        public override bool TrySendHeaders(HttpContextBase context)
+        public override bool TrySendHeaders(HttpContext context)
         {
             var fileLength = FileResponse.FileLength ?? FileResponse.Transmitter.GetFileLength();
             var etag = FileResponse.ETag;
@@ -182,7 +183,7 @@ namespace SmartStore.Web.Framework.Modelling
             return handled;
         }
 
-        public override void SendFile(HttpContextBase context)
+        public override void SendFile(HttpContext context)
         {
             // Do nothing here, we have handled everything in 'TrySendHeaders()' already
         }
@@ -192,7 +193,7 @@ namespace SmartStore.Web.Framework.Modelling
         // Most of the helpers here were copied over from the internal StaticFileHandler.cs
 
         private bool ExecuteRangeRequest(
-            HttpContextBase context,
+            HttpContext context,
             long fileLength,
             string rangeHeader,
             string etag,
