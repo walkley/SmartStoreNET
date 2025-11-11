@@ -1,17 +1,19 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Net;
 using System.Runtime.CompilerServices;
-using System.Web;
-using System.Web.Caching;
-using System.Web.Mvc;
-using System.Web.Security;
+using System.Runtime.Caching;
 using SmartStore.Core;
 using SmartStore.Core.Fakes;
 using SmartStore.Core.Infrastructure;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+
 
 namespace SmartStore
 {
@@ -32,34 +34,19 @@ namespace SmartStore
         };
 
         /// <summary>
-        /// Tries to get the <see cref="HttpRequestBase"/> instance without throwing exceptions
+        /// Tries to get the <see cref="HttpRequest"/> instance without throwing exceptions
         /// </summary>
-        /// <returns>The <see cref="HttpRequestBase"/> instance or <c>null</c>.</returns>
+        /// <returns>The <see cref="HttpRequest"/> instance or <c>null</c>.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static HttpRequestBase SafeGetHttpRequest(this HttpContext httpContext)
+        public static HttpRequest SafeGetHttpRequest(this HttpContext httpContext)
         {
             if (httpContext == null)
             {
                 return null;
             }
 
-            return SafeGetHttpRequest(new HttpContextWrapper(httpContext));
-        }
-
-        /// <summary>
-        /// Tries to get the <see cref="HttpRequestBase"/> instance without throwing exceptions
-        /// </summary>
-        /// <returns>The <see cref="HttpRequestBase"/> instance or <c>null</c>.</returns>
-        public static HttpRequestBase SafeGetHttpRequest(this HttpContextBase httpContext)
-        {
-            if (httpContext == null)
+            if (httpContext is FakeHttpContext)
             {
-                return null;
-            }
-
-            if (httpContext.Handler != null || httpContext is FakeHttpContext)
-            {
-                // Having a handler means we're most likely in the MVC routing pipeline.
                 return httpContext.Request;
             }
 
@@ -79,7 +66,7 @@ namespace SmartStore
         /// <param name="request"></param>
         /// <param name="url"></param>
         /// <returns></returns>
-        public static bool IsAppLocalUrl(this HttpRequestBase request, string url)
+        public static bool IsAppLocalUrl(this HttpRequest request, string url)
         {
             if (string.IsNullOrWhiteSpace(url))
             {
@@ -143,32 +130,21 @@ namespace SmartStore
         }
 
         /// <summary>
-        /// Gets a value which indicates whether the HTTP connection uses secure sockets (HTTPS protocol). 
+        /// Gets a value which indicates whether the HTTP connection uses secure sockets (HTTPS protocol).
         /// Works with Cloud's load balancers.
         /// </summary>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool IsHttps(this HttpRequest request)
         {
-            return IsHttps(new HttpRequestWrapper(request));
-        }
-
-        /// <summary>
-        /// Gets a value which indicates whether the HTTP connection uses secure sockets (HTTPS protocol). 
-        /// Works with Cloud's load balancers.
-        /// </summary>
-        public static bool IsHttps(this HttpRequestBase request)
-        {
-            if (request.IsSecureConnection)
+            if (request.IsHttps)
             {
                 return true;
             }
 
             foreach (var tuple in _sslHeaders)
             {
-                var serverVar = request.ServerVariables[tuple.Item1];
-                if (serverVar != null)
+                if (request.Headers.TryGetValue(tuple.Item1, out var headerValue))
                 {
-                    return tuple.Item2 == null || tuple.Item2.Equals(serverVar, StringComparison.OrdinalIgnoreCase);
+                    return tuple.Item2 == null || tuple.Item2.Equals(headerValue.ToString(), StringComparison.OrdinalIgnoreCase);
                 }
             }
 
@@ -178,16 +154,7 @@ namespace SmartStore
         /// <summary>
         /// Gets a value which indicates whether the current request requests a static resource, like .txt, .pdf, .js, .css etc.
         /// </summary>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool IsStaticResourceRequested(this HttpContext context)
-        {
-            return IsStaticResourceRequested(new HttpContextWrapper(context));
-        }
-
-        /// <summary>
-        /// Gets a value which indicates whether the current request requests a static resource, like .txt, .pdf, .js, .css etc.
-        /// </summary>
-        public static bool IsStaticResourceRequested(this HttpContextBase context)
         {
             if (context?.Request == null)
                 return false;
@@ -200,36 +167,37 @@ namespace SmartStore
 
         [SuppressMessage("ReSharper", "PossibleNullReferenceException")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void SetFormsAuthenticationCookie(this HttpWebRequest webRequest, HttpRequestBase httpRequest)
+        public static void SetFormsAuthenticationCookie(this HttpWebRequest webRequest, HttpRequest httpRequest)
         {
-            CopyCookie(webRequest, httpRequest, FormsAuthentication.FormsCookieName);
+            CopyCookie(webRequest, httpRequest, ".ASPXAUTH");
         }
 
         [SuppressMessage("ReSharper", "PossibleNullReferenceException")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void SetAnonymousIdentCookie(this HttpWebRequest webRequest, HttpRequestBase httpRequest)
+        public static void SetAnonymousIdentCookie(this HttpWebRequest webRequest, HttpRequest httpRequest)
         {
             CopyCookie(webRequest, httpRequest, "SMARTSTORE.ANONYMOUS");
         }
 
         [SuppressMessage("ReSharper", "PossibleNullReferenceException")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void SetVisitorCookie(this HttpWebRequest webRequest, HttpRequestBase httpRequest)
+        public static void SetVisitorCookie(this HttpWebRequest webRequest, HttpRequest httpRequest)
         {
             CopyCookie(webRequest, httpRequest, "SMARTSTORE.VISITOR");
         }
 
-        private static void CopyCookie(HttpWebRequest webRequest, HttpRequestBase sourceHttpRequest, string cookieName)
+        private static void CopyCookie(HttpWebRequest webRequest, HttpRequest sourceHttpRequest, string cookieName)
         {
             Guard.NotNull(webRequest, nameof(webRequest));
             Guard.NotNull(sourceHttpRequest, nameof(sourceHttpRequest));
             Guard.NotEmpty(cookieName, nameof(cookieName));
 
-            var sourceCookie = sourceHttpRequest.Cookies[cookieName];
-            if (sourceCookie == null)
+            var sourceCookieValue = sourceHttpRequest.Cookies[cookieName];
+            if (string.IsNullOrEmpty(sourceCookieValue))
                 return;
 
-            var sendCookie = new Cookie(sourceCookie.Name, sourceCookie.Value, sourceCookie.Path, sourceHttpRequest.Url.Host);
+            var requestHost = sourceHttpRequest.Host.Host;
+            var sendCookie = new Cookie(cookieName, sourceCookieValue, "/", requestHost);
 
             if (webRequest.CookieContainer == null)
             {
@@ -239,12 +207,12 @@ namespace SmartStore
             webRequest.CookieContainer.Add(sendCookie);
         }
 
-        public static string BuildScopedKey(this Cache cache, string key)
+        public static string BuildScopedKey(this MemoryCache cache, string key)
         {
             return key.HasValue() ? CacheRegionName + key : null;
         }
 
-        public static T GetOrAdd<T>(this Cache cache, string key, Func<T> acquirer, TimeSpan? duration = null)
+        public static T GetOrAdd<T>(this MemoryCache cache, string key, Func<T> acquirer, TimeSpan? duration = null)
         {
             Guard.NotEmpty(key, nameof(key));
             Guard.NotNull(acquirer, nameof(acquirer));
@@ -258,36 +226,35 @@ namespace SmartStore
 
             var value = acquirer();
 
-            var absoluteExpiration = Cache.NoAbsoluteExpiration;
+            var absoluteExpiration = ObjectCache.InfiniteAbsoluteExpiration;
             if (duration.HasValue)
             {
                 absoluteExpiration = DateTime.UtcNow + duration.Value;
             }
 
-            cache.Insert(key, value, null, Cache.NoAbsoluteExpiration, Cache.NoSlidingExpiration);
+            var policy = new CacheItemPolicy
+            {
+                AbsoluteExpiration = absoluteExpiration
+            };
+
+            cache.Set(key, value, policy);
 
             return value;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void RememberAppRelativePath(this HttpContextBase httpContext)
+        public static void RememberAppRelativePath(this HttpContext httpContext)
         {
-            httpContext.Items[RememberPathKey] = httpContext.Request.AppRelativeCurrentExecutionFilePath;
+            httpContext.Items[RememberPathKey] = httpContext.Request.Path.Value;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static string GetOriginalAppRelativePath(this HttpContextBase httpContext)
+        public static string GetOriginalAppRelativePath(this HttpContext httpContext)
         {
-            return GetItem<string>(httpContext, RememberPathKey, forceCreation: false) ?? httpContext.Request.AppRelativeCurrentExecutionFilePath;
+            return GetItem<string>(httpContext, RememberPathKey, forceCreation: false) ?? httpContext.Request.Path.Value;
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T GetItem<T>(this HttpContext httpContext, string key, Func<T> factory = null, bool forceCreation = true)
-        {
-            return GetItem<T>(new HttpContextWrapper(httpContext), key, factory, forceCreation);
-        }
-
-        public static T GetItem<T>(this HttpContextBase httpContext, string key, Func<T> factory = null, bool forceCreation = true)
         {
             Guard.NotEmpty(key, nameof(key));
 
@@ -297,16 +264,18 @@ namespace SmartStore
                 return default(T);
             }
 
-            if (items.Contains(key))
+            object keyObj = key;
+            if (items.TryGetValue(keyObj, out var value))
             {
-                return (T)items[key];
+                return (T)value;
             }
             else
             {
                 if (forceCreation)
                 {
-                    var item = items[key] = (factory ?? (() => Activator.CreateInstance<T>())).Invoke();
-                    return (T)item;
+                    var item = (factory ?? (() => Activator.CreateInstance<T>())).Invoke();
+                    items[keyObj] = item;
+                    return item;
                 }
                 else
                 {
@@ -315,7 +284,7 @@ namespace SmartStore
             }
         }
 
-        public static void RemoveByPattern(this Cache cache, string pattern)
+        public static void RemoveByPattern(this MemoryCache cache, string pattern)
         {
             var keys = cache.AllKeys(pattern);
 
@@ -325,42 +294,40 @@ namespace SmartStore
             }
         }
 
-        public static string[] AllKeys(this Cache cache, string pattern)
+        public static string[] AllKeys(this MemoryCache cache, string pattern)
         {
             pattern = pattern == "*" ? CacheRegionName : pattern;
 
-            var keys = from entry in HttpRuntime.Cache.AsParallel().Cast<DictionaryEntry>()
-                       let key = entry.Key.ToString()
-                       where key.StartsWith(pattern, StringComparison.OrdinalIgnoreCase)
-                       select key;
+            var keys = cache
+                .Where(entry => entry.Key.StartsWith(pattern, StringComparison.OrdinalIgnoreCase))
+                .Select(entry => entry.Key)
+                .ToArray();
 
-            return keys.ToArray();
+            return keys;
         }
 
         public static ControllerContext GetRootControllerContext(this ControllerContext controllerContext)
         {
             Guard.NotNull(controllerContext, nameof(controllerContext));
 
-            var ctx = controllerContext;
-
-            while (ctx.ParentActionViewContext != null)
-            {
-                ctx = ctx.ParentActionViewContext;
-            }
-
-            return ctx;
+            return controllerContext;
         }
 
         public static bool IsBareBonePage(this ControllerContext controllerContext)
         {
             var ctx = controllerContext.GetRootControllerContext();
 
-            if (ctx is ViewContext viewContext)
+            if (ctx?.HttpContext != null)
             {
-                // IsPopUp or Framed
-                if (viewContext.ViewBag.IsPopup == true || viewContext.ViewBag.Framed == true)
+                var controller = ctx.ActionDescriptor?.Properties.Values.OfType<Controller>().FirstOrDefault();
+                if (controller != null && controller.ViewData != null)
                 {
-                    return true;
+                    var viewBag = controller.ViewBag;
+                    // IsPopUp or Framed
+                    if (viewBag.IsPopup == true || viewBag.Framed == true)
+                    {
+                        return true;
+                    }
                 }
             }
 

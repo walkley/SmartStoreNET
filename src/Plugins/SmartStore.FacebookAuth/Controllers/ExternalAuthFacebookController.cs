@@ -1,4 +1,3 @@
-﻿using System.Web.Mvc;
 using SmartStore.ComponentModel;
 using SmartStore.Core.Domain.Customers;
 using SmartStore.Core.Security;
@@ -9,6 +8,10 @@ using SmartStore.Web.Framework;
 using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Framework.Security;
 using SmartStore.Web.Framework.Settings;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
 
 namespace SmartStore.FacebookAuth.Controllers
 {
@@ -28,7 +31,33 @@ namespace SmartStore.FacebookAuth.Controllers
             _externalAuthenticationSettings = externalAuthenticationSettings;
         }
 
-        [LoadSetting, AdminAuthorize, ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[LoadSetting, AdminAuthorize, ChildActionOnly]
         [Permission(Permissions.Configuration.Authentication.Read)]
         public ActionResult Configure(FacebookExternalAuthSettings settings)
         {
@@ -41,7 +70,33 @@ namespace SmartStore.FacebookAuth.Controllers
             return View(model);
         }
 
-        [SaveSetting, HttpPost, AdminAuthorize, ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[SaveSetting, HttpPost, AdminAuthorize, ChildActionOnly]
         [ValidateAntiForgeryToken]
         [Permission(Permissions.Configuration.Authentication.Update)]
         public ActionResult Configure(FacebookExternalAuthSettings settings, ConfigurationModel model)
@@ -60,7 +115,33 @@ namespace SmartStore.FacebookAuth.Controllers
             return RedirectToConfiguration(FacebookExternalAuthMethod.SystemName, true);
         }
 
-        [ChildActionOnly]
+        /* Added by CTA: This attribute is not available anymore. An alternative is using ViewComponents:
+Sample:
+
+public class SampleViewComponent : ViewComponent
+    {
+        private readonly InjectedService _injectedService;
+
+        public SampleViewComponent (InjectedService injectedService)
+        {
+            _injectedService = injectedService;
+        }
+
+
+       public IViewComponentResult Invoke(int parameter)
+        {
+            var object = _injectedService.SampleFunction(parameter);
+        // No name is specified, returns the view SampleView (same name as component)
+            return View(object);
+        }
+    }
+
+Then use this to call the view component from any view:
+
+    @await Component.InvokeAsync("SampleView", new { parameter = ""})
+
+https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components?view=aspnetcore-3.1 */
+[ChildActionOnly]
         public ActionResult PublicInfo()
         {
             var settings = Services.Settings.LoadSetting<FacebookExternalAuthSettings>(Services.StoreContext.CurrentStore.Id);

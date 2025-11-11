@@ -1,7 +1,9 @@
-﻿using System;
+using System;
 using NUnit.Framework;
 using SmartStore.Tests;
 using SmartStore.Web.Framework.WebApi.Security;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Web.MVC.Tests.Framework.WebApi
 {

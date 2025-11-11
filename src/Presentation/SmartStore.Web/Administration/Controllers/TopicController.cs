@@ -1,6 +1,5 @@
-﻿using System;
+using System;
 using System.Linq;
-using System.Web.Mvc;
 using SmartStore.Admin.Models.Topics;
 using SmartStore.Core;
 using SmartStore.Core.Domain.Cms;
@@ -19,6 +18,14 @@ using SmartStore.Web.Framework.Filters;
 using SmartStore.Web.Framework.Modelling;
 using SmartStore.Web.Framework.Security;
 using Telerik.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+using Microsoft.AspNetCore.Http;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
 
 namespace SmartStore.Admin.Controllers
 {
@@ -397,7 +404,7 @@ namespace SmartStore.Admin.Controllers
             var topic = _topicService.GetTopicById(id);
             if (topic == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             if (topic.IsSystemTopic)

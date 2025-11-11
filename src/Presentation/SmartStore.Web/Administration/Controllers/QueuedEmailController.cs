@@ -1,9 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
-using System.Web.Mvc;
 using SmartStore.Admin.Models.Messages;
 using SmartStore.Core.Domain.Messages;
 using SmartStore.Core.Security;
@@ -14,6 +13,10 @@ using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Framework.Filters;
 using SmartStore.Web.Framework.Security;
 using Telerik.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
 
 namespace SmartStore.Admin.Controllers
 {
@@ -257,7 +260,7 @@ namespace SmartStore.Admin.Controllers
             var qea = _queuedEmailService.GetQueuedEmailAttachmentById(id);
             if (qea == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             if (qea.StorageLocation == EmailAttachmentStorageLocation.Blob)

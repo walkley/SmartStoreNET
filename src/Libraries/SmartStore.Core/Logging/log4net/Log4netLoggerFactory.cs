@@ -1,9 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Concurrent;
 using System.Data;
 using System.IO;
 using System.Linq;
-using System.Web.Hosting;
 using log4net;
 using log4net.Appender;
 using log4net.Config;
@@ -13,24 +12,19 @@ using SmartStore.Utilities;
 
 namespace SmartStore.Core.Logging
 {
-    public class Log4netLoggerFactory : ILoggerFactory, IRegisteredObject
+    public class Log4netLoggerFactory : ILoggerFactory
     {
         private readonly ConcurrentDictionary<string, ILogger> _loggerCache = new ConcurrentDictionary<string, ILogger>(StringComparer.OrdinalIgnoreCase);
 
         public Log4netLoggerFactory()
         {
-            if (HostingEnvironment.IsHosted)
-            {
-                var configFile = GetConfigFile(CommonHelper.GetAppSetting<string>("log4net.Config", @"Config\log4net.config"));
+            var configFile = GetConfigFile(CommonHelper.GetAppSetting<string>("log4net.Config", @"Config\log4net.config"));
 
-                XmlConfigurator.ConfigureAndWatch(configFile);
+            XmlConfigurator.ConfigureAndWatch(configFile);
 
-                var repository = LogManager.GetRepository();
-                repository.ConfigurationChanged += OnConfigurationChanged;
-                TryConfigureDbAppender(repository);
-
-                HostingEnvironment.RegisterObject(this);
-            }
+            var repository = LogManager.GetRepository();
+            repository.ConfigurationChanged += OnConfigurationChanged;
+            TryConfigureDbAppender(repository);
         }
 
         private void OnConfigurationChanged(object sender, EventArgs e)
@@ -95,14 +89,6 @@ namespace SmartStore.Core.Logging
         }
 
 
-        #region IRegisteredObject
-
-        public void Stop(bool immediate)
-        {
-            RemoveEmptyLogFiles();
-            HostingEnvironment.UnregisterObject(this);
-        }
-
         internal static void RemoveEmptyLogFiles()
         {
             var fileAppenders = LogManager.GetRepository()?.GetAppenders()?.OfType<FileAppender>();
@@ -119,8 +105,6 @@ namespace SmartStore.Core.Logging
                 }
             }
         }
-
-        #endregion
     }
 
     //public class DbAppender : AdoNetAppender

@@ -1,11 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Web;
 using SmartStore.Core;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Services.Pdf
 {
@@ -50,9 +51,11 @@ namespace SmartStore.Services.Pdf
                 {
                     _html = WebHelper.MakeAllUrlsAbsolute(_html, _engineBaseUri.Scheme, _engineBaseUri.Authority);
                 }
-                else if (HttpContext.Current?.Request != null)
+                else if (/* Added by CTA: TODO: Replace HttpContext.Current with dependency injection pattern using IHttpContextAccessor. */
+HttpContext.Current?.Request != null)
                 {
-                    _html = WebHelper.MakeAllUrlsAbsolute(_html, new HttpRequestWrapper(HttpContext.Current.Request));
+                    _html = WebHelper.MakeAllUrlsAbsolute(_html, new HttpRequestWrapper(/* Added by CTA: TODO: Replace HttpContext.Current with dependency injection pattern using IHttpContextAccessor. */
+HttpContext.Current.Request));
                 }
 
                 if (!flag.IsCaseInsensitiveEqual("page"))

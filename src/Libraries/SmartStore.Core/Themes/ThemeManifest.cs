@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml;
-using SmartStore.Collections;
 
 namespace SmartStore.Core.Themes
 {
@@ -232,8 +231,8 @@ namespace SmartStore.Core.Themes
             internal set => _variables = value;
         }
 
-        private Multimap<string, string> _selects;
-        public Multimap<string, string> Selects
+        private Dictionary<string, ICollection<string>> _selects;
+        public Dictionary<string, ICollection<string>> Selects
         {
             get
             {
@@ -243,14 +242,17 @@ namespace SmartStore.Core.Themes
                 }
 
                 var baseSelects = this.BaseTheme.Selects;
-                var merged = new Multimap<string, string>();
-                baseSelects.Each(x => merged.AddRange(x.Key, x.Value));
+                var merged = new Dictionary<string, ICollection<string>>();
+                foreach (var x in baseSelects)
+                {
+                    merged[x.Key] = new List<string>(x.Value);
+                }
                 foreach (var localSelect in _selects)
                 {
                     if (!merged.ContainsKey(localSelect.Key))
                     {
                         // New Select in child: add to list.
-                        merged.AddRange(localSelect.Key, localSelect.Value);
+                        merged[localSelect.Key] = new List<string>(localSelect.Value);
                     }
                     else
                     {

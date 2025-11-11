@@ -1,36 +1,47 @@
-﻿using System;
-using System.Web;
-using Autofac.Integration.Mvc;
+using System;
+using Microsoft.AspNetCore.Http;
+using Autofac;
+using System.Threading.Tasks;
+
 
 namespace SmartStore.Core.Infrastructure.DependencyManagement
 {
     /// <summary>
-    /// An <see cref="IHttpModule"/> and <see cref="ILifetimeScopeProvider"/> implementation 
+    /// An <see cref="IHttpModule"/> and <see cref="ILifetimeScopeProvider"/> implementation
     /// that creates a nested lifetime scope for each HTTP request.
     /// </summary>
-    public class AutofacRequestLifetimeHttpModule : IHttpModule
+    public class AutofacRequestLifetimeHttpModule
     {
-        public void Init(HttpApplication context)
+        RequestDelegate _next = null;
+
+        public async Task InvokeAsync(HttpContext context)
         {
             Guard.NotNull(context, nameof(context));
 
-            context.EndRequest += OnEndRequest;
+            try
+            {
+                await _next(context);
+            }
+            finally
+            {
+                OnEndRequest(context);
+            }
         }
 
-        public static void OnEndRequest(object sender, EventArgs e)
+        private static void OnEndRequest(HttpContext context)
         {
             if (LifetimeScopeProvider != null)
             {
-                LifetimeScopeProvider.EndLifetimeScope();
+                LifetimeScopeProvider.Dispose();
             }
 
             // Dispose all other disposable object in HttpContext.Items
-            PurgeContextItems(sender as HttpApplication);
+            PurgeContextItems(context);
         }
 
-        private static void PurgeContextItems(HttpApplication app)
+        private static void PurgeContextItems(HttpContext context)
         {
-            var items = app?.Context?.Items;
+            var items = context?.Items;
 
             if (items != null)
             {
@@ -56,13 +67,13 @@ namespace SmartStore.Core.Infrastructure.DependencyManagement
             }
         }
 
-        public static void SetLifetimeScopeProvider(ILifetimeScopeProvider lifetimeScopeProvider)
+        public static void SetLifetimeScopeProvider(ILifetimeScope lifetimeScope)
         {
-            LifetimeScopeProvider = lifetimeScopeProvider ?? throw new ArgumentNullException("lifetimeScopeProvider");
+            LifetimeScopeProvider = lifetimeScope ?? throw new ArgumentNullException("lifetimeScope");
         }
 
 
-        internal static ILifetimeScopeProvider LifetimeScopeProvider
+        internal static ILifetimeScope LifetimeScopeProvider
         {
             get;
             private set;
@@ -72,5 +83,9 @@ namespace SmartStore.Core.Infrastructure.DependencyManagement
         {
         }
 
+        public AutofacRequestLifetimeHttpModule(RequestDelegate next)
+        {
+            _next = next;
+        }
     }
 }

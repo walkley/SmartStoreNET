@@ -1,15 +1,18 @@
-﻿using System.Collections.Specialized;
-using System.Web;
+using System.Collections.Specialized;
 using NUnit.Framework;
 using SmartStore.Core.Fakes;
 using SmartStore.Tests;
+using NUnit.Framework.Legacy;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Core.Tests
 {
     [TestFixture]
     public class WebHelperTests
     {
-        private HttpContextBase _httpContext;
+        private HttpContext _httpContext;
         private IWebHelper _webHelper;
 
         [Test]

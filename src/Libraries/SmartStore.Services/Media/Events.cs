@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.IO;
-using System.Web;
 using SmartStore.Services.Media.Imaging;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Services.Media
 {
@@ -47,7 +48,7 @@ namespace SmartStore.Services.Media
     /// </summary>
     public class ImageQueryCreatedEvent
     {
-        public ImageQueryCreatedEvent(ProcessImageQuery query, HttpContextBase httpContext, string mimeType, string extension)
+        public ImageQueryCreatedEvent(ProcessImageQuery query, HttpContext httpContext, string mimeType, string extension)
         {
             Query = query;
             HttpContext = httpContext;

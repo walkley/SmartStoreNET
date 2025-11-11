@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 using System.Web;
 
 namespace SmartStore.Core.Fakes
@@ -24,7 +24,7 @@ namespace SmartStore.Core.Fakes
             _outputString.Append(s);
         }
 
-        public override string ApplyAppPathModifier(string virtualPath)
+        public string ApplyAppPathModifier(string virtualPath)
         {
             return virtualPath;
         }

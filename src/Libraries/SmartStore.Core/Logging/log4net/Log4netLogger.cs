@@ -1,13 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
-using System.Web;
 using log4net.Core;
 using log4net.Util;
 using SmartStore.Core.Data;
 using SmartStore.Core.Infrastructure;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Core.Logging
 {
@@ -73,7 +74,8 @@ namespace SmartStore.Core.Logging
             var isAppInitialized = EngineContext.Current.IsFullyInitialized;
 
             // Don't knowingly run into exception
-            var httpRequest = isAppInitialized ? HttpContext.Current.SafeGetHttpRequest() : null;
+            var httpRequest = isAppInitialized ? /* Added by CTA: TODO: Replace HttpContext.Current with dependency injection pattern using IHttpContextAccessor. */
+HttpContext.Current.SafeGetHttpRequest() : null;
 
             if (httpRequest == null)
             {

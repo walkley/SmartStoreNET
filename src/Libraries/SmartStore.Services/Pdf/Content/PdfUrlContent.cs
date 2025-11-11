@@ -1,12 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-using System.Web;
 using System.Web.Security;
 using SmartStore.Core;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Services.Pdf
 {
@@ -81,9 +82,11 @@ namespace SmartStore.Services.Pdf
 
                 return _engineBaseUri.ToString() + url.TrimStart('/');
             }
-            else if (HttpContext.Current?.Request != null)
+            else if (/* Added by CTA: TODO: Replace HttpContext.Current with dependency injection pattern using IHttpContextAccessor. */
+HttpContext.Current?.Request != null)
             {
-                return WebHelper.GetAbsoluteUrl(_url, new HttpRequestWrapper(HttpContext.Current.Request));
+                return WebHelper.GetAbsoluteUrl(_url, new HttpRequestWrapper(/* Added by CTA: TODO: Replace HttpContext.Current with dependency injection pattern using IHttpContextAccessor. */
+HttpContext.Current.Request));
             }
 
             return _url;
@@ -117,7 +120,8 @@ namespace SmartStore.Services.Pdf
             }
 
             // Send FormsAuthentication Cookie
-            var ctx = HttpContext.Current;
+            var ctx = /* Added by CTA: TODO: Replace HttpContext.Current with dependency injection pattern using IHttpContextAccessor. */
+HttpContext.Current;
             if (SendAuthCookie && ctx != null && ctx.Request != null && ctx.Request.Cookies != null)
             {
                 var authCookieName = FormsAuthentication.FormsCookieName;

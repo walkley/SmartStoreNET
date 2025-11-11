@@ -1,11 +1,13 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Runtime.Versioning;
-using NuGet;
+using NuGet.Packaging;
+using NuGet.Packaging.Core;
+using NuGet.Frameworks;
 
 namespace SmartStore.Core.Packaging
 {
-    internal class FileBasedProjectSystem : PhysicalFileSystem, IProjectSystem
+    internal class FileBasedProjectSystem : PhysicalFileSystem
     {
 
         public FileBasedProjectSystem(string root)
@@ -18,7 +20,7 @@ namespace SmartStore.Core.Packaging
             throw new NotSupportedException();
         }
 
-        public void AddImport(string targetPath, ProjectImportLocation location)
+        public void AddImport(string targetPath, object location)
         {
             throw new NotSupportedException();
         }

@@ -1,6 +1,5 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
-using System.Web.Mvc;
 using SmartStore.Admin.Models.Shipping;
 using SmartStore.Core.Domain.Shipping;
 using SmartStore.Core.Security;
@@ -15,6 +14,12 @@ using SmartStore.Web.Framework.Modelling;
 using SmartStore.Web.Framework.Plugins;
 using SmartStore.Web.Framework.Security;
 using Telerik.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Admin.Controllers
 {
@@ -233,7 +238,7 @@ namespace SmartStore.Admin.Controllers
             var sm = _shippingService.GetShippingMethodById(model.Id);
             if (sm == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             if (ModelState.IsValid)

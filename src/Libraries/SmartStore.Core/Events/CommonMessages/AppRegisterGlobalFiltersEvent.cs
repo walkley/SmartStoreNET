@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
+using System.Collections.Generic;
 
 namespace SmartStore.Core.Events
 {
@@ -7,6 +9,6 @@ namespace SmartStore.Core.Events
     /// </summary>
     public class AppRegisterGlobalFiltersEvent
     {
-        public GlobalFilterCollection Filters { get; set; }
+        public IList<IFilterMetadata> Filters { get; set; }
     }
 }

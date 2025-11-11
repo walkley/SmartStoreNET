@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -11,7 +11,7 @@ namespace SmartStore.Core.Data.Hooks
     {
         private readonly IEnumerable<Lazy<IDbSaveHook, HookMetadata>> _saveHooks;
 
-        private readonly Multimap<RequestHookKey, IDbSaveHook> _hooksRequestCache = new Multimap<RequestHookKey, IDbSaveHook>();
+        private readonly Dictionary<RequestHookKey, List<IDbSaveHook>> _hooksRequestCache = new Dictionary<RequestHookKey, List<IDbSaveHook>>();
 
         // Prevents repetitive hooking of the same entity/state/[pre|post] combination within a single request
         private readonly HashSet<HookedEntityKey> _hookedEntities = new HashSet<HookedEntityKey>();
@@ -184,7 +184,7 @@ namespace SmartStore.Core.Data.Hooks
                     .Select(x => x.Value)
                     .ToArray();
 
-                _hooksRequestCache.AddRange(requestKey, hooks);
+                AddRangeToCache(requestKey, hooks);
             }
 
             return hooks;
@@ -208,14 +208,31 @@ namespace SmartStore.Core.Data.Hooks
             return false;
         }
 
+        private void AddRangeToCache(RequestHookKey key, IEnumerable<IDbSaveHook> hooks)
+        {
+            if (!_hooksRequestCache.ContainsKey(key))
+            {
+                _hooksRequestCache[key] = new List<IDbSaveHook>();
+            }
+            _hooksRequestCache[key].AddRange(hooks);
+        }
+
+        private void RemoveFromCache(RequestHookKey key, IDbSaveHook hook)
+        {
+            if (_hooksRequestCache.ContainsKey(key))
+            {
+                _hooksRequestCache[key].Remove(hook);
+            }
+        }
+
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private void RegisterVoidHook(IDbSaveHook hook, IHookedEntity entry, HookStage stage)
         {
             var hookType = hook.GetType();
 
             // Unregister from request cache (if cached)
-            _hooksRequestCache.Remove(new RequestHookKey(entry, stage, false), hook);
-            _hooksRequestCache.Remove(new RequestHookKey(entry, stage, true), hook);
+            RemoveFromCache(new RequestHookKey(entry, stage, false), hook);
+            RemoveFromCache(new RequestHookKey(entry, stage, true), hook);
 
             lock (_lock)
             {

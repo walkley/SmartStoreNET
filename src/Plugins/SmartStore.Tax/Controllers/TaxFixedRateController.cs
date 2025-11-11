@@ -1,6 +1,5 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
-using System.Web.Mvc;
 using SmartStore.Services.Configuration;
 using SmartStore.Services.Tax;
 using SmartStore.Tax.Models;
@@ -8,6 +7,8 @@ using SmartStore.Web.Framework;
 using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Framework.Security;
 using Telerik.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Tax.Controllers
 {

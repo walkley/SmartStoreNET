@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,8 +7,6 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Web;
-using System.Web.Compilation;
-using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 using SmartStore.Core.Data;
 using SmartStore.Core.Infrastructure;
 using SmartStore.Core.Infrastructure.DependencyManagement;
@@ -21,7 +19,8 @@ using SmartStore.Utilities;
 // SEE THIS POST for full details of what this does
 //http://shazwazza.com/post/Developing-a-plugin-framework-in-ASPNET-with-medium-trust.aspx
 
-[assembly: PreApplicationStartMethod(typeof(PluginManager), "Initialize")]
+// Note: PreApplicationStartMethod attribute is not supported in .NET Core/8.0
+// The Initialize() method should be called explicitly from Program.cs or Startup.cs
 namespace SmartStore.Core.Plugins
 {
     /// <summary>
@@ -55,7 +54,7 @@ namespace SmartStore.Core.Plugins
         /// </summary>
         public static string PluginsLocation { get; } = "~/Plugins";
 
-        /// <summary> 
+        /// <summary>
         /// Returns a collection of all referenced plugin assemblies that have been shadow copied
         /// </summary>
         public static IEnumerable<PluginDescriptor> ReferencedPlugins
@@ -121,7 +120,8 @@ namespace SmartStore.Core.Plugins
             // ensures that unmanaged native dependencies can be resolved successfully.
             SetNativeDllPath();
 
-            DynamicModuleUtility.RegisterModule(typeof(AutofacRequestLifetimeHttpModule));
+            // Note: DynamicModuleUtility.RegisterModule is not supported in .NET 8.0
+            // AutofacRequestLifetimeHttpModule registration should be handled in Program.cs/Startup.cs
 
             var incompatiblePlugins = (new HashSet<string>(StringComparer.OrdinalIgnoreCase)).AsSynchronized();
             var inactiveAssemblies = _inactiveAssemblies.AsSynchronized();
@@ -158,7 +158,7 @@ namespace SmartStore.Core.Plugins
             //// Therefore we retry initialization for failed plugins, but sequentially this time.
             //foreach (var p in plugins)
             //{
-            //	// INFO: this seems redundant, but it's ok: 
+            //	// INFO: this seems redundant, but it's ok:
             //	// DeployPlugin() only probes assemblies that are not loaded yet.
             //	DeployPlugin(p, dirty);
 
@@ -434,8 +434,8 @@ namespace SmartStore.Core.Plugins
         /// to be compatible with the current app version
         /// </summary>
         /// <remarks>
-        /// A plugin is generally compatible when both app version and plugin's 
-        /// <c>MinorAppVersion</c> are equal, OR - when app version is greater - it is 
+        /// A plugin is generally compatible when both app version and plugin's
+        /// <c>MinorAppVersion</c> are equal, OR - when app version is greater - it is
         /// assumed to be compatible when no breaking changes occured since <c>MinorAppVersion</c>.
         /// </remarks>
         /// <param name="descriptor">The plugin to check</param>
@@ -452,8 +452,8 @@ namespace SmartStore.Core.Plugins
         /// to be compatible with the current app version
         /// </summary>
         /// <remarks>
-        /// A plugin is generally compatible when both app version and plugin's 
-        /// <c>MinorAppVersion</c> are equal, OR - when app version is greater - it is 
+        /// A plugin is generally compatible when both app version and plugin's
+        /// <c>MinorAppVersion</c> are equal, OR - when app version is greater - it is
         /// assumed to be compatible when no breaking changes occured since <c>MinorAppVersion</c>.
         /// </remarks>
         /// <param name="minAppVersion">The min. app version to check for</param>
@@ -570,14 +570,6 @@ namespace SmartStore.Core.Plugins
                 {
                     // We can now register the plugin definition
                     ar.Assembly = Assembly.Load(AssemblyName.GetAssemblyName(ar.File.FullName));
-
-                    // Add the reference to the build manager
-                    if (ar.Assembly != null)
-                    {
-                        // Loading assembly can fail in parallel loops.
-                        // In this case, we'll probe again later in a sequential loop.
-                        BuildManager.AddReferencedAssembly(ar.Assembly);
-                    }
                 }
 
                 ar.ActivationException = null;
@@ -586,7 +578,7 @@ namespace SmartStore.Core.Plugins
             {
                 Logger.Error(ex.Message);
 
-                // Throw the exception if its UnauthorizedAccessException as this will 
+                // Throw the exception if its UnauthorizedAccessException as this will
                 // be because we most likely cannot copy to the dynamic folder.
                 throw;
             }

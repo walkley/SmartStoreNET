@@ -1,11 +1,12 @@
 using System.Collections.Generic;
-using System.Web.Routing;
 using SmartStore.Core.Domain.Cms;
 using SmartStore.Core.Plugins;
 using SmartStore.GoogleAnalytics.Services;
 using SmartStore.Services.Cms;
 using SmartStore.Services.Configuration;
 using SmartStore.Services.Localization;
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.GoogleAnalytics
 {

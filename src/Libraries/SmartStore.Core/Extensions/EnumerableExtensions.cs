@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
@@ -8,7 +8,6 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Web;
-using SmartStore.Collections;
 using SmartStore.Core;
 using SmartStore.Utilities.ObjectPools;
 
@@ -134,7 +133,7 @@ namespace SmartStore
         #region IEnumerable
 
         /// <summary>
-        /// Performs an action on each item while iterating through a list. 
+        /// Performs an action on each item while iterating through a list.
         /// This is a handy shortcut for <c>foreach(item in list) { ... }</c>
         /// </summary>
         /// <typeparam name="T">The type of the items.</typeparam>
@@ -151,7 +150,7 @@ namespace SmartStore
         }
 
         /// <summary>
-        /// Performs an action on each item while iterating through a list. 
+        /// Performs an action on each item while iterating through a list.
         /// This is a handy shortcut for <c>foreach(item in list) { ... }</c>
         /// </summary>
         /// <typeparam name="T">The type of the items.</typeparam>
@@ -302,44 +301,6 @@ namespace SmartStore
         public static string StrJoin(this IEnumerable<string> source, string separator)
         {
             return string.Join(separator, source);
-        }
-
-        #endregion
-
-        #region Multimap
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Multimap<TKey, TValue> ToMultimap<TSource, TKey, TValue>(
-                                                this IEnumerable<TSource> source,
-                                                Func<TSource, TKey> keySelector,
-                                                Func<TSource, TValue> valueSelector)
-        {
-            return source.ToMultimap(keySelector, valueSelector, null);
-        }
-
-        public static Multimap<TKey, TValue> ToMultimap<TSource, TKey, TValue>(
-                                                this IEnumerable<TSource> source,
-                                                Func<TSource, TKey> keySelector,
-                                                Func<TSource, TValue> valueSelector,
-                                                IEqualityComparer<TKey> comparer)
-        {
-            if (source == null)
-                throw new ArgumentNullException(nameof(source));
-
-            if (keySelector == null)
-                throw new ArgumentNullException(nameof(keySelector));
-
-            if (valueSelector == null)
-                throw new ArgumentNullException(nameof(valueSelector));
-
-            var map = new Multimap<TKey, TValue>(comparer);
-
-            foreach (var item in source)
-            {
-                map.Add(keySelector(item), valueSelector(item));
-            }
-
-            return map;
         }
 
         #endregion

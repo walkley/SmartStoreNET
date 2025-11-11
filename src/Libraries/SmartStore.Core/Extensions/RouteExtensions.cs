@@ -1,5 +1,7 @@
-﻿using System.Web.Mvc;
-using System.Web.Routing;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Routing;
+
 
 // use base SmartStore Namespace to ensure the extension methods are always available
 namespace SmartStore
@@ -16,18 +18,21 @@ namespace SmartStore
             return routeData.Route.GetAreaName();
         }
 
-        public static string GetAreaName(this RouteBase route)
+        public static string GetAreaName(this Endpoint endpoint)
         {
-            var area = route as IRouteWithArea;
-            if (area != null)
+            if (endpoint is RouteEndpoint routeEndpoint)
             {
-                return area.Area;
-            }
+                if (routeEndpoint.RoutePattern?.Defaults != null &&
+                    routeEndpoint.RoutePattern.Defaults.TryGetValue("area", out var areaValue))
+                {
+                    return areaValue as string;
+                }
 
-            var route2 = route as Route;
-            if ((route2 != null) && (route2.DataTokens != null))
-            {
-                return (route2.DataTokens["area"] as string);
+                if (routeEndpoint.RoutePattern?.RequiredValues != null &&
+                    routeEndpoint.RoutePattern.RequiredValues.TryGetValue("area", out var requiredArea))
+                {
+                    return requiredArea as string;
+                }
             }
 
             return null;
@@ -39,8 +44,8 @@ namespace SmartStore
         public static string GenerateRouteIdentifier(this RouteData routeData)
         {
             string area = routeData.GetAreaName();
-            string controller = routeData.GetRequiredString("controller");
-            string action = routeData.GetRequiredString("action");
+            string controller = routeData.Values["controller"]?.ToString();
+            string action = routeData.Values["action"]?.ToString();
 
             return "{0}{1}.{2}".FormatInvariant(area.HasValue() ? area + "." : "", controller, action);
         }
@@ -50,7 +55,7 @@ namespace SmartStore
             if (routeData == null)
                 return false;
 
-            return routeData.GetRequiredString("controller").IsCaseInsensitiveEqual(controller) && routeData.GetRequiredString("action").IsCaseInsensitiveEqual(action);
+            return routeData.Values["controller"]?.ToString().IsCaseInsensitiveEqual(controller) == true && routeData.Values["action"]?.ToString().IsCaseInsensitiveEqual(action) == true;
         }
 
     }

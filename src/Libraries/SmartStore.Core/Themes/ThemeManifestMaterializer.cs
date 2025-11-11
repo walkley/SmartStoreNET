@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
@@ -44,9 +44,9 @@ namespace SmartStore.Core.Themes
 
         [SuppressMessage("ReSharper", "AssignNullToNotNullAttribute")]
         [SuppressMessage("ReSharper", "PossibleMultipleEnumeration")]
-        private Multimap<string, string> MaterializeSelects()
+        private Dictionary<string, ICollection<string>> MaterializeSelects()
         {
-            var selects = new Multimap<string, string>();
+            var selects = new Dictionary<string, ICollection<string>>();
             var root = _manifest.ConfigurationNode;
             var xndSelects = root.SelectNodes(@"Selects/Select").Cast<XmlElement>();
 
@@ -72,7 +72,11 @@ namespace SmartStore.Core.Themes
                         throw new SmartException("A select option cannot be empty. Affected: '{0}' - element: {1}", _manifest.FullPath, xel.OuterXml);
                     }
 
-                    selects.Add(id, option);
+                    if (!selects.ContainsKey(id))
+                    {
+                        selects[id] = new List<string>();
+                    }
+                    selects[id].Add(option);
                 }
 
             }

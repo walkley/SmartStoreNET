@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Data.SqlServerCe;
 using System.IO;
 using System.Linq;
 using System.Threading;
 using SmartStore.Utilities;
 using SmartStore.Utilities.Threading;
+using Microsoft.Data.SqlClient;
+
 
 namespace SmartStore.Core.Data
 {
@@ -141,7 +141,7 @@ namespace SmartStore.Core.Data
             get
             {
                 if (this.DataProvider.HasValue() && this.DataProvider.IsCaseInsensitiveEqual("sqlserver"))
-                    return "System.Data.SqlClient";
+                    return "Microsoft.Data.SqlClient";
 
                 // SqlCe should always be the default provider
                 return "System.Data.SqlServerCe.4.0";
@@ -214,7 +214,7 @@ namespace SmartStore.Core.Data
                             this.DataProvider = settings["DataProvider"];
                             this.DataConnectionType = this.IsSqlServer
                                 ? typeof(SqlConnection).AssemblyQualifiedName
-                                : typeof(SqlCeConnection).AssemblyQualifiedName;
+                                : "System.Data.SqlServerCe.SqlCeConnection, System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91";
                         }
                         if (settings.ContainsKey("DataConnectionString"))
                         {

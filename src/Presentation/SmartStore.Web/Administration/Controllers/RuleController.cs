@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Web.Mvc;
 using Newtonsoft.Json;
 using SmartStore.Admin.Models.Catalog;
 using SmartStore.Admin.Models.Customers;
@@ -31,6 +30,12 @@ using SmartStore.Web.Framework.Modelling;
 using SmartStore.Web.Framework.Plugins;
 using SmartStore.Web.Framework.Security;
 using Telerik.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 
 namespace SmartStore.Admin.Controllers
 {
@@ -174,7 +179,7 @@ namespace SmartStore.Admin.Controllers
             var entity = _ruleStorage.GetRuleSetById(id, false, true);
             if (entity == null || entity.IsSubGroup)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var model = MiniMapper.Map<RuleSetEntity, RuleSetModel>(entity);
@@ -222,7 +227,7 @@ namespace SmartStore.Admin.Controllers
             var ruleSet = _ruleStorage.GetRuleSetById(id, false, false);
             if (ruleSet == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             _ruleStorage.DeleteRuleSet(ruleSet);
@@ -237,7 +242,7 @@ namespace SmartStore.Admin.Controllers
             var entity = _ruleStorage.GetRuleSetById(id, false, true);
             if (entity == null || entity.IsSubGroup)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             var model = MiniMapper.Map<RuleSetEntity, RuleSetPreviewModel>(entity);

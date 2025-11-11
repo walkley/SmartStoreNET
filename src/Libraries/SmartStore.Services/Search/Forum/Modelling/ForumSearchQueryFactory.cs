@@ -1,8 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Routing;
 using SmartStore.Core.Data;
 using SmartStore.Core.Domain.Customers;
 using SmartStore.Core.Domain.Forums;
@@ -11,6 +9,10 @@ using SmartStore.Core.Search;
 using SmartStore.Core.Search.Facets;
 using SmartStore.Services.Common;
 using SmartStore.Services.Search.Extensions;
+using Microsoft.AspNetCore.Routing;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Services.Search.Modelling
 {
@@ -35,7 +37,7 @@ namespace SmartStore.Services.Search.Modelling
 
         public ForumSearchQueryFactory(
             ICommonServices services,
-            HttpContextBase httpContext,
+            HttpContext httpContext,
             IForumSearchQueryAliasMapper forumSearchQueryAliasMapper,
             IGenericAttributeService genericAttributeService,
             ForumSearchSettings searchSettings,
@@ -61,7 +63,7 @@ namespace SmartStore.Services.Search.Modelling
 
         public ForumSearchQuery CreateFromQuery()
         {
-            var ctx = _httpContext;
+            HttpContext ctx = _httpContext;
 
             if (ctx.Request == null)
                 return null;

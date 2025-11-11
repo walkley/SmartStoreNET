@@ -1,10 +1,11 @@
-﻿using System;
-using System.Web.Mvc;
+using System;
 using SmartStore.Core.Domain.Media;
 using SmartStore.Core.Security;
 using SmartStore.Services.Media;
 using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Framework.Security;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Admin.Controllers
 {

@@ -1,7 +1,9 @@
-﻿using FluentValidation.TestHelper;
+using FluentValidation.TestHelper;
 using NUnit.Framework;
 using SmartStore.Core.Domain.Customers;
 using SmartStore.Web.Models.Common;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Web.MVC.Tests.Public.Validators.Common
 {

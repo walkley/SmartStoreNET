@@ -1,7 +1,9 @@
-﻿using System;
+using System;
 using NUnit.Framework;
 using SmartStore.Tests;
 using SmartStore.Utilities;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Services.Tests.Seo
 {

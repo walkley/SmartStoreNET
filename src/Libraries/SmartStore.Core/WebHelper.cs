@@ -10,13 +10,16 @@ using System.Net.Sockets;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
-using System.Web;
-using System.Web.Configuration;
+
 using SmartStore.Collections;
 using SmartStore.Core.Data;
 using SmartStore.Core.Domain.Stores;
 using SmartStore.Core.Infrastructure;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Extensions;
+using AspNetQueryString = Microsoft.AspNetCore.Http.QueryString;
+
 
 namespace SmartStore.Core
 {
@@ -24,13 +27,12 @@ namespace SmartStore.Core
     {
         private static readonly object s_lock = new object();
         private static bool? s_optimizedCompilationsEnabled;
-        private static AspNetHostingPermissionLevel? s_trustLevel;
         private static readonly Regex s_staticExts = new Regex(@"(.*?)\.(css|js|png|jpg|jpeg|gif|webp|liquid|bmp|html|htm|xml|txt|pdf|doc|xls|rar|zip|7z|ico|eot|svg|ttf|woff|woff2|otf|json)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         private static readonly Regex s_htmlPathPattern = new Regex(@"(?<=(?:href|src)=(?:""|'))(?!https?://)(?<url>[^(?:""|')]+)", RegexOptions.IgnoreCase | RegexOptions.Compiled | RegexOptions.Multiline);
         private static readonly Regex s_cssPathPattern = new Regex(@"url\('(?<url>.+)'\)", RegexOptions.IgnoreCase | RegexOptions.Compiled | RegexOptions.Multiline);
         private static readonly ConcurrentDictionary<int, string> s_safeLocalHostNames = new ConcurrentDictionary<int, string>();
 
-        private readonly HttpContextBase _httpContext;
+        private readonly HttpContext _httpContext;
         private bool? _isCurrentConnectionSecured;
         private string _storeHost;
         private string _storeHostSsl;
@@ -40,7 +42,7 @@ namespace SmartStore.Core
 
         private Store _currentStore;
 
-        public WebHelper(HttpContextBase httpContext)
+        public WebHelper(HttpContext httpContext)
         {
             _httpContext = httpContext;
         }
@@ -95,11 +97,11 @@ namespace SmartStore.Core
 
             foreach (var key in keysToCheck)
             {
-                var ipString = vars[key];
+                var ipString = vars[key]?.ToString();
 
                 if (!string.IsNullOrEmpty(ipString))
                 {
-                    var arrStrings = ipString.Split(',');
+                    string[] arrStrings = ipString.Split(',');
 
                     // Iterate list from end to start (IPv6 addresses usually have precedence)
                     for (int i = arrStrings.Length - 1; i >= 0; i--)
@@ -118,7 +120,7 @@ namespace SmartStore.Core
                                 break;
                             }
                         }
-                    }      
+                    }
 
                     if (!string.IsNullOrEmpty(result))
                     {
@@ -273,7 +275,7 @@ namespace SmartStore.Core
                     {
                         if (securityMode == HttpSecurityMode.SharedSsl)
                         {
-                            // Secure URL for shared ssl specified. 
+                            // Secure URL for shared ssl specified.
                             // So a store owner doesn't want it to be resolved automatically.
                             // In this case let's use the specified secure URL
                             result = _currentStore.SecureUrl.EmptyNull();
@@ -361,18 +363,11 @@ namespace SmartStore.Core
 
         public virtual bool IsStaticResource(HttpRequest request)
         {
-            return IsStaticResourceRequested(new HttpRequestWrapper(request));
+            return IsStaticResourceRequested(request);
         }
 
         public static bool IsStaticResourceRequested(HttpRequest request)
         {
-            Guard.NotNull(request, nameof(request));
-            return s_staticExts.IsMatch(request.Path);
-        }
-
-        public static bool IsStaticResourceRequested(HttpRequestBase request)
-        {
-            // unit testable
             Guard.NotNull(request, nameof(request));
             return s_staticExts.IsMatch(request.Path);
         }
@@ -397,8 +392,8 @@ namespace SmartStore.Core
             }
 
             var parts = url.Split(new[] { '?' });
-            var current = new QueryString(parts.Length == 2 ? parts[1] : "");
-            var modify = new QueryString(queryStringModification);
+            var current = new SmartStore.Collections.QueryString(parts.Length == 2 ? parts[1] : "");
+            var modify = new SmartStore.Collections.QueryString(queryStringModification);
 
             foreach (var nv in modify.AllKeys)
             {
@@ -418,7 +413,7 @@ namespace SmartStore.Core
         {
             var parts = url.SplitSafe("?");
 
-            var current = new QueryString(parts.Length == 2 ? parts[1] : "");
+            var current = new SmartStore.Collections.QueryString(parts.Length == 2 ? parts[1] : "");
 
             if (current.Count > 0 && queryString.HasValue())
             {
@@ -443,7 +438,9 @@ namespace SmartStore.Core
 
         public virtual void RestartAppDomain(bool makeRedirect = false, string redirectUrl = "", bool aggressive = false)
         {
-            HttpRuntime.UnloadAppDomain();
+            // Note: HttpRuntime.UnloadAppDomain() is not available in .NET 8.0
+            // AppDomain unloading is managed differently in ASP.NET Core
+// Consider using IHostApplicationLifetime for application shutdown/restart scenarios
 
             if (aggressive)
             {
@@ -478,7 +475,7 @@ namespace SmartStore.Core
             // new request will come to the newly started AppDomain.
             if (_httpContext != null && makeRedirect)
             {
-                if (_httpContext.Request.RequestType == "GET")
+                if (string.Equals(_httpContext.Request.Method, "GET", StringComparison.OrdinalIgnoreCase))
                 {
                     if (string.IsNullOrEmpty(redirectUrl))
                     {
@@ -490,20 +487,21 @@ namespace SmartStore.Core
                 {
                     // Don't redirect posts...
                     _httpContext.Response.ContentType = "text/html";
-                    _httpContext.Response.WriteFile("~/refresh.html");
-                    _httpContext.Response.End();
+                    var refreshFilePath = MapPath("~/refresh.html");
+                    _httpContext.Response.SendFileAsync(refreshFilePath).GetAwaiter().GetResult();
+                    return;
                 }
             }
         }
 
         private void DeleteMvcTypeCacheFiles()
         {
+            // Note: HttpRuntime.CodegenDir is not available in .NET 8.0
+            // ASP.NET Core does not use the same MVC cache file mechanism
+            // This method is kept for compatibility but does nothing in .NET 8.0
             try
             {
-                var userCacheDir = Path.Combine(HttpRuntime.CodegenDir, "UserCache");
-
-                File.Delete(Path.Combine(userCacheDir, "MVC-ControllerTypeCache.xml"));
-                File.Delete(Path.Combine(userCacheDir, "MVC-AreaRegistrationTypeCache.xml"));
+                // No-op in .NET 8.0 - MVC caching works differently
             }
             catch { }
         }
@@ -543,39 +541,29 @@ namespace SmartStore.Core
         }
 
         /// <summary>
-        /// Finds the trust level of the running application (http://blogs.msdn.com/dmitryr/archive/2007/01/23/finding-out-the-current-trust-level-in-asp-net.aspx)
+        /// Gets the trust level of the running application.
+        /// In .NET 8.0, applications always run with unrestricted permissions (equivalent to full trust).
         /// </summary>
-        /// <returns>The current trust level.</returns>
-        public static AspNetHostingPermissionLevel GetTrustLevel()
+        /// <returns>Always returns TrustLevel.Unrestricted for .NET 8.0 applications.</returns>
+        public static TrustLevel GetTrustLevel()
         {
-            if (!s_trustLevel.HasValue)
-            {
-                // set minimum
-                s_trustLevel = AspNetHostingPermissionLevel.None;
+            // .NET Core/.NET 8.0 does not support Code Access Security (CAS) or trust levels
+            // All applications run with full trust (unrestricted permissions)
+            return TrustLevel.Unrestricted;
+        }
 
-                // determine maximum
-                foreach (AspNetHostingPermissionLevel trustLevel in
-                        new[] {
-                                AspNetHostingPermissionLevel.Unrestricted,
-                                AspNetHostingPermissionLevel.High,
-                                AspNetHostingPermissionLevel.Medium,
-                                AspNetHostingPermissionLevel.Low,
-                                AspNetHostingPermissionLevel.Minimal
-                            })
-                {
-                    try
-                    {
-                        new AspNetHostingPermission(trustLevel).Demand();
-                        s_trustLevel = trustLevel;
-                        break; //we've set the highest permission we can
-                    }
-                    catch (System.Security.SecurityException)
-                    {
-                        continue;
-                    }
-                }
-            }
-            return s_trustLevel.Value;
+        /// <summary>
+        /// Represents trust levels for compatibility with legacy code.
+        /// In .NET 8.0, only Unrestricted is applicable.
+        /// </summary>
+        public enum TrustLevel
+        {
+            Unrestricted,
+            High,
+            Medium,
+            Low,
+            Minimal,
+            None
         }
 
         /// <summary>
@@ -587,16 +575,13 @@ namespace SmartStore.Core
         /// <remarks>
         /// All html attributed named <c>src</c> and <c>href</c> are affected, also occurences of <c>url('path')</c> within embedded stylesheets.
         /// </remarks>
-        public static string MakeAllUrlsAbsolute(string html, HttpRequestBase request)
+        public static string MakeAllUrlsAbsolute(string html, HttpRequest request)
         {
             Guard.NotNull(request, nameof(request));
 
-            if (request.Url == null)
-            {
-                return html;
-            }
+            var requestUrl = new Uri($"{request.Scheme}://{request.Host}{request.PathBase}{request.Path}{request.QueryString}");
 
-            return MakeAllUrlsAbsolute(html, request.Url.Scheme, request.Url.Authority);
+            return MakeAllUrlsAbsolute(html, requestUrl.Scheme, requestUrl.Authority);
         }
 
         /// <summary>
@@ -634,22 +619,17 @@ namespace SmartStore.Core
         /// </summary>
         /// <param name="protocol">Changes the protocol if passed.</param>
         [SuppressMessage("ReSharper", "AccessToModifiedClosure")]
-        public static string GetAbsoluteUrl(string url, HttpRequestBase request, bool enforceScheme = false, string protocol = null)
+        public static string GetAbsoluteUrl(string url, HttpRequest request, bool enforceScheme = false, string protocol = null)
         {
             Guard.NotEmpty(url, nameof(url));
             Guard.NotNull(request, nameof(request));
-
-            if (request.Url == null)
-            {
-                return url;
-            }
 
             if (url.Contains("://"))
             {
                 return url;
             }
 
-            protocol = protocol ?? request.Url.Scheme;
+            protocol = protocol ?? request.Scheme;
 
             if (url.StartsWith("//"))
             {
@@ -660,10 +640,16 @@ namespace SmartStore.Core
 
             if (url.StartsWith("~"))
             {
-                url = VirtualPathUtility.ToAbsolute(url);
+                // Remove the ~ and prepend the PathBase if it exists
+                url = url.Substring(1); // Remove the ~
+                if (request.PathBase.HasValue)
+                {
+                    url = request.PathBase.Value.TrimEnd('/') + url;
+                }
             }
 
-            url = string.Format("{0}://{1}{2}", protocol, request.Url.Authority, url);
+            var authority = $"{request.Host}";
+            url = string.Format("{0}://{1}{2}", protocol, authority, url);
             return url;
         }
 

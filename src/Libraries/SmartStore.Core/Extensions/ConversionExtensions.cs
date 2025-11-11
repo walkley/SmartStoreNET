@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
@@ -368,15 +368,19 @@ namespace SmartStore
         /// </summary>
         /// <param name="bytes">Object to deserialize. May be null.</param>
         /// <returns>Deserialized object, or null if input was null.</returns>
+[Obsolete("BinaryFormatter is obsolete. Consider using JSON serialization or other secure serialization methods.")]
         public static object ToObject(this byte[] bytes)
         {
             if (bytes == null)
                 return null;
 
-            using (MemoryStream stream = new MemoryStream(bytes))
+#pragma warning disable SYSLIB0011 // BinaryFormatter serialization is obsolete
+using (MemoryStream stream = new MemoryStream(bytes))
             {
-                return new BinaryFormatter().Deserialize(stream);
+                BinaryFormatter formatter = new BinaryFormatter();
+                return formatter.Deserialize(stream);
             }
+#pragma warning restore SYSLIB0011
         }
 
         public static Stream ToStream(this byte[] bytes)

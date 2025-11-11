@@ -1,7 +1,8 @@
-﻿using System;
-using System.Web;
+using System;
 using Autofac;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Core.Infrastructure.DependencyManagement
 {
@@ -42,7 +43,8 @@ namespace SmartStore.Core.Infrastructure.DependencyManagement
         {
             // Stack-like behaviour for Non-HttpContext thread:
             // Only the first call returns a disposer, all nested calls to this method are void.
-            return HttpContext.Current != null
+            return /* Added by CTA: TODO: Replace HttpContext.Current with dependency injection pattern using IHttpContextAccessor. */
+HttpContext.Current != null
                 ? (IDisposable)ActionDisposable.Empty
                 : new ContextAwareScope(
                     _state.GetState() == null

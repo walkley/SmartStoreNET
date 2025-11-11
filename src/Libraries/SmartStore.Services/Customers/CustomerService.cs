@@ -4,7 +4,6 @@ using System.Data.Entity;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
-using System.Web;
 using SmartStore.Collections;
 using SmartStore.Core;
 using SmartStore.Core.Data;
@@ -20,6 +19,8 @@ using SmartStore.Data.Caching;
 using SmartStore.Services.Common;
 using SmartStore.Services.Localization;
 using SmartStore.Services.Security;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Services.Customers
 {
@@ -34,7 +35,7 @@ namespace SmartStore.Services.Customers
         private readonly IGenericAttributeService _genericAttributeService;
         private readonly Lazy<RewardPointsSettings> _rewardPointsSettings;
         private readonly ICommonServices _services;
-        private readonly HttpContextBase _httpContext;
+        private readonly HttpContext _httpContext;
         private readonly IUserAgent _userAgent;
         private readonly CustomerSettings _customerSettings;
         private readonly Lazy<IGdprTool> _gdprTool;
@@ -49,7 +50,7 @@ namespace SmartStore.Services.Customers
             IGenericAttributeService genericAttributeService,
             Lazy<RewardPointsSettings> rewardPointsSettings,
             ICommonServices services,
-            HttpContextBase httpContext,
+            HttpContext httpContext,
             IUserAgent userAgent,
             CustomerSettings customerSettings,
             Lazy<IGdprTool> gdprTool)

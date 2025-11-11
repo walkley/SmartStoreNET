@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -67,7 +67,7 @@ namespace SmartStore.Collections
 
         protected virtual SyncedCollection<TValue> CreateCollection(IEnumerable<TValue> values)
         {
-            var creator = _collectionCreator ?? Multimap<TKey, TValue>.DefaultCollectionCreator;
+            var creator = _collectionCreator ?? (vals => new List<TValue>(vals));
             var col = creator(values ?? Enumerable.Empty<TValue>());
 
             return col.AsSynchronized();
@@ -281,12 +281,48 @@ namespace SmartStore.Collections
         #endregion
     }
 
-    public class ConcurrentMultiMapConverter : MultiMapConverter
+    public class ConcurrentMultiMapConverter : JsonConverter
     {
         public override bool CanConvert(Type objectType)
         {
             var canConvert = objectType.IsGenericType && objectType.GetGenericTypeDefinition() == typeof(ConcurrentMultimap<,>);
             return canConvert;
+        }
+
+        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            if (reader.TokenType == JsonToken.Null)
+                return null;
+
+            var keyType = objectType.GetGenericArguments()[0];
+            var valueType = objectType.GetGenericArguments()[1];
+            var dictionaryType = typeof(Dictionary<,>).MakeGenericType(keyType, typeof(ICollection<>).MakeGenericType(valueType));
+            var dictionary = serializer.Deserialize(reader, dictionaryType);
+
+            var constructor = objectType.GetConstructor(new[] { typeof(IEnumerable<>).MakeGenericType(typeof(KeyValuePair<,>).MakeGenericType(keyType, typeof(ICollection<>).MakeGenericType(valueType))) });
+            return constructor.Invoke(new[] { dictionary });
+        }
+
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            var objectType = value.GetType();
+            var keyType = objectType.GetGenericArguments()[0];
+            var valueType = objectType.GetGenericArguments()[1];
+            var dictionaryType = typeof(Dictionary<,>).MakeGenericType(keyType, typeof(ICollection<>).MakeGenericType(valueType));
+
+            var keysProperty = objectType.GetProperty("Keys");
+            var indexer = objectType.GetProperty("Item");
+            var keys = keysProperty.GetValue(value);
+            var dictionary = Activator.CreateInstance(dictionaryType);
+            var addMethod = dictionaryType.GetMethod("Add");
+
+            foreach (var key in (IEnumerable)keys)
+            {
+                var values = indexer.GetValue(value, new[] { key });
+                addMethod.Invoke(dictionary, new[] { key, values });
+            }
+
+            serializer.Serialize(writer, dictionary);
         }
     }
 }

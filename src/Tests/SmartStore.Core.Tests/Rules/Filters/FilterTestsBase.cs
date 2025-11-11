@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -10,6 +10,8 @@ using SmartStore.Core.Domain.Orders;
 using SmartStore.Core.Domain.Stores;
 using SmartStore.Rules;
 using SmartStore.Rules.Filters;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Core.Tests.Rules.Filters
 {

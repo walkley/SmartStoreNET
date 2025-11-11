@@ -1,11 +1,10 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Dynamic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Web.Mvc;
 using SmartStore.Collections;
 using SmartStore.ComponentModel;
 using SmartStore.Core;
@@ -37,6 +36,8 @@ using SmartStore.Services.Orders;
 using SmartStore.Services.Seo;
 using SmartStore.Templating;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Services.Messages
 {

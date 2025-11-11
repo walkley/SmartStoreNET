@@ -1,9 +1,13 @@
-﻿using System.Web.Mvc;
-using System.Web.Routing;
 using NUnit.Framework;
 using Rhino.Mocks;
 using SmartStore.Core.Fakes;
 using SmartStore.Web.Framework.Security;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Routing;
+
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Web.MVC.Tests.Framework.Controllers
 {

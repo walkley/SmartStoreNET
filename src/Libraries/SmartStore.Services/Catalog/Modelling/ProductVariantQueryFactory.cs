@@ -1,10 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using System.Web;
 using SmartStore.Collections;
 using SmartStore.Services.Search.Modelling;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Services.Catalog.Modelling
 {
@@ -15,13 +16,13 @@ namespace SmartStore.Services.Catalog.Modelling
         internal static readonly Regex IsGiftCardKey = new Regex(@"giftcard[0-9]+-[0-9]+-\.\w+$", RegexOptions.Singleline | RegexOptions.IgnoreCase | RegexOptions.Compiled);
         internal static readonly Regex IsCheckoutAttributeKey = new Regex(@"cattr[0-9]+", RegexOptions.Singleline | RegexOptions.IgnoreCase | RegexOptions.Compiled);
 
-        protected readonly HttpContextBase _httpContext;
+        protected readonly HttpContext _httpContext;
         protected readonly ICommonServices _services;
         protected readonly ICatalogSearchQueryAliasMapper _catalogSearchQueryAliasMapper;
         private Multimap<string, string> _queryItems;
 
         public ProductVariantQueryFactory(
-            HttpContextBase httpContext,
+            HttpContext httpContext,
             ICommonServices services,
             ICatalogSearchQueryAliasMapper catalogSearchQueryAliasMapper)
         {

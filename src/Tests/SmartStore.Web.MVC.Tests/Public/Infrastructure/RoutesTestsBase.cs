@@ -1,6 +1,9 @@
-﻿using System.Web.Routing;
 using NUnit.Framework;
 using SmartStore.Core.Data;
+using Microsoft.AspNetCore.Routing;
+
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Web.MVC.Tests.Public.Infrastructure
 {

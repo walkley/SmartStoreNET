@@ -1,5 +1,7 @@
-﻿using System.Collections;
+using System.Collections;
+using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.Linq;
 using System.Web;
 using System.Web.SessionState;
 
@@ -7,16 +9,27 @@ namespace SmartStore.Core.Fakes
 {
     public class FakeHttpSessionState : HttpSessionStateBase
     {
-        private readonly SessionStateItemCollection _sessionItems;
+        private readonly Dictionary<string, object> _sessionItems;
 
-        public FakeHttpSessionState(SessionStateItemCollection sessionItems)
+        public FakeHttpSessionState(Dictionary<string, object> sessionItems)
         {
             _sessionItems = sessionItems;
         }
 
         public override int Count => _sessionItems.Count;
 
-        public override NameObjectCollectionBase.KeysCollection Keys => _sessionItems.Keys;
+        public override NameObjectCollectionBase.KeysCollection Keys
+        {
+            get
+            {
+                var collection = new NameValueCollection();
+                foreach (var key in _sessionItems.Keys)
+                {
+                    collection.Add(key, null);
+                }
+                return collection.Keys;
+            }
+        }
 
         public override object this[string name]
         {
@@ -29,10 +42,10 @@ namespace SmartStore.Core.Fakes
             return _sessionItems[key] != null;
         }
 
-        public override object this[int index]
+        public new object this[int index]
         {
-            get => _sessionItems[index];
-            set => _sessionItems[index] = value;
+            get => _sessionItems.ElementAt(index).Value;
+            set => _sessionItems[_sessionItems.Keys.ElementAt(index)] = value;
         }
 
         public override void Add(string name, object value)
@@ -40,7 +53,7 @@ namespace SmartStore.Core.Fakes
             _sessionItems[name] = value;
         }
 
-        public override IEnumerator GetEnumerator()
+        public IEnumerator GetEnumerator()
         {
             return _sessionItems.GetEnumerator();
         }

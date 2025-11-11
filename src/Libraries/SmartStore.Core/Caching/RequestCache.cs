@@ -1,10 +1,11 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using System.Web;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Core.Caching
 {
@@ -12,11 +13,11 @@ namespace SmartStore.Core.Caching
     {
         const string RegionName = "SmartStoreNET:";
 
-        private readonly IDictionary _emptyDictionary = new Dictionary<string, object>();
+        private readonly IDictionary<object, object?> _emptyDictionary = new Dictionary<object, object?>();
 
-        private readonly HttpContextBase _context;
+        private readonly HttpContext _context;
 
-        public RequestCache(HttpContextBase context)
+        public RequestCache(HttpContext context)
         {
             _context = context;
         }
@@ -32,7 +33,7 @@ namespace SmartStore.Core.Caching
 
             key = BuildKey(key);
 
-            if (items.Contains(key))
+            if (items.ContainsKey(key))
             {
                 return (T)items[key];
             }
@@ -53,7 +54,7 @@ namespace SmartStore.Core.Caching
 
             key = BuildKey(key);
 
-            if (items.Contains(key))
+            if (items.ContainsKey(key))
                 items[key] = value;
             else
                 items.Add(key, value);
@@ -66,7 +67,7 @@ namespace SmartStore.Core.Caching
 
         public bool Contains(string key)
         {
-            return GetItems().Contains(BuildKey(key));
+            return GetItems().ContainsKey(BuildKey(key));
         }
 
         public void Remove(string key)
@@ -86,9 +87,11 @@ namespace SmartStore.Core.Caching
             }
         }
 
-        protected IDictionary GetItems()
+        protected IDictionary<object, object?> GetItems()
         {
-            return _context.Items ?? _emptyDictionary;
+            if (_context.Items == null)
+                return _emptyDictionary;
+            return _context.Items;
         }
 
         public IEnumerable<string> Keys(string pattern)
@@ -103,10 +106,9 @@ namespace SmartStore.Core.Caching
             pattern = pattern.NullEmpty() ?? "*";
             var wildcard = new Wildcard(pattern, RegexOptions.IgnoreCase);
 
-            var enumerator = items.GetEnumerator();
-            while (enumerator.MoveNext())
+            foreach (var kvp in items)
             {
-                if (enumerator.Key is string key)
+                if (kvp.Key is string key)
                 {
                     if (key.StartsWith(RegionName))
                     {

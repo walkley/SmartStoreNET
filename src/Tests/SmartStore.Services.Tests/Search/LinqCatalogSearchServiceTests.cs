@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -15,6 +15,8 @@ using SmartStore.Core.Search;
 using SmartStore.Services.Catalog;
 using SmartStore.Services.Directory;
 using SmartStore.Services.Search;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Services.Tests.Search
 {

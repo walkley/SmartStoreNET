@@ -1,8 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Routing;
 using SmartStore.Core.Data;
 using SmartStore.Core.Domain.Catalog;
 using SmartStore.Core.Search;
@@ -11,6 +9,10 @@ using SmartStore.Core.Security;
 using SmartStore.Services.Catalog;
 using SmartStore.Services.Search.Extensions;
 using SmartStore.Services.Security;
+using Microsoft.AspNetCore.Routing;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Services.Search.Modelling
 {
@@ -43,7 +45,7 @@ namespace SmartStore.Services.Search.Modelling
         protected readonly ICatalogSearchQueryAliasMapper _catalogSearchQueryAliasMapper;
 
         public CatalogSearchQueryFactory(
-            HttpContextBase httpContext,
+            HttpContext httpContext,
             CatalogSettings catalogSettings,
             SearchSettings searchSettings,
             ICommonServices services,
@@ -66,7 +68,7 @@ namespace SmartStore.Services.Search.Modelling
 
         public CatalogSearchQuery CreateFromQuery()
         {
-            var ctx = _httpContext;
+            HttpContext ctx = _httpContext;
 
             if (ctx.Request == null)
                 return null;

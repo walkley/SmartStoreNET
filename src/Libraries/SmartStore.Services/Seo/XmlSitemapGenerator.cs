@@ -4,7 +4,6 @@ using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Data.Entity;
-using System.Web.Mvc;
 using System.Xml.Linq;
 using System.IO;
 using System.Threading.Tasks;
@@ -19,6 +18,8 @@ using SmartStore.Utilities;
 using SmartStore.Collections;
 using SmartStore.Core.Domain.Stores;
 using SmartStore.Core.Domain.Localization;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Services.Seo
 {

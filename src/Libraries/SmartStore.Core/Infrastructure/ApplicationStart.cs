@@ -1,10 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Mvc.Filters;
 using SmartStore.Core.Logging;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Core.Infrastructure
 {
@@ -32,7 +33,7 @@ namespace SmartStore.Core.Infrastructure
     /// </summary>
     public interface IPostApplicationStart
     {
-        void Start(HttpContextBase httpContext);
+        void Start(HttpContext httpContext);
 
         /// <summary>
         /// Called when an error occurred and <see cref="ThrowOnError"/> is <c>false</c>.
@@ -58,19 +59,16 @@ namespace SmartStore.Core.Infrastructure
         int MaxAttempts { get; }
     }
 
-    public sealed class PostApplicationStartFilter : IAuthenticationFilter
+    public sealed class PostApplicationStartFilter : IActionFilter
     {
         private readonly static object _lock = new object();
         private static bool _initializing = false;
         private static List<StarterModuleInfo> _starterModuleInfos;
 
-        public void OnAuthentication(AuthenticationContext filterContext)
+        public void OnActionExecuting(ActionExecutingContext filterContext)
         {
             var request = filterContext?.HttpContext?.Request;
             if (request == null)
-                return;
-
-            if (filterContext.IsChildAction)
                 return;
 
             lock (_lock)
@@ -110,7 +108,7 @@ namespace SmartStore.Core.Infrastructure
                             {
                                 if (info.Attempts <= maxAttempts)
                                 {
-                                    // Don't pollute event log 
+                                    // Don't pollute event log
                                     var logger = EngineContext.Current.Resolve<ILoggerFactory>().CreateLogger<PostApplicationStartFilter>();
                                     logger.ErrorFormat(ex, "Error while executing post startup task '{0}': {1}", info.ModuleType, ex.Message);
                                 }
@@ -138,7 +136,8 @@ namespace SmartStore.Core.Infrastructure
                     {
                         // No more pending starter modules anymore.
                         // Don't run this filter from now on.
-                        GlobalFilters.Filters.Remove(this);
+                        // Note: In ASP.NET Core, filter removal should be handled through MVC options configuration
+                        // This filter will no longer execute once pendingModules is empty
                     }
 
                     _initializing = false;
@@ -160,7 +159,7 @@ namespace SmartStore.Core.Infrastructure
             return _starterModuleInfos;
         }
 
-        public void OnAuthenticationChallenge(AuthenticationChallengeContext filterContext)
+        public void OnActionExecuted(ActionExecutedContext filterContext)
         {
             // Noop
         }

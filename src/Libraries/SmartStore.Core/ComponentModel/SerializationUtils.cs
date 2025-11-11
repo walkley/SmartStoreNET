@@ -1,10 +1,10 @@
-﻿#region License
+#region License
 /*
  **************************************************************
- *  Author: Rick Strahl 
+ *  Author: Rick Strahl
  *          © West Wind Technologies, 2008 - 2009
  *          http://www.west-wind.com/
- * 
+ *
  * Created: 09/08/2008
  *
  * Permission is hereby granted, free of charge, to any person
@@ -15,10 +15,10 @@
  * copies of the Software, and to permit persons to whom the
  * Software is furnished to do so, subject to the following
  * conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be
  * included in all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
  * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
  * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -27,7 +27,7 @@
  * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  * OTHER DEALINGS IN THE SOFTWARE.
- **************************************************************  
+ **************************************************************
 */
 #endregion
 
@@ -88,9 +88,11 @@ namespace SmartStore.ComponentModel
                 Stream fs = null;
                 try
                 {
+#pragma warning disable SYSLIB0011 // BinaryFormatter serialization is obsolete
                     BinaryFormatter serializer = new BinaryFormatter();
                     fs = new FileStream(fileName, FileMode.Create);
                     serializer.Serialize(fs, instance);
+#pragma warning restore SYSLIB0011
                 }
                 catch
                 {
@@ -107,14 +109,14 @@ namespace SmartStore.ComponentModel
         }
 
         /// <summary>
-        /// Overload that supports passing in an XML TextWriter. 
+        /// Overload that supports passing in an XML TextWriter.
         /// </summary>
         /// <remarks>
-        /// Note the Writer is not closed when serialization is complete 
+        /// Note the Writer is not closed when serialization is complete
         /// so the caller needs to handle closing.
         /// </remarks>
         /// <param name="instance">object to serialize</param>
-        /// <param name="writer">XmlTextWriter instance to write output to</param>       
+        /// <param name="writer">XmlTextWriter instance to write output to</param>
         /// <param name="throwExceptions">Determines whether false is returned on failure or an exception is thrown</param>
         /// <returns></returns>
         public static bool SerializeObject(object instance, XmlTextWriter writer, bool throwExceptions)
@@ -202,9 +204,11 @@ namespace SmartStore.ComponentModel
             var ms = new MemoryStream();
             try
             {
+#pragma warning disable SYSLIB0011 // BinaryFormatter serialization is obsolete
                 var serializer = new BinaryFormatter();
                 serializer.Serialize(ms, instance);
                 resultBuffer = ms.ToArray();
+#pragma warning restore SYSLIB0011
             }
             catch (Exception ex)
             {
@@ -229,7 +233,7 @@ namespace SmartStore.ComponentModel
         /// <param name="instance"></param>
         /// <param name="throwExceptions">Determines if a failure throws or returns null</param>
         /// <returns>
-        /// null on error otherwise the Xml String.         
+        /// null on error otherwise the Xml String.
         /// </returns>
         /// <remarks>
         /// If null is passed in null is also returned so you might want
@@ -317,7 +321,7 @@ namespace SmartStore.ComponentModel
             }
             else
             {
-
+#pragma warning disable SYSLIB0011 // BinaryFormatter serialization is obsolete
                 BinaryFormatter serializer = null;
                 FileStream fs = null;
 
@@ -328,6 +332,7 @@ namespace SmartStore.ComponentModel
                     instance = serializer.Deserialize(fs);
 
                 }
+#pragma warning restore SYSLIB0011
                 catch
                 {
                     return null;
@@ -372,6 +377,7 @@ namespace SmartStore.ComponentModel
         /// <returns></returns>
         public static object DeSerializeObject(byte[] buffer, Type objectType, bool throwExceptions = false)
         {
+#pragma warning disable SYSLIB0011 // BinaryFormatter serialization is obsolete
             BinaryFormatter serializer = null;
             MemoryStream ms = null;
             object Instance = null;
@@ -383,6 +389,7 @@ namespace SmartStore.ComponentModel
                 Instance = serializer.Deserialize(ms);
 
             }
+#pragma warning restore SYSLIB0011
             catch
             {
                 if (throwExceptions)
@@ -454,7 +461,5 @@ namespace SmartStore.ComponentModel
         Fields
     }
 }
-
-
 
 

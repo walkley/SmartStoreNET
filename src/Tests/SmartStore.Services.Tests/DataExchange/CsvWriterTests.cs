@@ -1,7 +1,9 @@
-﻿using System.IO;
+using System.IO;
 using System.Text;
 using NUnit.Framework;
 using SmartStore.Services.DataExchange.Csv;
+using NUnit.Framework.Legacy;
+
 
 namespace SmartStore.Services.Tests.DataExchange
 {

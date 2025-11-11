@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Web.Hosting;
 using Autofac;
 using SmartStore.Core.Infrastructure;
 
@@ -344,31 +343,16 @@ namespace SmartStore.Core.Async
         }
     }
 
-    internal class BackgroundWorkHost : IRegisteredObject
+    internal class BackgroundWorkHost
     {
         private readonly CancellationTokenSource _shutdownCancellationTokenSource = new CancellationTokenSource();
         private int _numRunningWorkItems;
 
         public BackgroundWorkHost()
         {
-            HostingEnvironment.RegisterObject(this);
         }
 
         public CancellationTokenSource ShutdownCancellationTokenSource => _shutdownCancellationTokenSource;
-
-        public void Stop(bool immediate)
-        {
-            int num;
-            lock (this)
-            {
-                _shutdownCancellationTokenSource.Cancel();
-                num = _numRunningWorkItems;
-            }
-            if (num == 0)
-            {
-                FinalShutdown();
-            }
-        }
 
         public CancellationTokenSource CreateCompositeCancellationTokenSource(CancellationToken userCancellationToken)
         {
@@ -403,21 +387,10 @@ namespace SmartStore.Core.Async
         private void WorkItemComplete(Task work)
         {
             int num;
-            bool isCancellationRequested;
             lock (this)
             {
                 num = --_numRunningWorkItems;
-                isCancellationRequested = _shutdownCancellationTokenSource.IsCancellationRequested;
             }
-            if (num == 0 && isCancellationRequested)
-            {
-                FinalShutdown();
-            }
-        }
-
-        private void FinalShutdown()
-        {
-            HostingEnvironment.UnregisterObject(this);
         }
 
     }

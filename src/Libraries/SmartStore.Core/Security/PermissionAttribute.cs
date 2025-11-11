@@ -1,8 +1,13 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Net;
 using System.Text;
-using System.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Routing;
+using Microsoft.Extensions.DependencyInjection;
+
 
 namespace SmartStore.Core.Security
 {
@@ -10,7 +15,7 @@ namespace SmartStore.Core.Security
     /// Checks request permission for the current customer.
     /// </summary>
     [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class, Inherited = true, AllowMultiple = true)]
-    public partial class PermissionAttribute : FilterAttribute, IAuthorizationFilter
+    public partial class PermissionAttribute : Attribute, IAuthorizationFilter
     {
         /// <summary>
         /// e.g. [Permission(PermissionSystemNames.Customer.Read)]
@@ -40,7 +45,7 @@ namespace SmartStore.Core.Security
         public IWorkContext WorkContext { get; set; }
         public IPermissionService PermissionService { get; set; }
 
-        public virtual void OnAuthorization(AuthorizationContext filterContext)
+        public virtual void OnAuthorization(AuthorizationFilterContext filterContext)
         {
             Guard.NotNull(filterContext, nameof(filterContext));
 
@@ -55,13 +60,13 @@ namespace SmartStore.Core.Security
             }
             catch
             {
-                filterContext.Result = new HttpStatusCodeResult(HttpStatusCode.Unauthorized);
+                filterContext.Result = new StatusCodeResult(StatusCodes.Status401Unauthorized);
             }
         }
 
-        protected virtual void HandleUnauthorizedRequest(AuthorizationContext filterContext)
+        protected virtual void HandleUnauthorizedRequest(AuthorizationFilterContext filterContext)
         {
-            var httpContext = filterContext.HttpContext;
+            HttpContext httpContext = filterContext.HttpContext;
             var request = httpContext?.Request;
 
             if (request == null)
@@ -77,44 +82,40 @@ namespace SmartStore.Core.Security
             {
                 if (message.HasValue())
                 {
-                    httpContext.Response.AddHeader("X-Message-Type", "error");
-                    httpContext.Response.AddHeader("X-Message", message);
+                    httpContext.Response.Headers.Append("X-Message-Type", "error");
+                    httpContext.Response.Headers.Append("X-Message", message);
                 }
 
-                if (request.AcceptTypes?.Any(x => x.IsCaseInsensitiveEqual("text/html")) ?? false)
+                if (request.Headers["Accept"].Any(x => x.IsCaseInsensitiveEqual("text/html")))
                 {
                     filterContext.Result = AccessDeniedResult(message);
                 }
                 else
                 {
-                    filterContext.Result = new JsonResult
+                    var controllerActionDescriptor = filterContext.ActionDescriptor as Microsoft.AspNetCore.Mvc.Controllers.ControllerActionDescriptor;
+                    filterContext.Result = new JsonResult(new
                     {
-                        JsonRequestBehavior = JsonRequestBehavior.AllowGet,
-                        Data = new
-                        {
-                            error = true,
-                            success = false,
-                            controller = filterContext.ActionDescriptor.ControllerDescriptor.ControllerName,
-                            action = filterContext.ActionDescriptor.ActionName,
-                            //message
-                        }
-                    };
+                        error = true,
+                        success = false,
+                        controller = controllerActionDescriptor?.ControllerName,
+                        action = controllerActionDescriptor?.ActionName,
+                        //message
+                    });
                 }
             }
             else
             {
-                if (filterContext.IsChildAction)
-                {
-                    filterContext.Result = AccessDeniedResult(message);
-                }
-                else
-                {
-                    var urlHelper = new UrlHelper(request.RequestContext);
-                    var url = urlHelper.Action("AccessDenied", "Security", new { pageUrl = request.RawUrl, area = "Admin" });
+                var linkGenerator = httpContext.RequestServices.GetService<LinkGenerator>();
+                var rawUrl = request.Path + request.QueryString;
+                var url = linkGenerator?.GetPathByAction("AccessDenied", "Security", new { pageUrl = rawUrl, area = "Admin" });
 
-                    filterContext.Controller.TempData["UnauthorizedMessage"] = message;
-                    filterContext.Result = new RedirectResult(url);
+                if (url == null)
+                {
+                    url = "/Admin/Security/AccessDenied";
                 }
+
+                httpContext.Items["UnauthorizedMessage"] = message;
+                filterContext.Result = new RedirectResult(url);
             }
         }
 

@@ -1,10 +1,9 @@
-﻿using System;
+using System;
 using Autofac;
-using Autofac.Integration.Mvc;
 
 namespace SmartStore.Core.Infrastructure.DependencyManagement
 {
-    public class DefaultLifetimeScopeProvider : ILifetimeScopeProvider
+    public class DefaultLifetimeScopeProvider
     {
         private readonly ILifetimeScopeAccessor _accessor;
 
@@ -13,7 +12,6 @@ namespace SmartStore.Core.Infrastructure.DependencyManagement
             Guard.NotNull(accessor, nameof(accessor));
 
             this._accessor = accessor;
-            AutofacRequestLifetimeHttpModule.SetLifetimeScopeProvider(this);
         }
 
         public ILifetimeScope ApplicationContainer => _accessor.ApplicationContainer;

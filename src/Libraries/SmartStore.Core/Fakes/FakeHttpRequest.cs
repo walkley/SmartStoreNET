@@ -1,8 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Specialized;
 using System.Web;
-using System.Web.Mvc;
-using System.Web.Routing;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.Core.Fakes
 {
@@ -16,7 +18,6 @@ namespace SmartStore.Core.Fakes
         private readonly Uri _url;
         private readonly Uri _urlReferrer;
         private readonly string _httpMethod;
-        private RequestContext _requestContext;
 
         public FakeHttpRequest(string relativeUrl, Uri url, Uri urlReferrer)
             : this(relativeUrl, HttpVerbs.Get.ToString("g"), url, urlReferrer, null, null, null, null)
@@ -93,12 +94,5 @@ namespace SmartStore.Core.Fakes
         public override string[] UserLanguages => new string[] { };
         public override string UserAgent => "Smartstore";
         public override bool IsLocal => false;
-
-        public override RequestContext RequestContext
-        {
-            get => _requestContext ?? new RequestContext();
-
-            set => _requestContext = value;
-        }
     }
 }

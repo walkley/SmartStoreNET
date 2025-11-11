@@ -1,9 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Web;
-using System.Web.Mvc;
-using System.Web.Routing;
 using SmartStore.Collections;
 using SmartStore.Core.Domain.Catalog;
 using SmartStore.Core.Domain.Localization;
@@ -11,6 +9,10 @@ using SmartStore.Core.Domain.Stores;
 using SmartStore.Services.Catalog.Modelling;
 using SmartStore.Services.Localization;
 using SmartStore.Services.Search.Modelling;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Routing;
+
 
 namespace SmartStore.Services.Catalog.Extensions
 {

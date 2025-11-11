@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq.Expressions;
-using System.Reflection.Emit;
 using System.Runtime.CompilerServices;
 
 namespace SmartStore.Linq
@@ -112,11 +111,6 @@ namespace SmartStore.Linq
             return Predicate.Compile();
         }
 
-        public Func<T, bool> Compile(DebugInfoGenerator debugInfoGenerator)
-        {
-            return Predicate.Compile(debugInfoGenerator);
-        }
-
         public Expression<Func<T, bool>> Update(Expression body, IEnumerable<ParameterExpression> parameters)
         {
             return Predicate.Update(body, parameters);
@@ -139,16 +133,6 @@ namespace SmartStore.Linq
         public Type ReturnType => Predicate.ReturnType;
 
         public bool TailCall => Predicate.TailCall;
-
-        public void CompileToMethod(MethodBuilder method)
-        {
-            Predicate.CompileToMethod(method);
-        }
-
-        public void CompileToMethod(MethodBuilder method, DebugInfoGenerator debugInfoGenerator)
-        {
-            Predicate.CompileToMethod(method, debugInfoGenerator);
-        }
 
         #endregion
 

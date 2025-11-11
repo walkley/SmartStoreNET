@@ -10,10 +10,11 @@ using System.Runtime.CompilerServices;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Security.Cryptography;
 using System.Text;
-using System.Web.Hosting;
-using System.Web.Mvc;
 using Newtonsoft.Json;
 using SmartStore.ComponentModel;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+
 
 namespace SmartStore.Utilities
 {
@@ -78,35 +79,26 @@ namespace SmartStore.Utilities
             if (path == null)
                 throw new ArgumentNullException(nameof(path));
 
-            if (HostingEnvironment.IsHosted)
-            {
-                // hosted
-                return HostingEnvironment.MapPath(path);
-            }
-            else
-            {
-                // not hosted. For example, running in unit tests or EF tooling
-                string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-                path = path.Replace("~/", "").TrimStart('/').Replace('/', '\\');
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            path = path.Replace("~/", "").TrimStart('/').Replace('/', '\\');
 
-                var testPath = Path.Combine(baseDirectory, path);
+            var testPath = Path.Combine(baseDirectory, path);
 
-                if (findAppRoot /* && !Directory.Exists(testPath)*/)
+            if (findAppRoot /* && !Directory.Exists(testPath)*/)
+            {
+                // most likely we're in unit tests or design-mode (EF migration scaffolding)...
+                // find solution root directory first
+                var dir = FindSolutionRoot(baseDirectory);
+
+                // concat the web root
+                if (dir != null)
                 {
-                    // most likely we're in unit tests or design-mode (EF migration scaffolding)...
-                    // find solution root directory first
-                    var dir = FindSolutionRoot(baseDirectory);
-
-                    // concat the web root
-                    if (dir != null)
-                    {
-                        baseDirectory = Path.Combine(dir.FullName, "Presentation\\SmartStore.Web");
-                        testPath = Path.Combine(baseDirectory, path);
-                    }
+                    baseDirectory = Path.Combine(dir.FullName, "Presentation\\SmartStore.Web");
+                    testPath = Path.Combine(baseDirectory, path);
                 }
-
-                return testPath;
             }
+
+            return testPath;
         }
 
         public static bool IsDevEnvironment
@@ -124,18 +116,12 @@ namespace SmartStore.Utilities
 
         private static bool IsDevEnvironmentInternal()
         {
-            if (!HostingEnvironment.IsHosted)
-                return true;
-
-            if (HostingEnvironment.IsDevelopmentEnvironment)
-                return true;
-
             if (System.Diagnostics.Debugger.IsAttached)
                 return true;
 
             // if there's a 'SmartStore.NET.sln' in one of the parent folders,
             // then we're likely in a dev environment
-            if (FindSolutionRoot(HostingEnvironment.MapPath("~/")) != null)
+            if (FindSolutionRoot(AppDomain.CurrentDomain.BaseDirectory) != null)
                 return true;
 
             return false;
@@ -292,7 +278,7 @@ namespace SmartStore.Utilities
         public static bool HasConnectionString(string connectionStringName)
         {
             var conString = ConfigurationManager.ConnectionStrings[connectionStringName];
-            if (conString != null && conString.ConnectionString.HasValue())
+            if (conString != null && conString.HasValue())
             {
                 return true;
             }

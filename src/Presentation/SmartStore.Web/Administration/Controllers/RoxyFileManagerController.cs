@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -7,7 +7,6 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using System.Web.Mvc;
 using Newtonsoft.Json;
 using SmartStore.Core.IO;
 using SmartStore.Core.Localization;
@@ -17,6 +16,8 @@ using SmartStore.Services.Media;
 using SmartStore.Utilities;
 using SmartStore.Web.Framework.Controllers;
 using SmartStore.Web.Framework.Security;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Admin.Controllers
 {

@@ -1,11 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Web.Mvc;
 using SmartStore.Core.Logging;
 using SmartStore.Core.Search;
 using SmartStore.Services.Customers;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Services.Search
 {

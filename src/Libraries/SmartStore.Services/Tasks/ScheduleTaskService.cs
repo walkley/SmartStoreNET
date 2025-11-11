@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Core;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Data.Entity;
@@ -13,6 +12,8 @@ using SmartStore.Core.Localization;
 using SmartStore.Core.Logging;
 using SmartStore.Services.Helpers;
 using SmartStore.Utilities;
+using Microsoft.Data.SqlClient;
+
 
 namespace SmartStore.Services.Tasks
 {

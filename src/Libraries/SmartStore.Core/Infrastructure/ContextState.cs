@@ -1,6 +1,6 @@
-﻿using System;
-using System.Runtime.Remoting.Messaging;
-using System.Web;
+using System;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Core.Infrastructure
 {
@@ -28,7 +28,8 @@ namespace SmartStore.Core.Infrastructure
         {
             var key = BuildKey();
 
-            if (HttpContext.Current == null)
+            if (/* Added by CTA: TODO: Replace HttpContext.Current with dependency injection pattern using IHttpContextAccessor. */
+HttpContext.Current == null)
             {
                 var data = CallContext.GetData(key);
 
@@ -44,23 +45,28 @@ namespace SmartStore.Core.Infrastructure
                 return data as T;
             }
 
-            if (HttpContext.Current.Items[key] == null)
+            if (/* Added by CTA: TODO: Replace HttpContext.Current with dependency injection pattern using IHttpContextAccessor. */
+HttpContext.Current.Items[key] == null)
             {
-                HttpContext.Current.Items[key] = _defaultValue?.Invoke();
+                /* Added by CTA: TODO: Replace HttpContext.Current with dependency injection pattern using IHttpContextAccessor. */
+HttpContext.Current.Items[key] = _defaultValue?.Invoke();
             }
 
-            return HttpContext.Current.Items[key] as T;
+            return /* Added by CTA: TODO: Replace HttpContext.Current with dependency injection pattern using IHttpContextAccessor. */
+HttpContext.Current.Items[key] as T;
         }
 
         public void SetState(T state)
         {
-            if (HttpContext.Current == null)
+            if (/* Added by CTA: TODO: Replace HttpContext.Current with dependency injection pattern using IHttpContextAccessor. */
+HttpContext.Current == null)
             {
                 CallContext.SetData(BuildKey(), state);
             }
             else
             {
-                HttpContext.Current.Items[BuildKey()] = state;
+                /* Added by CTA: TODO: Replace HttpContext.Current with dependency injection pattern using IHttpContextAccessor. */
+HttpContext.Current.Items[BuildKey()] = state;
             }
         }
 
@@ -68,15 +74,18 @@ namespace SmartStore.Core.Infrastructure
         {
             var key = BuildKey();
 
-            if (HttpContext.Current == null)
+            if (/* Added by CTA: TODO: Replace HttpContext.Current with dependency injection pattern using IHttpContextAccessor. */
+HttpContext.Current == null)
             {
                 CallContext.FreeNamedDataSlot(key);
             }
             else
             {
-                if (HttpContext.Current.Items.Contains(key))
+                if (/* Added by CTA: TODO: Replace HttpContext.Current with dependency injection pattern using IHttpContextAccessor. */
+HttpContext.Current.Items.Contains(key))
                 {
-                    HttpContext.Current.Items.Remove(key);
+                    /* Added by CTA: TODO: Replace HttpContext.Current with dependency injection pattern using IHttpContextAccessor. */
+HttpContext.Current.Items.Remove(key);
                 }
             }
         }

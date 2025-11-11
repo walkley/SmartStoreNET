@@ -1,9 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Security.Principal;
 using System.Web;
 using System.Web.SessionState;
+using Microsoft.AspNetCore.Http;
+
 
 namespace SmartStore.Core.Fakes
 {
@@ -15,7 +17,7 @@ namespace SmartStore.Core.Fakes
         private readonly NameValueCollection _queryStringParams;
         private readonly string _relativeUrl;
         private readonly string _method;
-        private readonly SessionStateItemCollection _sessionItems;
+        private readonly Dictionary<string, object> _sessionItems;
         private readonly NameValueCollection _serverVariables;
         private HttpResponseBase _response;
         private HttpRequestBase _request;
@@ -41,7 +43,7 @@ namespace SmartStore.Core.Fakes
             NameValueCollection formParams,
             NameValueCollection queryStringParams,
             HttpCookieCollection cookies,
-            SessionStateItemCollection sessionItems,
+            Dictionary<string, object> sessionItems,
             NameValueCollection serverVariables)
             : this(relativeUrl, null, principal, formParams, queryStringParams, cookies, sessionItems, serverVariables)
         {
@@ -53,7 +55,7 @@ namespace SmartStore.Core.Fakes
             NameValueCollection formParams,
             NameValueCollection queryStringParams,
             HttpCookieCollection cookies,
-            SessionStateItemCollection sessionItems,
+            Dictionary<string, object> sessionItems,
             NameValueCollection serverVariables)
         {
             _relativeUrl = relativeUrl;
@@ -92,7 +94,7 @@ namespace SmartStore.Core.Fakes
             set => _principal = value;
         }
 
-        public override HttpSessionStateBase Session => new FakeHttpSessionState(_sessionItems ?? new SessionStateItemCollection());
+        public override HttpSessionStateBase Session => new FakeHttpSessionState(null);
 
         public override System.Collections.IDictionary Items => _items;
 

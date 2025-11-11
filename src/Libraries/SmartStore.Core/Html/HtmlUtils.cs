@@ -6,8 +6,8 @@ using System.Text.RegularExpressions;
 using System.Web;
 using AngleSharp;
 using AngleSharp.Dom;
-using AngleSharp.Extensions;
-using AngleSharp.Parser.Html;
+using AngleSharp.Html.Dom;
+using AngleSharp.Html.Parser;
 using Ganss.XSS;
 using SmartStore.Utilities.ObjectPools;
 
@@ -121,7 +121,7 @@ namespace SmartStore.Core.Html
             var removeTags = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { "script", "style", "svg", "img" };
             var parser = new HtmlParser();
 
-            using (var doc = parser.Parse(html))
+using (var doc = parser.ParseDocument(html))
             {
                 List<IElement> removeElements = new List<IElement>();
 
@@ -159,7 +159,7 @@ namespace SmartStore.Core.Html
             }
 
             var parser = new HtmlParser();
-            using (var doc = parser.Parse(html))
+using (var doc = parser.ParseDocument(html))
             {
                 foreach (var el in doc.All)
                 {
@@ -347,8 +347,9 @@ namespace SmartStore.Core.Html
             Guard.NotEmpty(html, nameof(html));
             Guard.IsPositive(baseFontSizePx, nameof(baseFontSizePx));
 
-            var parser = new HtmlParser(new AngleSharp.Configuration().WithCss());
-            var doc = parser.Parse(html);
+            var context = BrowsingContext.New(AngleSharp.Configuration.Default.WithCss());
+            var parser = context.GetService<IHtmlParser>();
+            var doc = parser.ParseDocument(html);
 
             var nodes = doc.QuerySelectorAll("*[style]");
             foreach (var node in nodes)

@@ -1,9 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Web.Mvc;
 using System.Web.Mvc.Html;
 using SmartStore.Admin.Models.Plugins;
 using SmartStore.Web.Framework.Plugins;
+using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Html;
+
 
 namespace SmartStore.Admin.Extensions
 {
@@ -36,7 +39,7 @@ namespace SmartStore.Admin.Extensions
             return result;
         }
 
-        public static MvcHtmlString ProviderList<TModel>(this HtmlHelper<IEnumerable<TModel>> html,
+        public static HtmlString ProviderList<TModel>(this HtmlHelper<IEnumerable<TModel>> html,
             IEnumerable<TModel> model,
             params Func<TModel, object>[] extraColumns) where TModel : ProviderModel
         {

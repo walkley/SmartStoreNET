@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
 using SmartStore.Core.Domain.Common;
 using SmartStore.Core.Domain.Media;
 using SmartStore.Core.Domain.Messages;
@@ -10,6 +9,8 @@ using SmartStore.Core.Events;
 using SmartStore.Core.Localization;
 using SmartStore.Core.Logging;
 using SmartStore.Utilities;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace SmartStore.Services.Messages
 {

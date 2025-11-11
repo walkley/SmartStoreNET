@@ -1,6 +1,5 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using SmartStore.Collections;
 using SmartStore.Core.Domain.Catalog;
 using SmartStore.Core.Domain.Directory;
 using SmartStore.Core.Domain.Localization;
@@ -21,9 +20,9 @@ namespace SmartStore.Core.Search
             Reason = reason;
             Languages = new List<Language>();
             Currencies = new List<Currency>();
-            StoreMappings = new Multimap<int, int>();
+            StoreMappings = new Dictionary<int, HashSet<int>>();
             CustomerRoleIds = new int[0];
-            CustomerRoleMappings = new Multimap<int, int>();
+            CustomerRoleMappings = new Dictionary<int, HashSet<int>>();
             DeliveryTimes = new Dictionary<int, DeliveryTime>();
             Manufacturers = new Dictionary<int, Manufacturer>();
             Categories = new Dictionary<int, Category>();
@@ -54,7 +53,7 @@ namespace SmartStore.Core.Search
         /// <summary>
         /// Map of product to store identifiers if the product is limited to certain stores
         /// </summary>
-        public Multimap<int, int> StoreMappings { get; set; }
+        public Dictionary<int, HashSet<int>> StoreMappings { get; set; }
 
         /// <summary>
         /// Array of all customer role identifiers
@@ -64,7 +63,7 @@ namespace SmartStore.Core.Search
         /// <summary>
         /// Map of product to customer role identifiers if the product is limited to certain customer roles
         /// </summary>
-        public Multimap<int, int> CustomerRoleMappings { get; set; }
+        public Dictionary<int, HashSet<int>> CustomerRoleMappings { get; set; }
 
         /// <summary>
         /// All manufacturers
