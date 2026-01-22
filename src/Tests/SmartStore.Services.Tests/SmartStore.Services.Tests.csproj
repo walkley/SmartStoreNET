@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>SmartStore.Services.Tests</AssemblyName>
+    <OutputType>Library</OutputType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RestorePackages>true</RestorePackages>
+    <RootNamespace>SmartStore.Services.Tests</RootNamespace>
+    <SccAuxPath></SccAuxPath>
+    <SccLocalPath></SccLocalPath>
+    <SccProjectName></SccProjectName>
+    <SccProvider></SccProvider>
+    <SolutionDir>..\..\</SolutionDir>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App"></FrameworkReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config"></None>
+    <None Include="packages.config"></None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}"></Service>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Moq" Version="4.20.2"></PackageReference>
+    <PackageReference Include="MSTest.TestAdapter" Version="3.2.1"></PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0"></PackageReference>
+    <PackageReference Include="coverlet.collector" Version="3.2.0"></PackageReference>
+    <PackageReference Include="MSTest.TestFramework" Version="2.2.8"></PackageReference>
+    <PackageReference Include="NUnit" Version="*"></PackageReference>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="*"></PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.SystemWebAdapters" Version="1.4.0"></PackageReference>
+    <PackageReference Include="EntityFramework" Version="6.5.1"></PackageReference>
+    <PackageReference Include="NUnitTestAdapter" Version="2.3.0"></PackageReference>
+    <PackageReference Include="System.Resources.Extensions" Version="*"></PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../Libraries/SmartStore.Core/SmartStore.Core.csproj"></ProjectReference>
+    <ProjectReference Include="../../Libraries/SmartStore.Data/SmartStore.Data.csproj"></ProjectReference>
+    <ProjectReference Include="../../Libraries/SmartStore.Services/SmartStore.Services.csproj"></ProjectReference>
+    <ProjectReference Include="../SmartStore.Tests/SmartStore.Tests.csproj"></ProjectReference>
+  </ItemGroup>
+</Project>

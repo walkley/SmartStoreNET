@@ -1,0 +1,2515 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SmartStore.Web
+build_property.RootNamespace = SmartStore.Web
+build_property.ProjectDir = /tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/wwwroot/Themes/Flex/Views/Shared/ConfigureTheme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdC9UaGVtZXMvRmxleC9WaWV3cy9TaGFyZWQvQ29uZmlndXJlVGhlbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/wwwroot/Themes/Flex/Views/Shared/Head.cshtml]
+build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdC9UaGVtZXMvRmxleC9WaWV3cy9TaGFyZWQvSGVhZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ActivityLog/ListLogs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQWN0aXZpdHlMb2cvTGlzdExvZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ActivityLog/ListTypes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQWN0aXZpdHlMb2cvTGlzdFR5cGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Affiliate/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQWZmaWxpYXRlL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Affiliate/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQWZmaWxpYXRlL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Affiliate/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQWZmaWxpYXRlL0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Affiliate/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQWZmaWxpYXRlL19DcmVhdGVPclVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Blog/Comments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQmxvZy9Db21tZW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Blog/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQmxvZy9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Blog/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQmxvZy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Blog/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQmxvZy9MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Blog/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQmxvZy9fQ3JlYXRlT3JVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Campaign/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ2FtcGFpZ24vQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Campaign/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ2FtcGFpZ24vRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Campaign/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ2FtcGFpZ24vTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Campaign/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ2FtcGFpZ24vX0NyZWF0ZU9yVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Category/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ2F0ZWdvcnkvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Category/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ2F0ZWdvcnkvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Category/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ2F0ZWdvcnkvTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Category/Tree.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ2F0ZWdvcnkvVHJlZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Category/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ2F0ZWdvcnkvX0NyZWF0ZU9yVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/CheckoutAttribute/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ2hlY2tvdXRBdHRyaWJ1dGUvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/CheckoutAttribute/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ2hlY2tvdXRBdHRyaWJ1dGUvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/CheckoutAttribute/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ2hlY2tvdXRBdHRyaWJ1dGUvTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/CheckoutAttribute/ValueCreatePopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ2hlY2tvdXRBdHRyaWJ1dGUvVmFsdWVDcmVhdGVQb3B1cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/CheckoutAttribute/ValueEditPopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ2hlY2tvdXRBdHRyaWJ1dGUvVmFsdWVFZGl0UG9wdXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/CheckoutAttribute/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ2hlY2tvdXRBdHRyaWJ1dGUvX0NyZWF0ZU9yVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/CheckoutAttribute/_CreateOrUpdateValue.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ2hlY2tvdXRBdHRyaWJ1dGUvX0NyZWF0ZU9yVXBkYXRlVmFsdWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Common/CheckUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ29tbW9uL0NoZWNrVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Common/GenericAttributes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ29tbW9uL0dlbmVyaWNBdHRyaWJ1dGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Common/LanguageSelector.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ29tbW9uL0xhbmd1YWdlU2VsZWN0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Common/Maintenance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ29tbW9uL01haW50ZW5hbmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Common/SystemInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ29tbW9uL1N5c3RlbUluZm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Common/Warnings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ29tbW9uL1dhcm5pbmdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Country/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ291bnRyeS9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Country/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ291bnRyeS9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Country/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ291bnRyeS9MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Country/StateCreatePopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ291bnRyeS9TdGF0ZUNyZWF0ZVBvcHVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Country/StateEditPopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ291bnRyeS9TdGF0ZUVkaXRQb3B1cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Country/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ291bnRyeS9fQ3JlYXRlT3JVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Country/_CreateOrUpdateState.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ291bnRyeS9fQ3JlYXRlT3JVcGRhdGVTdGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Currency/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ3VycmVuY3kvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Currency/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ3VycmVuY3kvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Currency/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ3VycmVuY3kvTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Currency/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ3VycmVuY3kvX0NyZWF0ZU9yVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Customer/AddressCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ3VzdG9tZXIvQWRkcmVzc0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Customer/AddressEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ3VzdG9tZXIvQWRkcmVzc0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Customer/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ3VzdG9tZXIvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Customer/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ3VzdG9tZXIvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Customer/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ3VzdG9tZXIvTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Customer/RegisteredCustomersDashboardReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ3VzdG9tZXIvUmVnaXN0ZXJlZEN1c3RvbWVyc0Rhc2hib2FyZFJlcG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Customer/ReportRegisteredCustomers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ3VzdG9tZXIvUmVwb3J0UmVnaXN0ZXJlZEN1c3RvbWVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Customer/Reports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ3VzdG9tZXIvUmVwb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Customer/TopCustomersDashboardReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ3VzdG9tZXIvVG9wQ3VzdG9tZXJzRGFzaGJvYXJkUmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Customer/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ3VzdG9tZXIvX0NyZWF0ZU9yVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Customer/_CreateOrUpdateAddress.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ3VzdG9tZXIvX0NyZWF0ZU9yVXBkYXRlQWRkcmVzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/CustomerRole/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ3VzdG9tZXJSb2xlL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/CustomerRole/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ3VzdG9tZXJSb2xlL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/CustomerRole/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ3VzdG9tZXJSb2xlL0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/CustomerRole/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvQ3VzdG9tZXJSb2xlL19DcmVhdGVPclVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/DeliveryTime/CreateDeliveryTimePopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRGVsaXZlcnlUaW1lL0NyZWF0ZURlbGl2ZXJ5VGltZVBvcHVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/DeliveryTime/EditDeliveryTimePopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRGVsaXZlcnlUaW1lL0VkaXREZWxpdmVyeVRpbWVQb3B1cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/DeliveryTime/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRGVsaXZlcnlUaW1lL0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/DeliveryTime/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRGVsaXZlcnlUaW1lL19DcmVhdGVPclVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Discount/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRGlzY291bnQvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Discount/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRGlzY291bnQvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Discount/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRGlzY291bnQvTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Discount/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRGlzY291bnQvX0NyZWF0ZU9yVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/EmailAccount/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRW1haWxBY2NvdW50L0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/EmailAccount/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRW1haWxBY2NvdW50L0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/EmailAccount/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRW1haWxBY2NvdW50L0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/EmailAccount/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRW1haWxBY2NvdW50L19DcmVhdGVPclVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Export/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRXhwb3J0L0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Export/CreateDeployment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRXhwb3J0L0NyZWF0ZURlcGxveW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Export/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRXhwb3J0L0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Export/EditDeployment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRXhwb3J0L0VkaXREZXBsb3ltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Export/InfoProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRXhwb3J0L0luZm9Qcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Export/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRXhwb3J0L0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Export/Preview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRXhwb3J0L1ByZXZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Export/ProfileFileCount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRXhwb3J0L1Byb2ZpbGVGaWxlQ291bnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Export/ProfileFileDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRXhwb3J0L1Byb2ZpbGVGaWxlRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Export/_CreateOrUpdate.Deployment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRXhwb3J0L19DcmVhdGVPclVwZGF0ZS5EZXBsb3ltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Export/_ProfileList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRXhwb3J0L19Qcm9maWxlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Export/_Tab.Deployment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRXhwb3J0L19UYWIuRGVwbG95bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Export/_Tab.Filter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRXhwb3J0L19UYWIuRmlsdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Export/_Tab.Projection.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRXhwb3J0L19UYWIuUHJvamVjdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ExternalAuthentication/Providers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRXh0ZXJuYWxBdXRoZW50aWNhdGlvbi9Qcm92aWRlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Forum/CreateForum.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRm9ydW0vQ3JlYXRlRm9ydW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Forum/CreateForumGroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRm9ydW0vQ3JlYXRlRm9ydW1Hcm91cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Forum/EditForum.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRm9ydW0vRWRpdEZvcnVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Forum/EditForumGroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRm9ydW0vRWRpdEZvcnVtR3JvdXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Forum/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRm9ydW0vTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Forum/_CreateOrUpdateForum.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRm9ydW0vX0NyZWF0ZU9yVXBkYXRlRm9ydW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Forum/_CreateOrUpdateForumGroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvRm9ydW0vX0NyZWF0ZU9yVXBkYXRlRm9ydW1Hcm91cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/GiftCard/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvR2lmdENhcmQvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/GiftCard/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvR2lmdENhcmQvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/GiftCard/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvR2lmdENhcmQvTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/GiftCard/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvR2lmdENhcmQvX0NyZWF0ZU9yVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvSG9tZS9BYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Home/MarketplaceFeed.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvSG9tZS9NYXJrZXRwbGFjZUZlZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Home/UaTester.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvSG9tZS9VYVRlc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Import/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvSW1wb3J0L0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Import/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvSW1wb3J0L0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Import/ProfileImportResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvSW1wb3J0L1Byb2ZpbGVJbXBvcnRSZXN1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Import/_ColumnMappings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvSW1wb3J0L19Db2x1bW5NYXBwaW5ncy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Import/_Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvSW1wb3J0L19VcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Language/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTGFuZ3VhZ2UvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Language/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTGFuZ3VhZ2UvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Language/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTGFuZ3VhZ2UvTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Language/Partials/AvailableLanguages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTGFuZ3VhZ2UvUGFydGlhbHMvQXZhaWxhYmxlTGFuZ3VhZ2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Language/Resources.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTGFuZ3VhZ2UvUmVzb3VyY2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Language/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTGFuZ3VhZ2UvX0NyZWF0ZU9yVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Log/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTG9nL0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Log/View.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTG9nL1ZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Manufacturer/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWFudWZhY3R1cmVyL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Manufacturer/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWFudWZhY3R1cmVyL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Manufacturer/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWFudWZhY3R1cmVyL0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Manufacturer/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWFudWZhY3R1cmVyL19DcmVhdGVPclVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Measure/CreateDimensionPopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVhc3VyZS9DcmVhdGVEaW1lbnNpb25Qb3B1cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Measure/CreateWeightPopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVhc3VyZS9DcmVhdGVXZWlnaHRQb3B1cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Measure/Dimensions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVhc3VyZS9EaW1lbnNpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Measure/EditDimensionPopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVhc3VyZS9FZGl0RGltZW5zaW9uUG9wdXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Measure/EditorTemplates/Decimal8.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVhc3VyZS9FZGl0b3JUZW1wbGF0ZXMvRGVjaW1hbDguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Measure/EditWeightPopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVhc3VyZS9FZGl0V2VpZ2h0UG9wdXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Measure/Weights.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVhc3VyZS9XZWlnaHRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Measure/_CreateOrUpdateDimension.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVhc3VyZS9fQ3JlYXRlT3JVcGRhdGVEaW1lbnNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Measure/_CreateOrUpdateWeight.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVhc3VyZS9fQ3JlYXRlT3JVcGRhdGVXZWlnaHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Media/FileConflictResolutionDialog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVkaWEvRmlsZUNvbmZsaWN0UmVzb2x1dGlvbkRpYWxvZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Menu/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVudS9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Menu/CreateItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVudS9DcmVhdGVJdGVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Menu/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVudS9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Menu/EditItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVudS9FZGl0SXRlbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Menu/EditorTemplates/MenuItem.Catalog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVudS9FZGl0b3JUZW1wbGF0ZXMvTWVudUl0ZW0uQ2F0YWxvZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Menu/EditorTemplates/MenuItem.Entity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVudS9FZGl0b3JUZW1wbGF0ZXMvTWVudUl0ZW0uRW50aXR5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Menu/EditorTemplates/MenuItem.Route.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVudS9FZGl0b3JUZW1wbGF0ZXMvTWVudUl0ZW0uUm91dGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Menu/ItemList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVudS9JdGVtTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Menu/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVudS9MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Menu/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVudS9fQ3JlYXRlT3JVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Menu/_CreateOrUpdate.Item.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVudS9fQ3JlYXRlT3JVcGRhdGUuSXRlbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/MessageTemplate/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVzc2FnZVRlbXBsYXRlL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/MessageTemplate/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVzc2FnZVRlbXBsYXRlL0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/MessageTemplate/Preview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVzc2FnZVRlbXBsYXRlL1ByZXZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/MessageTemplate/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTWVzc2FnZVRlbXBsYXRlL19DcmVhdGVPclVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/News/Comments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTmV3cy9Db21tZW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/News/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTmV3cy9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/News/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTmV3cy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/News/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTmV3cy9MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/News/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTmV3cy9fQ3JlYXRlT3JVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/NewsLetterSubscription/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvTmV3c0xldHRlclN1YnNjcmlwdGlvbi9MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/OnlineCustomer/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT25saW5lQ3VzdG9tZXIvTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/AddProductToOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvQWRkUHJvZHVjdFRvT3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/AddProductToOrderDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvQWRkUHJvZHVjdFRvT3JkZXJEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/AddressEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvQWRkcmVzc0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/AddShipment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvQWRkU2hpcG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/BestsellersBriefReportByAmount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvQmVzdHNlbGxlcnNCcmllZlJlcG9ydEJ5QW1vdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/BestsellersBriefReportByQuantity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvQmVzdHNlbGxlcnNCcmllZlJlcG9ydEJ5UXVhbnRpdHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/BestsellersDashboardReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvQmVzdHNlbGxlcnNEYXNoYm9hcmRSZXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/BestsellersReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvQmVzdHNlbGxlcnNSZXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/LatestOrdersDashboardReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvTGF0ZXN0T3JkZXJzRGFzaGJvYXJkUmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/NeverSoldReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvTmV2ZXJTb2xkUmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/OrderAverageReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvT3JkZXJBdmVyYWdlUmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/OrdersDashboardReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvT3JkZXJzRGFzaGJvYXJkUmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/OrdersIncompleteDashboardReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvT3JkZXJzSW5jb21wbGV0ZURhc2hib2FyZFJlcG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/PartiallyRefundOrderPopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvUGFydGlhbGx5UmVmdW5kT3JkZXJQb3B1cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/Partials/OrderGrid.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvUGFydGlhbHMvT3JkZXJHcmlkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/ShipmentDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvU2hpcG1lbnREZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/ShipmentDetails.Print.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvU2hpcG1lbnREZXRhaWxzLlByaW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/ShipmentList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvU2hpcG1lbnRMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/UploadLicenseFilePopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvVXBsb2FkTGljZW5zZUZpbGVQb3B1cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/_AutoUpdateOrderItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvX0F1dG9VcGRhdGVPcmRlckl0ZW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/_Edit.BillingAndShipment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvX0VkaXQuQmlsbGluZ0FuZFNoaXBtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/_Edit.Info.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvX0VkaXQuSW5mby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/_Edit.OrderNotes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvX0VkaXQuT3JkZXJOb3Rlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/_Edit.Products.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvX0VkaXQuUHJvZHVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/_ProductAddAttributes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvX1Byb2R1Y3RBZGRBdHRyaWJ1dGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Order/_ProductAddGiftCardInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvT3JkZXIvX1Byb2R1Y3RBZGRHaWZ0Q2FyZEluZm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Packaging/UploadPackage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUGFja2FnaW5nL1VwbG9hZFBhY2thZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Payment/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUGF5bWVudC9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Payment/Providers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUGF5bWVudC9Qcm92aWRlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Plugin/ConfigurePlugin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUGx1Z2luL0NvbmZpZ3VyZVBsdWdpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Plugin/ConfigureProvider.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUGx1Z2luL0NvbmZpZ3VyZVByb3ZpZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Plugin/EditProviderPopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUGx1Z2luL0VkaXRQcm92aWRlclBvcHVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Plugin/LicensePlugin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUGx1Z2luL0xpY2Vuc2VQbHVnaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Plugin/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUGx1Z2luL0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Plugin/Partials/LicenseLabel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUGx1Z2luL1BhcnRpYWxzL0xpY2Vuc2VMYWJlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Poll/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUG9sbC9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Poll/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUG9sbC9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Poll/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUG9sbC9MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Poll/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUG9sbC9fQ3JlYXRlT3JVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/AttributeCombinationCreatePopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9BdHRyaWJ1dGVDb21iaW5hdGlvbkNyZWF0ZVBvcHVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/AttributeCombinationEditPopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9BdHRyaWJ1dGVDb21iaW5hdGlvbkVkaXRQb3B1cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/BulkEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9CdWxrRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/BundleItemEditPopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9CdW5kbGVJdGVtRWRpdFBvcHVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/EditAttributeValues.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9FZGl0QXR0cmlidXRlVmFsdWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/EditorTemplates/AttributeControlType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9FZGl0b3JUZW1wbGF0ZXMvQXR0cmlidXRlQ29udHJvbFR5cGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/EditorTemplates/ProductAttribute.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9FZGl0b3JUZW1wbGF0ZXMvUHJvZHVjdEF0dHJpYnV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/EditorTemplates/ProductCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9FZGl0b3JUZW1wbGF0ZXMvUHJvZHVjdENhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/EditorTemplates/ProductManufacturer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9FZGl0b3JUZW1wbGF0ZXMvUHJvZHVjdE1hbnVmYWN0dXJlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/EditorTemplates/TierPriceCalculationMethod.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9FZGl0b3JUZW1wbGF0ZXMvVGllclByaWNlQ2FsY3VsYXRpb25NZXRob2QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/EditorTemplates/TierPriceCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9FZGl0b3JUZW1wbGF0ZXMvVGllclByaWNlQ3VzdG9tZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/EditorTemplates/TierPriceStore.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9FZGl0b3JUZW1wbGF0ZXMvVGllclByaWNlU3RvcmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/EditProductTag.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9FZGl0UHJvZHVjdFRhZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/LowStockReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9Mb3dTdG9ja1JlcG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/ProductAttributeValueCreatePopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9Qcm9kdWN0QXR0cmlidXRlVmFsdWVDcmVhdGVQb3B1cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/ProductAttributeValueEditPopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9Qcm9kdWN0QXR0cmlidXRlVmFsdWVFZGl0UG9wdXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/ProductTags.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9Qcm9kdWN0VGFncy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/_Create.SaveFirst.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9fQ3JlYXRlLlNhdmVGaXJzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/_CreateOrUpdate.AssociatedProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9fQ3JlYXRlT3JVcGRhdGUuQXNzb2NpYXRlZFByb2R1Y3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/_CreateOrUpdate.Attributes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9fQ3JlYXRlT3JVcGRhdGUuQXR0cmlidXRlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/_CreateOrUpdate.BundleItems.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9fQ3JlYXRlT3JVcGRhdGUuQnVuZGxlSXRlbXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/_CreateOrUpdate.Categories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9fQ3JlYXRlT3JVcGRhdGUuQ2F0ZWdvcmllcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9fQ3JlYXRlT3JVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/_CreateOrUpdate.Downloads.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9fQ3JlYXRlT3JVcGRhdGUuRG93bmxvYWRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/_CreateOrUpdate.Info.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9fQ3JlYXRlT3JVcGRhdGUuSW5mby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/_CreateOrUpdate.Inventory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9fQ3JlYXRlT3JVcGRhdGUuSW52ZW50b3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/_CreateOrUpdate.Manufacturers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9fQ3JlYXRlT3JVcGRhdGUuTWFudWZhY3R1cmVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/_CreateOrUpdate.Orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9fQ3JlYXRlT3JVcGRhdGUuT3JkZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/_CreateOrUpdate.Pictures.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9fQ3JlYXRlT3JVcGRhdGUuUGljdHVyZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/_CreateOrUpdate.Price.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9fQ3JlYXRlT3JVcGRhdGUuUHJpY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/_CreateOrUpdate.Promotion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9fQ3JlYXRlT3JVcGRhdGUuUHJvbW90aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/_CreateOrUpdate.SEO.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9fQ3JlYXRlT3JVcGRhdGUuU0VPLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/_CreateOrUpdate.SpecificationAttributes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9fQ3JlYXRlT3JVcGRhdGUuU3BlY2lmaWNhdGlvbkF0dHJpYnV0ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/_CreateOrUpdateAttributeCombinationPopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9fQ3JlYXRlT3JVcGRhdGVBdHRyaWJ1dGVDb21iaW5hdGlvblBvcHVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/_CreateOrUpdateProductAttributeValue.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9fQ3JlYXRlT3JVcGRhdGVQcm9kdWN0QXR0cmlidXRlVmFsdWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/_CreateOrUpdateProductTag.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9fQ3JlYXRlT3JVcGRhdGVQcm9kdWN0VGFnLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Product/_ProductAttributes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdC9fUHJvZHVjdEF0dHJpYnV0ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ProductAttribute/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdEF0dHJpYnV0ZS9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ProductAttribute/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdEF0dHJpYnV0ZS9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ProductAttribute/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdEF0dHJpYnV0ZS9MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ProductAttribute/OptionCreatePopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdEF0dHJpYnV0ZS9PcHRpb25DcmVhdGVQb3B1cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ProductAttribute/OptionEditPopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdEF0dHJpYnV0ZS9PcHRpb25FZGl0UG9wdXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ProductAttribute/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdEF0dHJpYnV0ZS9fQ3JlYXRlT3JVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ProductAttribute/_CreateOrUpdateOption.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdEF0dHJpYnV0ZS9fQ3JlYXRlT3JVcGRhdGVPcHRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ProductReview/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdFJldmlldy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ProductReview/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdFJldmlldy9MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ProductReview/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUHJvZHVjdFJldmlldy9fQ3JlYXRlT3JVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/QuantityUnit/CreateQuantityUnitPopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUXVhbnRpdHlVbml0L0NyZWF0ZVF1YW50aXR5VW5pdFBvcHVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/QuantityUnit/EditQuantityUnitPopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUXVhbnRpdHlVbml0L0VkaXRRdWFudGl0eVVuaXRQb3B1cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/QuantityUnit/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUXVhbnRpdHlVbml0L0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/QuantityUnit/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUXVhbnRpdHlVbml0L19DcmVhdGVPclVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/QueuedEmail/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUXVldWVkRW1haWwvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/QueuedEmail/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUXVldWVkRW1haWwvTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/QueuedEmail/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUXVldWVkRW1haWwvX0NyZWF0ZU9yVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/RecurringPayment/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUmVjdXJyaW5nUGF5bWVudC9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/RecurringPayment/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUmVjdXJyaW5nUGF5bWVudC9MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/RecurringPayment/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUmVjdXJyaW5nUGF5bWVudC9fQ3JlYXRlT3JVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ReturnRequest/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUmV0dXJuUmVxdWVzdC9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ReturnRequest/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUmV0dXJuUmVxdWVzdC9MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ReturnRequest/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUmV0dXJuUmVxdWVzdC9fQ3JlYXRlT3JVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/RoxyFileManager/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUm94eUZpbGVNYW5hZ2VyL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Rule/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUnVsZS9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Rule/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUnVsZS9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Rule/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUnVsZS9MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Rule/Preview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUnVsZS9QcmV2aWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Rule/ValueTemplates/Boolean.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUnVsZS9WYWx1ZVRlbXBsYXRlcy9Cb29sZWFuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Rule/ValueTemplates/CartItemQuantity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUnVsZS9WYWx1ZVRlbXBsYXRlcy9DYXJ0SXRlbVF1YW50aXR5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Rule/ValueTemplates/DateTime.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUnVsZS9WYWx1ZVRlbXBsYXRlcy9EYXRlVGltZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Rule/ValueTemplates/Decimal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUnVsZS9WYWx1ZVRlbXBsYXRlcy9EZWNpbWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Rule/ValueTemplates/Dropdown.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUnVsZS9WYWx1ZVRlbXBsYXRlcy9Ecm9wZG93bi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Rule/ValueTemplates/Float.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUnVsZS9WYWx1ZVRlbXBsYXRlcy9GbG9hdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Rule/ValueTemplates/Int32.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUnVsZS9WYWx1ZVRlbXBsYXRlcy9JbnQzMi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Rule/ValueTemplates/TextBox.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUnVsZS9WYWx1ZVRlbXBsYXRlcy9UZXh0Qm94LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Rule/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUnVsZS9fQ3JlYXRlT3JVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Rule/_Rule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUnVsZS9fUnVsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Rule/_Rule.Descriptor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUnVsZS9fUnVsZS5EZXNjcmlwdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Rule/_Rule.Operator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUnVsZS9fUnVsZS5PcGVyYXRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Rule/_RuleSet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvUnVsZS9fUnVsZVNldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ScheduleTask/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2NoZWR1bGVUYXNrL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ScheduleTask/FutureSchedules.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2NoZWR1bGVUYXNrL0Z1dHVyZVNjaGVkdWxlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ScheduleTask/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2NoZWR1bGVUYXNrL0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ScheduleTask/MinimalTask.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2NoZWR1bGVUYXNrL01pbmltYWxUYXNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ScheduleTask/_LastRun.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2NoZWR1bGVUYXNrL19MYXN0UnVuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ScheduleTask/_MinimalTaskWidget.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2NoZWR1bGVUYXNrL19NaW5pbWFsVGFza1dpZGdldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ScheduleTask/_NextRun.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2NoZWR1bGVUYXNrL19OZXh0UnVuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Security/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2VjdXJpdHkvQWNjZXNzRGVuaWVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Setting/AllSettings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2V0dGluZy9BbGxTZXR0aW5ncy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Setting/Blog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2V0dGluZy9CbG9nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Setting/Catalog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2V0dGluZy9DYXRhbG9nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Setting/CookieInfoCreatePopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2V0dGluZy9Db29raWVJbmZvQ3JlYXRlUG9wdXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Setting/CookieInfoEditPopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2V0dGluZy9Db29raWVJbmZvRWRpdFBvcHVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Setting/CustomerUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2V0dGluZy9DdXN0b21lclVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Setting/DataExchange.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2V0dGluZy9EYXRhRXhjaGFuZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Setting/Forum.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2V0dGluZy9Gb3J1bS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Setting/GeneralCommon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2V0dGluZy9HZW5lcmFsQ29tbW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Setting/Media.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2V0dGluZy9NZWRpYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Setting/News.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2V0dGluZy9OZXdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Setting/Order.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2V0dGluZy9PcmRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Setting/Partials/CommonFacet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2V0dGluZy9QYXJ0aWFscy9Db21tb25GYWNldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Setting/Payment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2V0dGluZy9QYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Setting/RewardPoints.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2V0dGluZy9SZXdhcmRQb2ludHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Setting/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2V0dGluZy9TZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Setting/Shipping.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2V0dGluZy9TaGlwcGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Setting/ShoppingCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2V0dGluZy9TaG9wcGluZ0NhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Setting/StoreScopeConfiguration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2V0dGluZy9TdG9yZVNjb3BlQ29uZmlndXJhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Setting/Tax.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2V0dGluZy9UYXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Setting/_CreateOrUpdateCookieInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2V0dGluZy9fQ3JlYXRlT3JVcGRhdGVDb29raWVJbmZvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/EditorTemplates/AccessPermissions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9BY2Nlc3NQZXJtaXNzaW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/EditorTemplates/Address.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9BZGRyZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/EditorTemplates/CustomerRoles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9DdXN0b21lclJvbGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/EditorTemplates/DeliveryTimes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9EZWxpdmVyeVRpbWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/EditorTemplates/Discounts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9EaXNjb3VudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/EditorTemplates/Download.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9Eb3dubG9hZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/EditorTemplates/ModelTree.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9Nb2RlbFRyZWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/EditorTemplates/RuleSets.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9SdWxlU2V0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/EditorTemplates/SelectList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9TZWxlY3RMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/EditorTemplates/SeoModel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9TZW9Nb2RlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/EditorTemplates/Stores.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9TdG9yZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/EditorTemplates/WidgetZone.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9XaWRnZXRab25lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/Layouts/_AdminBareLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL0xheW91dHMvX0FkbWluQmFyZUxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/Layouts/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL0xheW91dHMvX0FkbWluTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/Layouts/_AdminPopupLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL0xheW91dHMvX0FkbWluUG9wdXBMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/Layouts/_AdminRoot.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL0xheW91dHMvX0FkbWluUm9vdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/Layouts/_MinimalLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL0xheW91dHMvX01pbmltYWxMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/Layouts/_SettingLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL0xheW91dHMvX1NldHRpbmdMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/Menus/Admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL01lbnVzL0FkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/Menus/Settings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL01lbnVzL1NldHRpbmdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/Partials/CsvConfiguration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL1BhcnRpYWxzL0NzdkNvbmZpZ3VyYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/Partials/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL1BhcnRpYWxzL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/Partials/FontAwesomeIcon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL1BhcnRpYWxzL0ZvbnRBd2Vzb21lSWNvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/Partials/Navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL1BhcnRpYWxzL05hdmJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shared/Partials/_Providers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hhcmVkL1BhcnRpYWxzL19Qcm92aWRlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shipping/CreateMethod.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hpcHBpbmcvQ3JlYXRlTWV0aG9kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shipping/EditMethod.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hpcHBpbmcvRWRpdE1ldGhvZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shipping/Methods.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hpcHBpbmcvTWV0aG9kcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shipping/Providers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hpcHBpbmcvUHJvdmlkZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Shipping/_CreateOrUpdateMethod.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hpcHBpbmcvX0NyZWF0ZU9yVXBkYXRlTWV0aG9kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ShoppingCart/CurrentCarts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hvcHBpbmdDYXJ0L0N1cnJlbnRDYXJ0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/ShoppingCart/CurrentWishlists.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU2hvcHBpbmdDYXJ0L0N1cnJlbnRXaXNobGlzdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/SpecificationAttribute/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU3BlY2lmaWNhdGlvbkF0dHJpYnV0ZS9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/SpecificationAttribute/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU3BlY2lmaWNhdGlvbkF0dHJpYnV0ZS9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/SpecificationAttribute/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU3BlY2lmaWNhdGlvbkF0dHJpYnV0ZS9MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/SpecificationAttribute/OptionCreatePopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU3BlY2lmaWNhdGlvbkF0dHJpYnV0ZS9PcHRpb25DcmVhdGVQb3B1cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/SpecificationAttribute/OptionEditPopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU3BlY2lmaWNhdGlvbkF0dHJpYnV0ZS9PcHRpb25FZGl0UG9wdXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/SpecificationAttribute/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU3BlY2lmaWNhdGlvbkF0dHJpYnV0ZS9fQ3JlYXRlT3JVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/SpecificationAttribute/_CreateOrUpdateOption.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU3BlY2lmaWNhdGlvbkF0dHJpYnV0ZS9fQ3JlYXRlT3JVcGRhdGVPcHRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Store/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU3RvcmUvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Store/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU3RvcmUvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Store/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU3RvcmUvTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Store/StoreDashboardReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU3RvcmUvU3RvcmVEYXNoYm9hcmRSZXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Store/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvU3RvcmUvX0NyZWF0ZU9yVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Tax/Categories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvVGF4L0NhdGVnb3JpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Tax/Providers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvVGF4L1Byb3ZpZGVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Theme/Configure.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvVGhlbWUvQ29uZmlndXJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Theme/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvVGhlbWUvTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Theme/PreviewTool.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvVGhlbWUvUHJldmlld1Rvb2wuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Topic/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvVG9waWMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Topic/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvVG9waWMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Topic/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvVG9waWMvTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Topic/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvVG9waWMvX0NyZWF0ZU9yVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/UrlRecord/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvVXJsUmVjb3JkL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/UrlRecord/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvVXJsUmVjb3JkL0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/UrlRecord/NamesPerEntity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvVXJsUmVjb3JkL05hbWVzUGVyRW50aXR5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/UrlRecord/_CreateOrUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvVXJsUmVjb3JkL19DcmVhdGVPclVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Widget/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvV2lkZ2V0L0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/Widget/Providers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvV2lkZ2V0L1Byb3ZpZGVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Administration/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QWRtaW5pc3RyYXRpb24vVmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Blog/BlogPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmxvZy9CbG9nUG9zdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Blog/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmxvZy9MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Blog/Partials/BlogMonths.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmxvZy9QYXJ0aWFscy9CbG9nTW9udGhzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Blog/Partials/BlogSummary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmxvZy9QYXJ0aWFscy9CbG9nU3VtbWFyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Blog/Partials/BlogSummaryHeading.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmxvZy9QYXJ0aWFscy9CbG9nU3VtbWFyeUhlYWRpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Blog/Partials/BlogSummaryList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmxvZy9QYXJ0aWFscy9CbG9nU3VtbWFyeUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Blog/Partials/BlogTags.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmxvZy9QYXJ0aWFscy9CbG9nVGFncy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Boards/ActiveDiscussions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRzL0FjdGl2ZURpc2N1c3Npb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Boards/Forum.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRzL0ZvcnVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Boards/ForumGroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRzL0ZvcnVtR3JvdXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Boards/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Boards/Partials/Filters.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRzL1BhcnRpYWxzL0ZpbHRlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Boards/Partials/ForumGroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRzL1BhcnRpYWxzL0ZvcnVtR3JvdXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Boards/Partials/InstantSearch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRzL1BhcnRpYWxzL0luc3RhbnRTZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Boards/Partials/LastPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRzL1BhcnRpYWxzL0xhc3RQb3N0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Boards/Partials/SearchHits.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRzL1BhcnRpYWxzL1NlYXJjaEhpdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Boards/Partials/_ActiveTopics.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRzL1BhcnRpYWxzL19BY3RpdmVUb3BpY3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Boards/Partials/_CreateUpdatePost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRzL1BhcnRpYWxzL19DcmVhdGVVcGRhdGVQb3N0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Boards/Partials/_CreateUpdateTopic.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRzL1BhcnRpYWxzL19DcmVhdGVVcGRhdGVUb3BpYy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Boards/Partials/_ForumPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRzL1BhcnRpYWxzL19Gb3J1bVBvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Boards/PostCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRzL1Bvc3RDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Boards/PostEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRzL1Bvc3RFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Boards/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRzL1NlYXJjaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Boards/Topic.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRzL1RvcGljLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Boards/TopicCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRzL1RvcGljQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Boards/TopicEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRzL1RvcGljRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Boards/TopicMove.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRzL1RvcGljTW92ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Catalog/CategoryTemplate.ProductsInGridOrLines.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0YWxvZy9DYXRlZ29yeVRlbXBsYXRlLlByb2R1Y3RzSW5HcmlkT3JMaW5lcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Catalog/CompareProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0YWxvZy9Db21wYXJlUHJvZHVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Catalog/ManufacturerAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0YWxvZy9NYW51ZmFjdHVyZXJBbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Catalog/ManufacturerTemplate.ProductsInGridOrLines.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0YWxvZy9NYW51ZmFjdHVyZXJUZW1wbGF0ZS5Qcm9kdWN0c0luR3JpZE9yTGluZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Catalog/Menus/Categories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0YWxvZy9NZW51cy9DYXRlZ29yaWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Catalog/Partials/HomepageBestSellers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0YWxvZy9QYXJ0aWFscy9Ib21lcGFnZUJlc3RTZWxsZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Catalog/Partials/HomepageCategories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0YWxvZy9QYXJ0aWFscy9Ib21lcGFnZUNhdGVnb3JpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Catalog/Partials/HomepageManufacturers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0YWxvZy9QYXJ0aWFscy9Ib21lcGFnZU1hbnVmYWN0dXJlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Catalog/Partials/HomepageProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0YWxvZy9QYXJ0aWFscy9Ib21lcGFnZVByb2R1Y3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Catalog/Partials/OffCanvasCompare.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0YWxvZy9QYXJ0aWFscy9PZmZDYW52YXNDb21wYXJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Catalog/Partials/PopularProductTags.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0YWxvZy9QYXJ0aWFscy9Qb3B1bGFyUHJvZHVjdFRhZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Catalog/Partials/RecentlyViewedProductsBlock.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0YWxvZy9QYXJ0aWFscy9SZWNlbnRseVZpZXdlZFByb2R1Y3RzQmxvY2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Catalog/ProductsByTag.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0YWxvZy9Qcm9kdWN0c0J5VGFnLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Catalog/ProductTagsAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0YWxvZy9Qcm9kdWN0VGFnc0FsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Catalog/RecentlyAddedProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0YWxvZy9SZWNlbnRseUFkZGVkUHJvZHVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Catalog/RecentlyViewedProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0YWxvZy9SZWNlbnRseVZpZXdlZFByb2R1Y3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Checkout/BillingAddress.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2hlY2tvdXQvQmlsbGluZ0FkZHJlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Checkout/Completed.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2hlY2tvdXQvQ29tcGxldGVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Checkout/Confirm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2hlY2tvdXQvQ29uZmlybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Checkout/Partials/CheckoutProgress.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2hlY2tvdXQvUGFydGlhbHMvQ2hlY2tvdXRQcm9ncmVzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Checkout/PaymentMethod.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2hlY2tvdXQvUGF5bWVudE1ldGhvZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Checkout/ShippingAddress.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2hlY2tvdXQvU2hpcHBpbmdBZGRyZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Checkout/ShippingMethod.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2hlY2tvdXQvU2hpcHBpbmdNZXRob2QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Common/Partials/AccountDropdown.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbW9uL1BhcnRpYWxzL0FjY291bnREcm9wZG93bi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Common/Partials/CookieManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbW9uL1BhcnRpYWxzL0Nvb2tpZU1hbmFnZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Common/Partials/CurrencySelector.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbW9uL1BhcnRpYWxzL0N1cnJlbmN5U2VsZWN0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Common/Partials/Favicon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbW9uL1BhcnRpYWxzL0Zhdmljb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Common/Partials/Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbW9uL1BhcnRpYWxzL0Zvb3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Common/Partials/GdprConsent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbW9uL1BhcnRpYWxzL0dkcHJDb25zZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Common/Partials/JavaScriptDisabledWarning.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbW9uL1BhcnRpYWxzL0phdmFTY3JpcHREaXNhYmxlZFdhcm5pbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Common/Partials/LanguageSelector.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbW9uL1BhcnRpYWxzL0xhbmd1YWdlU2VsZWN0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Common/Partials/Logo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbW9uL1BhcnRpYWxzL0xvZ28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Common/Partials/MetaProperties.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbW9uL1BhcnRpYWxzL01ldGFQcm9wZXJ0aWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Common/Partials/ShopBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbW9uL1BhcnRpYWxzL1Nob3BCYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Common/Partials/ShopBar.Tools.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbW9uL1BhcnRpYWxzL1Nob3BCYXIuVG9vbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Common/Partials/StoreThemeSelector.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbW9uL1BhcnRpYWxzL1N0b3JlVGhlbWVTZWxlY3Rvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Common/Partials/TaxTypeSelector.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbW9uL1BhcnRpYWxzL1RheFR5cGVTZWxlY3Rvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Common/Partials/TopBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbW9uL1BhcnRpYWxzL1RvcEJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Common/PdfReceiptFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbW9uL1BkZlJlY2VpcHRGb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Common/PdfReceiptHeader.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbW9uL1BkZlJlY2VpcHRIZWFkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Customer/AccountActivation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvQWNjb3VudEFjdGl2YXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Customer/AddressAdd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvQWRkcmVzc0FkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Customer/AddressEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvQWRkcmVzc0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Customer/Addresses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvQWRkcmVzc2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Customer/Avatar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvQXZhdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Customer/BackInStockSubscriptions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvQmFja0luU3RvY2tTdWJzY3JpcHRpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Customer/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvQ2hhbmdlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Customer/DownloadableProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvRG93bmxvYWRhYmxlUHJvZHVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Customer/ForumSubscriptions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvRm9ydW1TdWJzY3JpcHRpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Customer/Info.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvSW5mby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Customer/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Customer/Orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvT3JkZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Customer/Partials/_CheckUsernameAvailability.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvUGFydGlhbHMvX0NoZWNrVXNlcm5hbWVBdmFpbGFiaWxpdHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Customer/Partials/_ExternalAuthentication.AssociateMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvUGFydGlhbHMvX0V4dGVybmFsQXV0aGVudGljYXRpb24uQXNzb2NpYXRlTWVzc2FnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Customer/PasswordRecovery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvUGFzc3dvcmRSZWNvdmVyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Customer/PasswordRecoveryConfirm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvUGFzc3dvcmRSZWNvdmVyeUNvbmZpcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Customer/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Customer/RegisterResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvUmVnaXN0ZXJSZXN1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Customer/ReturnRequests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvUmV0dXJuUmVxdWVzdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Customer/RewardPoints.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvUmV3YXJkUG9pbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Customer/UserAgreement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvVXNlckFncmVlbWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Entity/Partials/Picker.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW50aXR5L1BhcnRpYWxzL1BpY2tlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Entity/Partials/Picker.List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW50aXR5L1BhcnRpYWxzL1BpY2tlci5MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/ExternalAuthentication/Partials/ExternalMethods.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXh0ZXJuYWxBdXRoZW50aWNhdGlvbi9QYXJ0aWFscy9FeHRlcm5hbE1ldGhvZHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Home/ContactUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Db250YWN0VXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Home/StoreClosed.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9TdG9yZUNsb3NlZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Install/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSW5zdGFsbC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Menu/Breadcrumb.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVudS9CcmVhZGNydW1iLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Menu/OffCanvas.Brands.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVudS9PZmZDYW52YXMuQnJhbmRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Menu/OffCanvas.Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVudS9PZmZDYW52YXMuSG9tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Menu/OffCanvas.Menu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVudS9PZmZDYW52YXMuTWVudS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/News/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTmV3cy9MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/News/NewsItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTmV3cy9OZXdzSXRlbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/News/Partials/HomePageNews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTmV3cy9QYXJ0aWFscy9Ib21lUGFnZU5ld3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/News/Partials/NewsSummary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTmV3cy9QYXJ0aWFscy9OZXdzU3VtbWFyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/News/Partials/NewsSummaryHeading.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTmV3cy9QYXJ0aWFscy9OZXdzU3VtbWFyeUhlYWRpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/News/Partials/NewsSummaryList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTmV3cy9QYXJ0aWFscy9OZXdzU3VtbWFyeUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Newsletter/SubscriptionActivation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTmV3c2xldHRlci9TdWJzY3JpcHRpb25BY3RpdmF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Order/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXIvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Order/Details.Print.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXIvRGV0YWlscy5QcmludC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Order/ShipmentDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXIvU2hpcG1lbnREZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Poll/Partials/HomePagePolls.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9sbC9QYXJ0aWFscy9Ib21lUGFnZVBvbGxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Poll/Partials/PollBlock.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9sbC9QYXJ0aWFscy9Qb2xsQmxvY2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Poll/Partials/_Poll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9sbC9QYXJ0aWFscy9fUG9sbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/PrivateMessages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJpdmF0ZU1lc3NhZ2VzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/PrivateMessages/Partials/Inbox.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJpdmF0ZU1lc3NhZ2VzL1BhcnRpYWxzL0luYm94LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/PrivateMessages/Partials/SentItems.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJpdmF0ZU1lc3NhZ2VzL1BhcnRpYWxzL1NlbnRJdGVtcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/PrivateMessages/Send.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJpdmF0ZU1lc3NhZ2VzL1NlbmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/PrivateMessages/View.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJpdmF0ZU1lc3NhZ2VzL1ZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/AskQuestion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9Bc2tRdWVzdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/BackInStockSubscribePopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9CYWNrSW5TdG9ja1N1YnNjcmliZVBvcHVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/EmailAFriend.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9FbWFpbEFGcmllbmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/CrossSellProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Dcm9zc1NlbGxQcm9kdWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.AlsoPurchased.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0LkFsc29QdXJjaGFzZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.AssociatedProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0LkFzc29jaWF0ZWRQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.Attrs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0LkF0dHJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.Bundle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0LkJ1bmRsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.Bundle.Items.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0LkJ1bmRsZS5JdGVtcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.Bundle.Price.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0LkJ1bmRsZS5QcmljZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.CustomerPrice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0LkN1c3RvbWVyUHJpY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.GiftCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0LkdpZnRDYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.Info.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0LkluZm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.Media.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0Lk1lZGlhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.Offer.Actions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0Lk9mZmVyLkFjdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.Offer.Actions.Misc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0Lk9mZmVyLkFjdGlvbnMuTWlzYy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.Offer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0Lk9mZmVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.Offer.Price.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0Lk9mZmVyLlByaWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.RelatedProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0LlJlbGF0ZWRQcm9kdWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.Reviews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0LlJldmlld3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.ReviewSummary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0LlJldmlld1N1bW1hcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.Specs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0LlNwZWNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.StockInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0LlN0b2NrSW5mby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.Tabs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0LlRhYnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.Tags.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0LlRhZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.TierPrices.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0LlRpZXJQcmljZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Partials/Product.Variants.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9QYXJ0aWFscy9Qcm9kdWN0LlZhcmlhbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Product.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9Qcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Product/Reviews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9SZXZpZXdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Profile/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZmlsZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Profile/Partials/Info.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZmlsZS9QYXJ0aWFscy9JbmZvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Profile/Partials/Posts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZmlsZS9QYXJ0aWFscy9Qb3N0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/ReturnRequest/ReturnRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV0dXJuUmVxdWVzdC9SZXR1cm5SZXF1ZXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Search/FacetTemplates/MultiSelect.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VhcmNoL0ZhY2V0VGVtcGxhdGVzL011bHRpU2VsZWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Search/FacetTemplates/Price.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VhcmNoL0ZhY2V0VGVtcGxhdGVzL1ByaWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Search/FacetTemplates/Rating.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VhcmNoL0ZhY2V0VGVtcGxhdGVzL1JhdGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Search/FacetTemplates/SingleSelect.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VhcmNoL0ZhY2V0VGVtcGxhdGVzL1NpbmdsZVNlbGVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Search/Partials/Filters.Active.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VhcmNoL1BhcnRpYWxzL0ZpbHRlcnMuQWN0aXZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Search/Partials/Filters.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VhcmNoL1BhcnRpYWxzL0ZpbHRlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Search/Partials/InstantSearch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VhcmNoL1BhcnRpYWxzL0luc3RhbnRTZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Search/Partials/InstantSearch.HitGroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VhcmNoL1BhcnRpYWxzL0luc3RhbnRTZWFyY2guSGl0R3JvdXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Search/Partials/InstantSearch.TopProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VhcmNoL1BhcnRpYWxzL0luc3RhbnRTZWFyY2guVG9wUHJvZHVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Search/Partials/SearchBox.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VhcmNoL1BhcnRpYWxzL1NlYXJjaEJveC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Search/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VhcmNoL1NlYXJjaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/ChoiceTemplates/Choice.Box.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Nob2ljZVRlbXBsYXRlcy9DaG9pY2UuQm94LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/ChoiceTemplates/Choice.CheckRadio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Nob2ljZVRlbXBsYXRlcy9DaG9pY2UuQ2hlY2tSYWRpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/ChoiceTemplates/Choice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Nob2ljZVRlbXBsYXRlcy9DaG9pY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/ChoiceTemplates/Choice.Date.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Nob2ljZVRlbXBsYXRlcy9DaG9pY2UuRGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/ChoiceTemplates/Choice.Dropdown.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Nob2ljZVRlbXBsYXRlcy9DaG9pY2UuRHJvcGRvd24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/ChoiceTemplates/Choice.FileUpload.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Nob2ljZVRlbXBsYXRlcy9DaG9pY2UuRmlsZVVwbG9hZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/ChoiceTemplates/Choice.Radio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Nob2ljZVRlbXBsYXRlcy9DaG9pY2UuUmFkaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/ChoiceTemplates/Choice.TextArea.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Nob2ljZVRlbXBsYXRlcy9DaG9pY2UuVGV4dEFyZWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/ChoiceTemplates/Choice.TextBox.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Nob2ljZVRlbXBsYXRlcy9DaG9pY2UuVGV4dEJveC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Components/EntityPicker.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvRW50aXR5UGlja2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Components/FileUploader.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvRmlsZVVwbG9hZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Components/Product.List.Pager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvUHJvZHVjdC5MaXN0LlBhZ2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/ConfigureTheme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbmZpZ3VyZVRoZW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/DisplayTemplates/DateTime.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Rpc3BsYXlUZW1wbGF0ZXMvRGF0ZVRpbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/EditorTemplates/Boolean.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9Cb29sZWFuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/EditorTemplates/ButtonType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9CdXR0b25UeXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/EditorTemplates/Byte.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9CeXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/EditorTemplates/Color.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9Db2xvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/EditorTemplates/DateTime.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9EYXRlVGltZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/EditorTemplates/Decimal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9EZWNpbWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/EditorTemplates/Double.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9Eb3VibGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/EditorTemplates/Html.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9IdG1sLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/EditorTemplates/Int32.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9JbnQzMi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/EditorTemplates/Int64.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9JbnQ2NC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/EditorTemplates/Link.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9MaW5rLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/EditorTemplates/Liquid.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9MaXF1aWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/EditorTemplates/Media.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9NZWRpYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/EditorTemplates/QtyInput.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9RdHlJbnB1dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/EditorTemplates/Range.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9SYW5nZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/EditorTemplates/Time.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0VkaXRvclRlbXBsYXRlcy9UaW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Layouts/_Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0xheW91dHMvX0NoZWNrb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Layouts/_Document.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0xheW91dHMvX0RvY3VtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Layouts/_Layout.Bare.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0xheW91dHMvX0xheW91dC5CYXJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Layouts/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0xheW91dHMvX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Layouts/_Layout.Off.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0xheW91dHMvX0xheW91dC5PZmYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Layouts/_Layout.Popup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0xheW91dHMvX0xheW91dC5Qb3B1cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Layouts/_MyAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0xheW91dHMvX015QWNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Layouts/_Print.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0xheW91dHMvX1ByaW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/LicenseRequired.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0xpY2Vuc2VSZXF1aXJlZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/MediaTemplates/Audio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL01lZGlhVGVtcGxhdGVzL0F1ZGlvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/MediaTemplates/Bin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL01lZGlhVGVtcGxhdGVzL0Jpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/MediaTemplates/Document.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL01lZGlhVGVtcGxhdGVzL0RvY3VtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/MediaTemplates/Image.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL01lZGlhVGVtcGxhdGVzL0ltYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/MediaTemplates/Text.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL01lZGlhVGVtcGxhdGVzL1RleHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/MediaTemplates/Video.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL01lZGlhVGVtcGxhdGVzL1ZpZGVvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/MediaTemplates/_Thumbnail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL01lZGlhVGVtcGxhdGVzL19UaHVtYm5haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Menus/Dropdown.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL01lbnVzL0Ryb3Bkb3duLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Menus/LinkList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL01lbnVzL0xpbmtMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Menus/ListGroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL01lbnVzL0xpc3RHcm91cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Menus/Main.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL01lbnVzL01haW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Menus/Navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL01lbnVzL05hdmJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL05vdEZvdW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Partials/Comment.Item.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL0NvbW1lbnQuSXRlbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Partials/Comment.List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL0NvbW1lbnQuTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Partials/ConditionalComments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL0NvbmRpdGlvbmFsQ29tbWVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Partials/Customer.Avatar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL0N1c3RvbWVyLkF2YXRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Partials/Head.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL0hlYWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Partials/MediaGallery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL01lZGlhR2FsbGVyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Partials/PhotoSwipe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL1Bob3RvU3dpcGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Partials/Product.List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL1Byb2R1Y3QuTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Partials/Product.List.FilterSort.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL1Byb2R1Y3QuTGlzdC5GaWx0ZXJTb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Partials/Product.List.Item.Brand.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL1Byb2R1Y3QuTGlzdC5JdGVtLkJyYW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Partials/Product.List.Item.Buttons.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL1Byb2R1Y3QuTGlzdC5JdGVtLkJ1dHRvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Partials/Product.List.Item.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL1Byb2R1Y3QuTGlzdC5JdGVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Partials/Product.List.Item.Price.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL1Byb2R1Y3QuTGlzdC5JdGVtLlByaWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Partials/Product.List.Item.Rating.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL1Byb2R1Y3QuTGlzdC5JdGVtLlJhdGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Partials/Product.List.Item.Variants.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL1Byb2R1Y3QuTGlzdC5JdGVtLlZhcmlhbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Partials/Product.List.Pager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL1Byb2R1Y3QuTGlzdC5QYWdlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Partials/Product.List.ViewMode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL1Byb2R1Y3QuTGlzdC5WaWV3TW9kZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Partials/_Assets.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL19Bc3NldHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Partials/_ClientRes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL19DbGllbnRSZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Partials/_CreateOrUpdateAddress.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL19DcmVhdGVPclVwZGF0ZUFkZHJlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Partials/_GoogleFonts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL19Hb29nbGVGb250cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Shared/Partials/_Notifications.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1BhcnRpYWxzL19Ob3RpZmljYXRpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/ShoppingCart/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcHBpbmdDYXJ0L0NhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/ShoppingCart/EmailWishlist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcHBpbmdDYXJ0L0VtYWlsV2lzaGxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/ShoppingCart/Partials/CartItems.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcHBpbmdDYXJ0L1BhcnRpYWxzL0NhcnRJdGVtcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/ShoppingCart/Partials/EstimateShipping.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcHBpbmdDYXJ0L1BhcnRpYWxzL0VzdGltYXRlU2hpcHBpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/ShoppingCart/Partials/OffCanvasCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcHBpbmdDYXJ0L1BhcnRpYWxzL09mZkNhbnZhc0NhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/ShoppingCart/Partials/OffCanvasShoppingCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcHBpbmdDYXJ0L1BhcnRpYWxzL09mZkNhbnZhc1Nob3BwaW5nQ2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/ShoppingCart/Partials/OffCanvasWishlist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcHBpbmdDYXJ0L1BhcnRpYWxzL09mZkNhbnZhc1dpc2hsaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/ShoppingCart/Partials/OrderSummary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcHBpbmdDYXJ0L1BhcnRpYWxzL09yZGVyU3VtbWFyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/ShoppingCart/Partials/OrderTotals.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcHBpbmdDYXJ0L1BhcnRpYWxzL09yZGVyVG90YWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/ShoppingCart/Partials/WishlistItems.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcHBpbmdDYXJ0L1BhcnRpYWxzL1dpc2hsaXN0SXRlbXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/ShoppingCart/Partials/_CheckoutAttributes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcHBpbmdDYXJ0L1BhcnRpYWxzL19DaGVja291dEF0dHJpYnV0ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/ShoppingCart/Partials/_CommentBox.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcHBpbmdDYXJ0L1BhcnRpYWxzL19Db21tZW50Qm94LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/ShoppingCart/Partials/_DiscountBox.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcHBpbmdDYXJ0L1BhcnRpYWxzL19EaXNjb3VudEJveC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/ShoppingCart/Partials/_GiftCardBox.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcHBpbmdDYXJ0L1BhcnRpYWxzL19HaWZ0Q2FyZEJveC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/ShoppingCart/Partials/_OrderReviewData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcHBpbmdDYXJ0L1BhcnRpYWxzL19PcmRlclJldmlld0RhdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/ShoppingCart/Partials/_RefreshCartScript.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcHBpbmdDYXJ0L1BhcnRpYWxzL19SZWZyZXNoQ2FydFNjcmlwdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/ShoppingCart/Partials/_RewardPointsBox.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcHBpbmdDYXJ0L1BhcnRpYWxzL19SZXdhcmRQb2ludHNCb3guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/ShoppingCart/Wishlist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcHBpbmdDYXJ0L1dpc2hsaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Topic/Partials/TopicBlock.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG9waWMvUGFydGlhbHMvVG9waWNCbG9jay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Topic/Partials/TopicWidget.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG9waWMvUGFydGlhbHMvVG9waWNXaWRnZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Topic/TopicDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG9waWMvVG9waWNEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Widget/Partials/TabWidgets.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvV2lkZ2V0L1BhcnRpYWxzL1RhYldpZGdldHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/Widget/Partials/WidgetsByZone.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvV2lkZ2V0L1BhcnRpYWxzL1dpZGdldHNCeVpvbmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/src/Presentation/SmartStore.Web/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 

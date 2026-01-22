@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>SmartStore.Web.MVC.Tests</AssemblyName>
+    <OutputType>Library</OutputType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RestorePackages>true</RestorePackages>
+    <RootNamespace>SmartStore.Web.MVC.Tests</RootNamespace>
+    <SccAuxPath></SccAuxPath>
+    <SccLocalPath></SccLocalPath>
+    <SccProjectName></SccProjectName>
+    <SccProvider></SccProvider>
+    <SolutionDir>..\..\</SolutionDir>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SystemWebAdapters" Version="1.4.0" />
+    <PackageReference Include="NUnit" Version="*" />
+    <PackageReference Include="DotLiquid" Version="2.3.197" />
+    <PackageReference Include="FluentValidation" Version="12.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../Libraries/SmartStore.Core/SmartStore.Core.csproj" />
+    <ProjectReference Include="../../Libraries/SmartStore.Services/SmartStore.Services.csproj" />
+    <ProjectReference Include="../SmartStore.Tests/SmartStore.Tests.csproj" />
+    <ProjectReference Include="../../Presentation/SmartStore.Web.Framework/SmartStore.Web.Framework.csproj" />
+    <ProjectReference Include="../../Presentation/SmartStore.Web/Administration/SmartStore.Admin.csproj" />
+    <ProjectReference Include="../../Presentation/SmartStore.Web/SmartStore.Web.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+</Project>

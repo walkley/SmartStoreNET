@@ -1,0 +1,119 @@
+using System;
+using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Security.Principal;
+
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Http;
+using System.Web;
+
+
+namespace SmartStore.Core.Fakes
+{
+    public class FakeHttpContext : System.Web.HttpContext
+    {
+        private readonly HttpCookieCollection _cookies;
+        private readonly NameValueCollection _formParams;
+        private IPrincipal _principal;
+        private readonly NameValueCollection _queryStringParams;
+        private readonly string _relativeUrl;
+        private readonly string _method;
+        private readonly Dictionary<string, object> _sessionItems;
+        private readonly NameValueCollection _serverVariables;
+        private HttpResponseBase _response;
+        private HttpRequestBase _request;
+        private readonly Dictionary<object, object> _items;
+
+        public static FakeHttpContext Root()
+        {
+            return new FakeHttpContext("~/");
+        }
+
+        public FakeHttpContext(string relativeUrl)
+            : this(relativeUrl, null, null, null, null, null, null)
+        {
+        }
+
+        public FakeHttpContext(string relativeUrl, string method)
+            : this(relativeUrl, method, null, null, null, null, null, null)
+        {
+        }
+
+        public FakeHttpContext(string relativeUrl,
+            IPrincipal principal,
+            NameValueCollection formParams,
+            NameValueCollection queryStringParams,
+            HttpCookieCollection cookies,
+            Dictionary<string, object> sessionItems,
+            NameValueCollection serverVariables)
+            : this(relativeUrl, null, principal, formParams, queryStringParams, cookies, sessionItems, serverVariables)
+        {
+        }
+
+        public FakeHttpContext(string relativeUrl,
+            string method,
+            IPrincipal principal,
+            NameValueCollection formParams,
+            NameValueCollection queryStringParams,
+            HttpCookieCollection cookies,
+            Dictionary<string, object> sessionItems,
+            NameValueCollection serverVariables)
+        {
+            _relativeUrl = relativeUrl;
+            _method = method;
+            _principal = principal;
+            _formParams = formParams;
+            _queryStringParams = queryStringParams;
+            _cookies = cookies;
+            _sessionItems = sessionItems;
+            _serverVariables = serverVariables;
+
+            _items = new Dictionary<object, object>();
+
+            Handler = new FakeHttpHandler();
+        }
+
+        public IHttpHandler Handler { get; set; }
+
+        public HttpRequestBase Request => _request ?? new FakeHttpRequest(_relativeUrl, _method, _formParams, _queryStringParams, _cookies, _serverVariables);
+
+        public void SetRequest(HttpRequestBase request)
+        {
+            _request = request;
+        }
+
+        public HttpResponseBase Response => _response ?? new FakeHttpResponse();
+
+        public void SetResponse(HttpResponseBase response)
+        {
+            _response = response;
+        }
+
+        public IPrincipal User
+        {
+            get => _principal;
+            set => _principal = value;
+        }
+
+        public HttpSessionStateBase Session => new FakeHttpSessionState(ToSessionStateItemCollection(_sessionItems ?? new Dictionary<string, object>()));
+
+        private SessionStateItemCollection ToSessionStateItemCollection(Dictionary<string, object> dict)
+        {
+            var collection = new SessionStateItemCollection();
+            foreach (var kvp in dict)
+            {
+                collection.Add(kvp.Key, kvp.Value);
+            }
+            return collection;
+        }
+
+        public System.Collections.IDictionary Items => _items;
+
+        public bool SkipAuthorization { get; set; }
+
+        public override object GetService(Type serviceType)
+        {
+            return null;
+        }
+    }
+}

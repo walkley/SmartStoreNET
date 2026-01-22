@@ -1,0 +1,454 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <AssemblyName>SmartStore.Web</AssemblyName>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+    <OutputType>Exe</OutputType>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PostBuildEvent></PostBuildEvent>
+    <PrecompileBeforePublish>false</PrecompileBeforePublish>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RestorePackages>true</RestorePackages>
+    <RootNamespace>SmartStore.Web</RootNamespace>
+    <SccAuxPath></SccAuxPath>
+    <SccLocalPath></SccLocalPath>
+    <SccProjectName></SccProjectName>
+    <SccProvider></SccProvider>
+    <SignAssembly>false</SignAssembly>
+    <SolutionDir>..\..\</SolutionDir>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SystemWebAdapters" Version="1.4.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
+    <PackageReference Include="BundleTransformer.JsMin" Version="1.12.6" />
+    <PackageReference Include="BundleTransformer.NUglify" Version="1.12.16" />
+    <PackageReference Include="DouglasCrockford.JsMin" Version="2.1.0" />
+    <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation" Version="4.3.0" />
+    <PackageReference Include="Autofac" Version="8.4.0" />
+    <PackageReference Include="EntityFramework" Version="6.5.1" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="9.0.9" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.1.2" />
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.6.3" />
+    <PackageReference Include="FluentValidation" Version="12.0.0" />
+    <PackageReference Include="AdvancedStringBuilder" Version="0.1.1" />
+    <PackageReference Include="AutoprefixerHost" Version="3.2.1" />
+    <PackageReference Include="BundleTransformer.SassAndScss" Version="1.13.9" />
+    <PackageReference Include="JavaScriptEngineSwitcher.Core" Version="3.24.1" />
+    <PackageReference Include="JavaScriptEngineSwitcher.Msie" Version="3.24.1" />
+    <PackageReference Include="JavaScriptEngineSwitcher.V8" Version="3.24.2" />
+    <PackageReference Include="JavaScriptEngineSwitcher.V8.Native.win-x64" Version="3.21.3" />
+    <PackageReference Include="JavaScriptEngineSwitcher.V8.Native.win-x86" Version="3.21.3" />
+    <PackageReference Include="LibSassHost" Version="1.5.0" />
+    <PackageReference Include="LibSassHost.Native.win-x64" Version="1.3.3" />
+    <PackageReference Include="LibSassHost.Native.win-x86" Version="1.3.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.10" />
+    <PackageReference Include="MsieJavaScriptEngine" Version="3.2.5" />
+    <PackageReference Include="NUglify" Version="1.21.17" />
+    <PackageReference Include="System.Buffers" Version="4.6.1" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="9.0.9" />
+    <PackageReference Include="System.Memory" Version="4.6.3" />
+    <PackageReference Include="System.Numerics.Vectors" Version="4.6.1" />
+    <PackageReference Include="System.ValueTuple" Version="4.6.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../Libraries/SmartStore.Core/SmartStore.Core.csproj" />
+    <ProjectReference Include="../../Libraries/SmartStore.Data/SmartStore.Data.csproj" />
+    <ProjectReference Include="../../Libraries/SmartStore.Services/SmartStore.Services.csproj" />
+    <ProjectReference Include="../SmartStore.Web.Framework/SmartStore.Web.Framework.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Telerik.Web.Mvc">
+      <HintPath>..\..\..\lib\Telerik\Telerik.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Global.asax.cs"></Compile>
+    <Compile Remove="Administration/MappingExtensions.cs"></Compile>
+    <Compile Remove="Administration/Infrastructure/SettingsMenu.cs"></Compile>
+    <Compile Remove="Administration/Infrastructure/AdminStartupTask.cs"></Compile>
+    <Compile Remove="Administration/Infrastructure/AdminMenu.cs"></Compile>
+    <Compile Remove="Administration/Infrastructure/RouteProvider.cs"></Compile>
+    <Compile Remove="Administration/Infrastructure/PreviewModeFilter.cs"></Compile>
+    <Compile Remove="Administration/Infrastructure/DependencyRegistrar.cs"></Compile>
+    <Compile Remove="Administration/Extensions/HtmlHelperExtensions.cs"></Compile>
+    <Compile Remove="Administration/Controllers/SettingController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/UrlRecordController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/OrderController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/QuantityUnitController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/CustomerController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/MenuController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/MeasureController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/NewsController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/DiscountController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/ExportController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/ForumController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/BlogController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/CampaignController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/HomeController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/PaymentController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/LanguageController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/ImportController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/CurrencyController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/DeliveryTimeController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/ManufacturerController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/AffiliateController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/GiftCardController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/PackagingController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/ProductAttributeController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/MessageTemplateController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/ProductReviewController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/StoreController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/PollController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/WidgetController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/RoxyFileManagerController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/AdminModelHelper.cs"></Compile>
+    <Compile Remove="Administration/Controllers/PluginController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/TaxController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/CustomerRoleController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/CategoryController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/QueuedEmailController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/RuleController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/ThemeController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/OnlineCustomerController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/CommonController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/LogController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/ActivityLogController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/TopicController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/ProductController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/NewsLetterSubscriptionController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/ExternalAuthenticationController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/ShippingController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/SpecificationAttributeController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/SecurityController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/RecurringPaymentController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/ScheduleTaskController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/ShoppingCartController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/MediaController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/CheckoutAttributeController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/DownloadController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/CountryController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/EmailAccountController.cs"></Compile>
+    <Compile Remove="Administration/Controllers/ReturnRequestController.cs"></Compile>
+    <Compile Remove="Administration/Properties/AssemblyInfo.cs"></Compile>
+    <Compile Remove="Administration/Models/Topics/TopicModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Topics/TopicListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/DataExchange/ProfileInfoForProviderModel.cs"></Compile>
+    <Compile Remove="Administration/Models/DataExchange/ImportProfileListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/DataExchange/ExportProjectionModel.cs"></Compile>
+    <Compile Remove="Administration/Models/DataExchange/ExportFilterModel.cs"></Compile>
+    <Compile Remove="Administration/Models/DataExchange/CsvConfigurationModel.cs"></Compile>
+    <Compile Remove="Administration/Models/DataExchange/ExportProfileModel.cs"></Compile>
+    <Compile Remove="Administration/Models/DataExchange/ImportProfileModel.cs"></Compile>
+    <Compile Remove="Administration/Models/DataExchange/ExportPreviewModel.cs"></Compile>
+    <Compile Remove="Administration/Models/DataExchange/ExportDeploymentModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Themes/ConfigureThemeModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Themes/ThemeListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Themes/ThemeManifestModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Directory/MeasureWeightModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Directory/CountryListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Directory/DeliveryTimeModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Directory/QuantityUnitModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Directory/CountryModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Directory/CurrencyModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Directory/MeasureDimensionModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Directory/StateProvinceModel.cs"></Compile>
+    <Compile Remove="Administration/Models/ShoppingCart/ShoppingCartItemModel.cs"></Compile>
+    <Compile Remove="Administration/Models/ShoppingCart/ShoppingCartModel.cs"></Compile>
+    <Compile Remove="Administration/Models/UrlRecord/UrlRecordListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/UrlRecord/UrlRecordModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Plugins/PluginModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Plugins/LicensePluginModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Plugins/ProviderModelList.cs"></Compile>
+    <Compile Remove="Administration/Models/Plugins/LocalPluginsModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Plugins/LicenseLabelModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Menus/MenuRecordModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Menus/MenuItemRecordModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Menus/MenuRecordListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Discounts/DiscountModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Localization/LanguageResourceModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Localization/CheckAvailableResourcesResult.cs"></Compile>
+    <Compile Remove="Administration/Models/Localization/LanguageModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Localization/AvailableLanguageModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Cms/WidgetModel.cs"></Compile>
+    <Compile Remove="Administration/Models/ExternalAuthentication/AuthenticationMethodModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Forums/ForumGroupModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Forums/ForumModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Shipping/ShippingMethodModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Shipping/ShippingRateComputationMethodModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Affiliates/AffiliateModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Dashboard/DashboardChartReportModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Tax/TaxCategoryModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Tax/TaxProviderModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Common/SystemInfoModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Common/GenericAttributeModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Common/SystemWarningModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Common/LanguageSelectorModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Common/AddressModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Common/CheckUpdateResult.cs"></Compile>
+    <Compile Remove="Administration/Models/Common/MaintenanceModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Common/FeedItemModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Orders/CheckoutAttributeModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Orders/OrdersIncompleteDashboardReportModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Orders/CheckoutAttributeValueModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Orders/OrderModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Orders/NeverSoldReportModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Orders/ReturnRequestListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Orders/BestsellersReportLineModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Orders/ShipmentModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Orders/OrderAddressModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Orders/OrderAverageReportLineSummaryModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Orders/OrderListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Orders/GiftCardListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Orders/LatestOrdersDashboardReportModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Orders/ReturnRequestModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Orders/ShipmentListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Orders/BestsellersDashboardReportModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Orders/BestsellersReportModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Orders/CheckoutAttributeListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Orders/GiftCardModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Orders/AutoUpdateOrderItemModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Orders/NeverSoldReportLineModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Orders/RecurringPaymentModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Payments/PaymentMethodEditModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Payments/PaymentMethodModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Rules/RuleEditItem.cs"></Compile>
+    <Compile Remove="Administration/Models/Rules/RuleSetModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Rules/RuleSelectItem.cs"></Compile>
+    <Compile Remove="Administration/Models/Rules/RuleSetListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Logging/ActivityLogModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Logging/LogModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Logging/LogListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Logging/ActivityLogTypeModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Logging/ActivityLogSearchModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Tasks/ScheduleTaskModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Tasks/ScheduleTaskHistoryModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Polls/PollAnswerModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Polls/PollModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Polls/PollVotingRecordModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Customers/CustomerReportsModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Customers/OnlineCustomerModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Customers/CustomerRoleModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Customers/TopCustomersDashboardReportModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Customers/CustomerRoleMappingModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Customers/TopCustomersReportModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Customers/RegisteredCustomerReportLineModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Customers/CustomerListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Customers/CustomerAddressModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Customers/CustomerModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Customers/TopCustomerReportLineModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Customers/RegisteredCustomersDashboardReportModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Customers/BestCustomersReportLineModel.cs"></Compile>
+    <Compile Remove="Administration/Models/News/NewsCommentModel.cs"></Compile>
+    <Compile Remove="Administration/Models/News/NewsItemListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/News/NewsItemModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Settings/SettingModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Settings/PaymentSettingsModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Settings/GeneralCommonSettingsModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Settings/StoreScopeConfigurationModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Settings/MediaSettingsModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Settings/BlogSettingsModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Settings/NewsSettingsModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Settings/ForumSearchSettingsModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Settings/RewardPointsSettingsModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Settings/CustomerUserSettingsModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Settings/ForumSettingsModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Settings/DataExchangeSettingsModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Settings/TaxSettingsModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Settings/SearchSettingsModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Settings/ShoppingCartSettingsModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Settings/OrderSettingsModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Settings/ShippingSettingsModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Settings/CatalogSettingsModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Messages/MessageTemplateListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Messages/NewsLetterSubscriptionListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Messages/QueuedEmailListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Messages/EmailAccountModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Messages/NewsLetterSubscriptionModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Messages/MessageTemplateModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Messages/CampaignModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Messages/QueuedEmailModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Messages/MessageTemplatePreviewModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Catalog/CategoryModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Catalog/ProductTagModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Catalog/ManufacturerListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Catalog/SpecificationAttributeOptionModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Catalog/ProductListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Catalog/CategoryTreeModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Catalog/BulkEditListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Catalog/BulkEditProductModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Catalog/ProductAttributeOptionModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Catalog/ProductAttributeModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Catalog/ProductBundleItemModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Catalog/CopyProductModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Catalog/ProductReviewModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Catalog/CategoryListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Catalog/ManufacturerModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Catalog/ProductAttributeOptionsSetModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Catalog/ProductVariantAttributeCombinationModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Catalog/ProductSpecificationAttributeModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Catalog/ProductModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Catalog/SpecificationAttributeModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Catalog/ProductReviewListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Stores/StoreModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Stores/StoreDashboardReportModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Blogs/BlogPostModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Blogs/BlogListModel.cs"></Compile>
+    <Compile Remove="Administration/Models/Blogs/BlogCommentModel.cs"></Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\AssemblySharedInfo.cs">
+      <Link>Properties\AssemblySharedInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\AssemblyVersionInfo.cs">
+      <Link>Properties\AssemblyVersionInfo.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\vendors\x-editable\README.txt" />
+    <None Include="Content\vendors\jquery\jquery.validate-vsdoc.js" />
+    <None Include="Themes\Flex\Content\compiled\theme.css" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Themes\Flex\Content\theme.scss">
+      <Compile>True</Compile>
+      <Minify>True</Minify>
+      <OutputFolder>.\output</OutputFolder>
+      <IgnoreWarnings>True</IgnoreWarnings>
+      <IgnoreErrors>True</IgnoreErrors>
+      <CompileStyle>Nested</CompileStyle>
+      <DebugInfo>False</DebugInfo>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\editors\CodeMirror\js\" />
+    <Folder Include="Plugins\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\EditorLocalization.de.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.de.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\EditorLocalization.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EditorLocalization.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\MvcLocalization.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>MvcLocalization.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WebConfigsToTransform Include="Config\log4net.config">
+      <DestinationRelativePath>Config\log4net.config</DestinationRelativePath>
+      <Exclude>False</Exclude>
+      <TransformFileFolder>$(TransformWebConfigIntermediateLocation)\original</TransformFileFolder>
+      <TransformFile>Config\log4net.$(Configuration).config</TransformFile>
+      <TransformOriginalFolder>$(TransformWebConfigIntermediateLocation)\original</TransformOriginalFolder>
+      <TransformOriginalFile>$(TransformWebConfigIntermediateLocation)\original\%(DestinationRelativePath)</TransformOriginalFile>
+      <TransformOutputFile>$(TransformWebConfigIntermediateLocation)\transformed\%(DestinationRelativePath)</TransformOutputFile>
+      <TransformScope>$(_PackageTempDir)\%(DestinationRelativePath)</TransformScope>
+      <SubType>Designer</SubType>
+    </WebConfigsToTransform>
+    <None Include="Config\log4net.Debug.config">
+      <DependentUpon>log4net.config</DependentUpon>
+    </None>
+    <None Include="Config\log4net.Release.config">
+      <DependentUpon>log4net.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="ExcludeRootBinariesDeployment">
+    <PropertyGroup>
+      <ExcludeFilesFromDeployment>
+        **\*.cs;
+        **\*.orig;
+        **\*.bak;
+        **\*.log;
+        **\*.csproj;
+        **\*.csproj.user;
+        **\*.DotSettings.user;
+        **\packages.config;
+        **\*.Debug.config;
+        **\*.Release.config;
+        **\*.PluginDev.config;
+        **\*.EFMigrations.config;
+        **\obj\**;
+        **\bin\*.xml; 
+        App_Data\Licenses.lic;
+        App_Data\Settings.txt;
+        App_Data\InstalledPlugins.txt;
+        App_Data\SmartStore.Db.sdf;
+        Plugins\*\bin\**;
+        Themes\*\Content\compiled\**;
+      </ExcludeFilesFromDeployment>
+      <ExcludeFoldersFromDeployment>
+	    x64;
+	    x86;
+        roslyn;
+		bin\da; bin\fi; bin\ja; bin\ko; bin\mk; bin\nl; bin\pt; bin\no; bin\pl; bin\pl; bin\ru-ru; bin\sv; bin\tr; bin\uk; bin\zh-CHS; bin\zh-Hans; bin\zh-Hant;
+      	Exchange;
+      	Media;
+      	Properties;
+      	App_Data\_Backup;
+        App_Data\_temp;
+        App_Data\Tenants;
+        App_Data\Migrations;
+        App_Data\Logs;
+        bin\HostRestart;
+        Administration\bin;
+        Content\Images\Thumbs;
+      </ExcludeFoldersFromDeployment>
+    </PropertyGroup>
+  </Target>
+  <Target Name="ExcludeRootBinariesPackage" DependsOnTargets="ExcludeRootBinariesDeployment" BeforeTargets="ExcludeFilesFromPackage">
+    <ItemGroup>
+      <ExcludeFromPackageFolders Include="$(ExcludeFoldersFromDeployment)">
+        <FromTarget>Project</FromTarget>
+        <InProject>false</InProject>
+      </ExcludeFromPackageFolders>
+      <ExcludeFromPackageFiles Include="$(ExcludeFilesFromDeployment)" />
+    </ItemGroup>
+  </Target>
+  <Target Name="CopyNativeBinaries">
+    <ItemGroup>
+      <SqlCeBinariesx86 Include="$(SolutionDir)..\lib\sqlce\x86\**\*" />
+      <SqlCeBinariesx64 Include="$(SolutionDir)..\lib\sqlce\x64\**\*" />
+      <VC14Binariesx86 Include="$(SolutionDir)..\lib\msvcp140\x86\**\*" />
+      <VC14Binariesx64 Include="$(SolutionDir)..\lib\msvcp140\x64\**\*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(SqlCeBinariesx86)" DestinationFolder="$(OutputPath)\x86\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(SqlCeBinariesx64)" DestinationFolder="$(OutputPath)\x64\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(VC14Binariesx86)" DestinationFolder="$(OutputPath)\x86\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(VC14Binariesx64)" DestinationFolder="$(OutputPath)\x64\%(RecursiveDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="CopyRoslynFiles">
+    <!-- Copying Roslyn tools and their dependencies to the "bin" folder. -->
+    <PropertyGroup>
+      <RoslynFilesDestination>$(ProjectDir)bin\roslyn\</RoslynFilesDestination>
+    </PropertyGroup>
+    <PropertyGroup>
+      <PlaceholderFile>$(ProjectDir)Content\placeholder.txt</PlaceholderFile>
+    </PropertyGroup>
+    <ItemGroup>
+      <RoslynFiles Include="..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\tools\Roslyn472\*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(RoslynFiles)" DestinationFolder="$(RoslynFilesDestination)" Condition="!Exists('$(RoslynFilesDestination)csc.exe')" />
+  </Target>
+  <Target Name="CreateEmptyFolders">
+    <Copy SourceFiles="$(PlaceholderFile)" DestinationFolder="$(ProjectDir)Plugins\bin\" ContinueOnError="true" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="AfterBuild" DependsOnTargets="MvcBuildViews">
+    <CallTarget Targets="ExcludeRootBinariesDeployment" />
+    <CallTarget Targets="CopyNativeBinaries" />
+    <!--<CallTarget Targets="CopyRoslynFiles" />-->
+    <CallTarget Targets="CreateEmptyFolders" />
+  </Target>
+</Project>

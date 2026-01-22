@@ -1,0 +1,90 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>SmartStore.Data</AssemblyName>
+    <OutputType>Library</OutputType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PostBuildEvent>
+    </PostBuildEvent>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RestorePackages>true</RestorePackages>
+    <RootNamespace>SmartStore.Data</RootNamespace>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProjectName>
+    </SccProjectName>
+    <SccProvider>
+    </SccProvider>
+    <SolutionDir>..\..\</SolutionDir>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
+    <PackageReference Include="Autofac" Version="8.4.0" />
+    <PackageReference Include="EntityFramework" Version="6.5.1" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="9.0.9" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.1.2" />
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.6.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../SmartStore.Core/SmartStore.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Migrations/202010030939136_AttributeChoiceBehaviour.Designer.cs">
+    </Compile>
+    <Compile Remove="Migrations/202009090817220_DeliveryTimeMinMaxDays.Designer.cs">
+    </Compile>
+    <Compile Remove="Migrations/202112171231491_V420Resources.Designer.cs">
+    </Compile>
+    <Compile Remove="Migrations/202010121359446_RemoveBlogAndNewsLanguage.Designer.cs">
+    </Compile>
+    <Compile Remove="Migrations/202012051645539_AddBlogAndNewsLanguage.Designer.cs">
+    </Compile>
+    <Compile Remove="Migrations/202010011005387_TopicCookieType.Designer.cs">
+    </Compile>
+    <Compile Remove="Migrations/202101251149352_V411Resources.Designer.cs">
+    </Compile>
+    <Compile Remove="Migrations/202009041122208_ShopIcons.Designer.cs">
+    </Compile>
+    <Compile Remove="Migrations/202011091154314_V410Resources.Designer.cs">
+    </Compile>
+    <Compile Remove="Migrations/202008181949580_RenamedCustomerRoleOrderTotal.Designer.cs">
+    </Compile>
+    <Compile Remove="Migrations/202009021705132_Merge9.Designer.cs">
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\AssemblySharedInfo.cs">
+      <Link>Properties\AssemblySharedInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\AssemblyVersionInfo.cs">
+      <Link>Properties\AssemblyVersionInfo.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Resources.Extensions" Version="*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Migrations\**" />
+    <Content Remove="Migrations\**" />
+    <EmbeddedResource Remove="Migrations\**" />
+    <None Remove="Migrations\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+      <_Parameter1>"SmartStore.Web"</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+      <_Parameter1>"SmartStore.Data.Tests"</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+</Project>
